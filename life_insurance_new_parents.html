@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>新手父母必看：为什么人寿保险如此重要？</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+  :root {
+    --coral: #E85D3A;
+    --coral-light: #FF8A6E;
+    --coral-pale: #FFF0EC;
+    --warm-dark: #1C1410;
+    --warm-mid: #5C4033;
+    --warm-text: #3D2B1F;
+    --warm-muted: #9B7B6E;
+    --cream: #FDF8F4;
+    --accent-gold: #D4962A;
+    --accent-green: #3A7D56;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { font-size: 16px; }
+
+  body {
+    background: var(--cream);
+    color: var(--warm-text);
+    font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    background: var(--warm-dark);
+    min-height: 420px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 48px 36px 44px;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://www.darrenrobinson.ca/wp-content/uploads/2022/10/Darren_MortgageBroker_LifeInsurance_Oct17.jpg');
+    background-size: cover;
+    background-position: center top;
+    opacity: 0.4;
+    filter: saturate(0.7);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      160deg,
+      rgba(28,20,16,0.3) 0%,
+      rgba(28,20,16,0.75) 55%,
+      rgba(28,20,16,0.95) 100%
+    );
+  }
+
+  .hero-tag {
+    position: relative;
+    display: inline-block;
+    background: var(--coral);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    padding: 6px 16px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    align-self: flex-start;
+  }
+
+  .hero-title {
+    position: relative;
+    font-family: 'Noto Serif SC', 'SimSun', serif;
+    font-size: clamp(28px, 6vw, 40px);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.25;
+    margin-bottom: 18px;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-title em {
+    font-style: normal;
+    color: var(--coral-light);
+  }
+
+  .hero-meta {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .hero-meta span { display: flex; align-items: center; gap: 6px; }
+
+  /* ── INTRO PULL-QUOTE ── */
+  .pull-quote {
+    background: var(--coral);
+    padding: 32px 36px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pull-quote::before {
+    content: '"';
+    position: absolute;
+    top: -20px; left: 20px;
+    font-family: Georgia, serif;
+    font-size: 160px;
+    color: rgba(255,255,255,0.1);
+    line-height: 1;
+  }
+
+  .pull-quote p {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 18px;
+    line-height: 1.75;
+    position: relative;
+    font-weight: 600;
+  }
+
+  /* ── CONTENT AREA ── */
+  .content {
+    padding: 0 36px;
+  }
+
+  /* ── SECTION ── */
+  .section {
+    padding: 40px 0 0;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .section-icon {
+    width: 44px; height: 44px;
+    background: var(--coral-pale);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--warm-dark);
+    line-height: 1.3;
+  }
+
+  /* ── INSURANCE TYPE CARDS ── */
+  .type-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 480px) {
+    .type-cards { grid-template-columns: 1fr; }
+  }
+
+  .type-card {
+    border-radius: 16px;
+    padding: 24px 22px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .type-card.term {
+    background: #EBF4FF;
+    border: 1.5px solid #B8D8F8;
+  }
+
+  .type-card.perm {
+    background: #F0F9F0;
+    border: 1.5px solid #B0DDB0;
+  }
+
+  .type-card-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .type-card.term .type-card-label { color: #2D7DD2; }
+  .type-card.perm .type-card-label { color: var(--accent-green); }
+
+  .type-card-name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--warm-dark);
+    margin-bottom: 10px;
+  }
+
+  .type-card-desc {
+    font-size: 14px;
+    color: var(--warm-muted);
+    line-height: 1.7;
+  }
+
+  .type-card-badge {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  .type-card.term .type-card-badge {
+    background: #D0E8FB;
+    color: #1A5C9E;
+  }
+
+  .type-card.perm .type-card-badge {
+    background: #C8EDCA;
+    color: #1E6B30;
+  }
+
+  /* ── REASON CARDS ── */
+  .reasons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 4px;
+  }
+
+  .reason-card {
+    background: #fff;
+    border: 1.5px solid #EDE0D8;
+    border-radius: 16px;
+    padding: 22px 24px;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    transition: box-shadow 0.2s;
+  }
+
+  .reason-card:hover {
+    box-shadow: 0 6px 24px rgba(232,93,58,0.1);
+  }
+
+  .reason-num {
+    width: 36px; height: 36px;
+    background: var(--coral);
+    color: #fff;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .reason-body {}
+
+  .reason-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--warm-dark);
+    margin-bottom: 7px;
+    line-height: 1.4;
+  }
+
+  .reason-text {
+    font-size: 14px;
+    color: #6B5548;
+    line-height: 1.75;
+  }
+
+  .reason-text strong {
+    color: var(--coral);
+    font-weight: 700;
+  }
+
+  /* ── STAT HIGHLIGHT ── */
+  .stat-box {
+    background: var(--warm-dark);
+    border-radius: 16px;
+    padding: 28px 28px;
+    margin: 32px 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: #fff;
+  }
+
+  .stat-num {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 44px;
+    font-weight: 900;
+    color: var(--coral-light);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .stat-label {
+    font-size: 15px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.65;
+  }
+
+  .stat-label strong { color: #fff; }
+
+  /* ── QUESTION BLOCK ── */
+  .question-block {
+    background: linear-gradient(135deg, #FFF4F1 0%, #FFF8F5 100%);
+    border: 2px solid var(--coral);
+    border-radius: 20px;
+    padding: 32px 28px;
+    margin: 36px 0;
+  }
+
+  .question-block h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--coral);
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+
+  .question-block p {
+    font-size: 15px;
+    color: var(--warm-text);
+    line-height: 1.8;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #DDD0C8, transparent);
+    margin: 36px 0;
+  }
+
+  /* ── CTA ── */
+  .cta-block {
+    background: var(--coral-pale);
+    border-radius: 20px;
+    padding: 36px 28px;
+    text-align: center;
+    margin: 36px 0 0;
+  }
+
+  .cta-block h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--warm-dark);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .cta-block p {
+    font-size: 14px;
+    color: var(--warm-muted);
+    line-height: 1.75;
+    margin-bottom: 24px;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--coral);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 14px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .cta-btn:hover {
+    background: #D44525;
+    transform: translateY(-2px);
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    margin-top: 48px;
+    padding: 28px 36px;
+    background: var(--warm-dark);
+    color: rgba(255,255,255,0.5);
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.8;
+  }
+
+  .footer a {
+    color: var(--coral-light);
+    text-decoration: none;
+  }
+
+  /* ── CHECKLIST ── */
+  .checklist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+  }
+
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14.5px;
+    color: var(--warm-text);
+    line-height: 1.7;
+  }
+
+  .check-icon {
+    width: 22px; height: 22px;
+    background: var(--accent-green);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: #fff;
+    font-size: 12px;
+  }
+
+  /* ── SCROLL ANIMATIONS ── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.5s ease forwards;
+  }
+
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+  .delay-4 { animation-delay: 0.4s; }
+  .delay-5 { animation-delay: 0.5s; }
+
+  /* ── PROGRESS BAR ── */
+  .progress-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    background: var(--coral);
+    width: 0%;
+    z-index: 999;
+    transition: width 0.1s;
+  }
+
+  /* ── SHARE TIP ── */
+  .share-tip {
+    background: #fff;
+    border: 1.5px solid #EDE0D8;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 0 36px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--warm-muted);
+  }
+
+  .share-tip strong { color: var(--warm-text); }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-tag">保险规划 · 家庭必读</div>
+  <h1 class="hero-title">
+    初为父母，<br>
+    <em>人寿保险</em>是给孩子<br>
+    最重要的礼物
+  </h1>
+  <div class="hero-meta">
+    <span>📅 2026年5月</span>
+    <span>📧 elina_insurance@hotmail.com</span>
+    <span>📖 约4分钟阅读</span>
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote fade-in">
+  <p>孩子刚出生，脑子里满是装修婴儿房、选择幼儿园……但有一件事，大多数新手父母都没想到——人寿保险。而恰恰这个时候，它比任何时候都更重要。</p>
+</div>
+
+<!-- SHARE TIP -->
+<div class="share-tip" style="margin-top: 20px;">
+  <span style="font-size:20px;">💬</span>
+  <span><strong>适合分享给：</strong>正在备孕、刚生宝宝、或家有幼儿的朋友</span>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <!-- SECTION 1: 两种保险类型 -->
+  <div class="section fade-in delay-1">
+    <div class="section-header">
+      <div class="section-icon">🛡️</div>
+      <h2 class="section-title">两种人寿保险，你需要了解的基础</h2>
+    </div>
+    <div class="type-cards">
+      <div class="type-card term">
+        <div class="type-card-label">TYPE 01</div>
+        <div class="type-card-name">定期寿险<br>Term Life</div>
+        <div class="type-card-desc">在固定年限内提供保障，保费固定。期满后可续保或终止。适合预算有限、需要高额保障的家庭。</div>
+        <div class="type-card-badge">💰 保费最低</div>
+      </div>
+      <div class="type-card perm">
+        <div class="type-card-label">TYPE 02</div>
+        <div class="type-card-name">终身寿险<br>Permanent Life</div>
+        <div class="type-card-desc">无固定期限，保费终身不变，保障持续至身故。同时具备现金价值积累功能，是长期财富规划工具。</div>
+        <div class="type-card-badge">♾️ 终身保障</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- STAT -->
+  <div class="stat-box fade-in delay-2">
+    <div class="stat-num">$7,848</div>
+    <div class="stat-label">
+      <strong>美国2021年平均葬礼费用</strong>（含瞻仰遗容及土葬）<br>
+      换算成加拿大元更高。没有保险，这笔钱从哪来？
+    </div>
+  </div>
+
+  <!-- SECTION 2: 为什么要买 -->
+  <div class="section fade-in delay-2">
+    <div class="section-header">
+      <div class="section-icon">💡</div>
+      <h2 class="section-title">新手父母购买人寿保险的 5 大理由</h2>
+    </div>
+    <div class="reasons">
+
+      <div class="reason-card">
+        <div class="reason-num">1</div>
+        <div class="reason-body">
+          <div class="reason-title">葬礼费用远超预期</div>
+          <div class="reason-text">刚起步的新手父母往往没有足够的储备来应对突如其来的葬礼开销。人寿保险让你无需担心这笔沉重的费用，在最难过的时候不必为钱发愁。</div>
+        </div>
+      </div>
+
+      <div class="reason-card">
+        <div class="reason-num">2</div>
+        <div class="reason-body">
+          <div class="reason-title">给家人真正的安心感</div>
+          <div class="reason-text">离世不仅留下悲痛，还有未偿还的贷款、账单。保险让你的家人知道：<strong>一切都被照顾好了</strong>，无需在最脆弱的时刻还要面对经济压力。</div>
+        </div>
+      </div>
+
+      <div class="reason-card">
+        <div class="reason-num">3</div>
+        <div class="reason-body">
+          <div class="reason-title">爸爸妈妈都需要投保</div>
+          <div class="reason-text">很多人以为只需要给"经济支柱"买保险，这是误区。无论哪位父母离开，另一方都将独自承担育儿重担。<strong>两个人都投保才是真正的保障</strong>。</div>
+        </div>
+      </div>
+
+      <div class="reason-card">
+        <div class="reason-num">4</div>
+        <div class="reason-body">
+          <div class="reason-title">越早买越划算，是一种投资</div>
+          <div class="reason-text">年轻时身体好，保费低。随着年龄增长，健康风险上升，保费也随之攀升。<strong>趁年轻锁定低保费</strong>，长期来看节省的钱相当可观。</div>
+        </div>
+      </div>
+
+      <div class="reason-card">
+        <div class="reason-num">5</div>
+        <div class="reason-body">
+          <div class="reason-title">别只依赖公司团险</div>
+          <div class="reason-text">工作单位提供的保障往往额度不足，且一旦离职便中断。<strong>自己买的保险跟着你走</strong>，不受工作变动影响，保费也更稳定。</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- QUESTION BLOCK -->
+  <div class="question-block fade-in delay-3">
+    <h3>❓ 如果另一方突然离世，单靠一份收入能养育孩子吗？</h3>
+    <p>养孩子的成本是巨大的——托儿费、教育、日常开销……这是一个很沉重的问题，但越早思考、越早部署，你的家人就越安全。人寿保险正是为了防止这种最坏的情况，让留下来的一方不必在悲痛中还要面对经济崩溃。</p>
+  </div>
+
+  <!-- CHECKLIST -->
+  <div class="section fade-in delay-3">
+    <div class="section-header">
+      <div class="section-icon">✅</div>
+      <h2 class="section-title">购买前，先问自己这几个问题</h2>
+    </div>
+    <ul class="checklist">
+      <li>
+        <div class="check-icon">✓</div>
+        如果我明天不在了，我的孩子的生活费和教育费有着落吗？
+      </li>
+      <li>
+        <div class="check-icon">✓</div>
+        我的另一半能独自应付房贷、车贷和日常开销吗？
+      </li>
+      <li>
+        <div class="check-icon">✓</div>
+        我的公司保险在我离职后还有效吗？额度够用吗？
+      </li>
+      <li>
+        <div class="check-icon">✓</div>
+        我是否趁年轻锁定了一个合理的保费？
+      </li>
+      <li>
+        <div class="check-icon">✓</div>
+        我和另一半都投保了，还是只有一方有保险？
+      </li>
+    </ul>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-block fade-in delay-4">
+    <h3>每个月不过两顿外卖的钱<br>却能换来全家人的保障</h3>
+    <p>人寿保险的月供，往往相当于一两次外卖的花费。把这笔钱投入保险，就像钱从未离开你的口袋——却在最关键的时刻，为你的家人撑起一把伞。</p>
+
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>本文仅供参考，具体保险方案请咨询持牌保险顾问。</p>
+</div>
+
+<script>
+  // Reading progress bar
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const scrollTop = doc.scrollTop || document.body.scrollTop;
+    const scrollHeight = doc.scrollHeight - doc.clientHeight;
+    const progress = (scrollTop / scrollHeight) * 100;
+    document.getElementById('progressBar').style.width = progress + '%';
+  });
+
+  // Intersection Observer for fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        entry.target.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
