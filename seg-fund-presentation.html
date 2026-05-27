@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta property="og:title" content="分隔基金 Segregated Fund 深度解析">
+<meta property="og:description" content="为什么 Seg Fund 比 Mutual Fund 和 ETF 更值得投资？">
+<title>分隔基金完全指南</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8CC7A;
+    --dark: #0A0E1A;
+    --dark2: #111827;
+    --dark3: #1A2235;
+    --accent: #2D6BE4;
+    --accent2: #34C77B;
+    --text: #F0EDE8;
+    --text-muted: #A8A098;
+    --red: #E85555;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Noto Sans SC', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── SLIDE WRAPPER ── */
+  .slide {
+    min-height: 100vh;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 48px 28px 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    overflow: hidden;
+  }
+
+  /* decorative bg circles */
+  .slide::before {
+    content: '';
+    position: absolute;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(45,107,228,0.12) 0%, transparent 70%);
+    top: -80px; right: -80px;
+    pointer-events: none;
+  }
+
+  /* ── SLIDE NUMBERS ── */
+  .slide-num {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+
+  /* ── SLIDE TITLES ── */
+  .slide-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+  .slide-title .gold { color: var(--gold); }
+  .slide-subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    width: 48px; height: 3px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin-bottom: 28px;
+    border-radius: 2px;
+  }
+
+  /* ── BODY TEXT ── */
+  p.body { font-size: 14px; line-height: 1.8; color: #D4CECC; margin-bottom: 16px; }
+  p.body strong { color: var(--gold-light); font-weight: 500; }
+
+  /* ── HERO SLIDE ── */
+  .hero {
+    background: linear-gradient(160deg, #0A0E1A 0%, #0F1726 50%, #0A1628 100%);
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 80px;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 200px;
+    background: linear-gradient(transparent, rgba(201,168,76,0.05));
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.3);
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+    padding: 6px 14px;
+    border-radius: 2px;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+  }
+  .hero-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
+  .hero-title .en {
+    display: block;
+    font-size: 22px;
+    color: var(--gold);
+    margin-top: 6px;
+  }
+  .hero-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 48px;
+    max-width: 360px;
+  }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .stat-box {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 16px 12px;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .stat-label { font-size: 10px; color: var(--text-muted); line-height: 1.3; }
+
+  /* ── INFO CARDS ── */
+  .info-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 14px;
+  }
+  .info-card .card-icon {
+    font-size: 22px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .info-card .card-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+  }
+  .info-card .card-body {
+    font-size: 12.5px;
+    color: #C8C3BF;
+    line-height: 1.7;
+  }
+
+  /* ── HIGHLIGHT BOX ── */
+  .highlight-box {
+    background: linear-gradient(135deg, rgba(201,168,76,0.12), rgba(201,168,76,0.04));
+    border: 1px solid rgba(201,168,76,0.25);
+    border-left: 3px solid var(--gold);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 16px;
+  }
+  .highlight-box .hb-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  .highlight-box .hb-body {
+    font-size: 13px;
+    line-height: 1.75;
+    color: #D8D3CF;
+  }
+
+  /* ── COMPARISON TABLE ── */
+  .compare-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 20px;
+    font-size: 11.5px;
+  }
+  .compare-table th {
+    padding: 10px 8px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .compare-table th:first-child { text-align: left; color: var(--text-muted); }
+  .compare-table th.seg { color: var(--gold); background: rgba(201,168,76,0.08); border-radius: 8px 8px 0 0; }
+  .compare-table th.mutual { color: #7DB3FF; }
+  .compare-table th.etf { color: #A8A098; }
+  .compare-table td {
+    padding: 9px 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    text-align: center;
+    color: #C0BAB5;
+    vertical-align: middle;
+  }
+  .compare-table td:first-child { text-align: left; color: #D8D3CF; font-weight: 500; }
+  .compare-table td.seg { background: rgba(201,168,76,0.05); color: var(--gold-light); font-weight: 600; }
+  .tick { color: var(--accent2); font-size: 14px; }
+  .cross { color: var(--red); font-size: 14px; }
+  .partial { color: #F59E0B; font-size: 14px; }
+
+  /* ── PRO/CON LISTS ── */
+  .pro-con {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .pro-box, .con-box {
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .pro-box {
+    background: rgba(52,199,123,0.07);
+    border: 1px solid rgba(52,199,123,0.2);
+  }
+  .con-box {
+    background: rgba(232,85,85,0.07);
+    border: 1px solid rgba(232,85,85,0.2);
+  }
+  .pro-box .box-title { color: var(--accent2); font-size: 12px; font-weight: 700; margin-bottom: 10px; }
+  .con-box .box-title { color: var(--red); font-size: 12px; font-weight: 700; margin-bottom: 10px; }
+  .pro-box li, .con-box li {
+    font-size: 11.5px;
+    line-height: 1.65;
+    color: #C8C3BF;
+    list-style: none;
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 6px;
+  }
+  .pro-box li::before { content: '✓'; position: absolute; left: 0; color: var(--accent2); font-weight: 700; }
+  .con-box li::before { content: '×'; position: absolute; left: 0; color: var(--red); font-weight: 700; }
+
+  /* ── SCENARIO CARDS ── */
+  .scenario-card {
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .scenario-icon {
+    font-size: 26px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .scenario-title { font-size: 13px; font-weight: 700; color: var(--gold-light); margin-bottom: 4px; }
+  .scenario-body { font-size: 12px; color: #B8B3AF; line-height: 1.65; }
+
+  /* ── DEATH BENEFIT SECTION ── */
+  .death-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 20px;
+  }
+  .flow-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .flow-item:last-child { border-bottom: none; }
+  .flow-circle {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .flow-circle.gold { background: rgba(201,168,76,0.15); border: 1.5px solid var(--gold); }
+  .flow-circle.green { background: rgba(52,199,123,0.1); border: 1.5px solid var(--accent2); }
+  .flow-circle.blue { background: rgba(45,107,228,0.12); border: 1.5px solid var(--accent); }
+  .flow-title { font-size: 13px; font-weight: 700; color: #E8E3DF; margin-bottom: 4px; }
+  .flow-body { font-size: 12px; color: #A8A3A0; line-height: 1.65; }
+
+  /* ── COMPARISON DEATH TABLE ── */
+  .death-compare {
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+  .dc-row {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .dc-row:last-child { border-bottom: none; }
+  .dc-cell {
+    padding: 10px 12px;
+    font-size: 11.5px;
+    color: #C0BAB5;
+  }
+  .dc-cell.header {
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-muted);
+    background: rgba(0,0,0,0.2);
+    padding: 9px 12px;
+  }
+  .dc-cell.seg-cell {
+    background: rgba(201,168,76,0.05);
+    color: var(--gold-light);
+    font-weight: 600;
+  }
+  .dc-cell.bad { color: var(--red); }
+  .dc-cell.good { color: var(--accent2); }
+
+  /* ── CHART / RETURN VISUAL ── */
+  .chart-wrap {
+    background: rgba(255,255,255,0.02);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.07);
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .chart-title {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .bar-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    height: 120px;
+    margin-bottom: 8px;
+  }
+  .bar-col { display: flex; flex-direction: column; align-items: center; flex: 1; }
+  .bar {
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+    position: relative;
+    min-height: 6px;
+    transition: all 0.3s;
+  }
+  .bar.pos { background: linear-gradient(180deg, var(--accent2), rgba(52,199,123,0.5)); }
+  .bar.neg { background: linear-gradient(0deg, var(--red), rgba(232,85,85,0.5)); align-self: flex-start; border-radius: 0 0 3px 3px; }
+  .bar-year { font-size: 8.5px; color: var(--text-muted); margin-top: 4px; }
+  .bar-val { font-size: 8px; color: var(--text-muted); margin-top: 1px; }
+
+  .return-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .rs-item {
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .rs-label { font-size: 10px; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.8px; }
+  .rs-value { font-size: 18px; font-weight: 700; color: var(--gold); font-family: 'Noto Serif SC', serif; }
+  .rs-sub { font-size: 10px; color: var(--text-muted); }
+
+  /* ── TAX SECTION ── */
+  .tax-item {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    align-items: flex-start;
+  }
+  .tax-item:last-child { border-bottom: none; }
+  .tax-badge {
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.25);
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 2px;
+    text-align: center;
+    min-width: 52px;
+    letter-spacing: 0.3px;
+  }
+  .tax-content .tax-title { font-size: 13px; font-weight: 700; color: #E8E3DF; margin-bottom: 4px; }
+  .tax-content .tax-body { font-size: 12px; color: #A8A3A0; line-height: 1.65; }
+
+  /* ── FINAL CTA SLIDE ── */
+  .cta-slide {
+    background: linear-gradient(160deg, #0B1022 0%, #0D1528 100%);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .cta-ring {
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    border: 2px solid rgba(201,168,76,0.3);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 28px;
+    position: relative;
+  }
+  .cta-ring::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.15);
+  }
+  .cta-icon { font-size: 36px; position: relative; z-index: 1; }
+  .cta-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+  .cta-desc { font-size: 13px; color: var(--text-muted); line-height: 1.75; max-width: 340px; margin: 0 auto 32px; }
+  .cta-disclaimer { font-size: 10px; color: #504A48; line-height: 1.6; max-width: 360px; margin: 0 auto; }
+
+  /* ── DOLLAR EXAMPLE ── */
+  .dollar-flow {
+    background: rgba(201,168,76,0.06);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 14px;
+  }
+  .df-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 12.5px;
+  }
+  .df-row:last-child { border-bottom: none; }
+  .df-label { color: #B8B3AF; }
+  .df-val { font-weight: 700; }
+  .df-val.gold { color: var(--gold); }
+  .df-val.green { color: var(--accent2); }
+  .df-val.red { color: var(--red); }
+
+  /* navigation dots */
+  .nav-dots {
+    position: fixed;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 100;
+  }
+  .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .dot.active { background: var(--gold); transform: scale(1.4); }
+
+  /* page header decoration */
+  .page-header-deco {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.4;
+  }
+
+  /* mobile tweaks */
+  @media (max-width: 380px) {
+    .slide { padding: 40px 22px 52px; }
+    .hero-title { font-size: 30px; }
+    .slide-title { font-size: 23px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav-dots" id="navDots">
+  <div class="dot active" onclick="scrollToSlide(0)"></div>
+  <div class="dot" onclick="scrollToSlide(1)"></div>
+  <div class="dot" onclick="scrollToSlide(2)"></div>
+  <div class="dot" onclick="scrollToSlide(3)"></div>
+  <div class="dot" onclick="scrollToSlide(4)"></div>
+  <div class="dot" onclick="scrollToSlide(5)"></div>
+  <div class="dot" onclick="scrollToSlide(6)"></div>
+  <div class="dot" onclick="scrollToSlide(7)"></div>
+  <div class="dot" onclick="scrollToSlide(8)"></div>
+  <div class="dot" onclick="scrollToSlide(9)"></div>
+</nav>
+
+<!-- ══════════════════════════════ SLIDE 1 – HERO ══════════════════════════════ -->
+<section class="slide hero" id="slide0">
+  <div class="hero-badge">完全指南 · 2026版</div>
+  <h1 class="hero-title">
+    分隔基金
+    <span class="en">Segregated Fund</span>
+  </h1>
+  <p class="hero-desc">
+    保险级别的投资保护 · 遗产传承利器<br>
+    深度解析为什么 Seg Fund 在加拿大是<strong style="color:var(--gold)">最被低估的投资工具</strong>
+  </p>
+  <div class="hero-stats">
+    <div class="stat-box">
+      <span class="stat-num">75–100%</span>
+      <span class="stat-label">本金保障比例</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num">$0</span>
+      <span class="stat-label">遗产认证费用</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num">2周</span>
+      <span class="stat-label">身故赔付时间</span>
+    </div>
+  </div>
+
+  <!-- Contact Card -->
+  <div style="margin-top:32px;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.28);border-radius:14px;padding:20px 18px;">
+    <div style="font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:14px;font-weight:700;">📬 咨询顾问</div>
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
+      <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#C9A84C,#8A6B28);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">👩</div>
+      <div>
+        <div style="font-family:'Noto Serif SC',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.2;">Elina</div>
+        <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">持牌保险及理财顾问</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <a href="tel:4168267591" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="width:32px;height:32px;border-radius:8px;background:rgba(52,199,123,0.12);border:1px solid rgba(52,199,123,0.25);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">📞</span>
+        <span style="font-size:14px;font-weight:600;color:#34C77B;letter-spacing:0.5px;">416-826-7591</span>
+      </a>
+      <a href="https://wa.me/14168267591" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="width:32px;height:32px;border-radius:8px;background:rgba(52,199,123,0.12);border:1px solid rgba(52,199,123,0.25);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">💬</span>
+        <span style="font-size:13px;color:#34C77B;">WhatsApp: 416-826-7591</span>
+      </a>
+      <a href="mailto:elina_insurance@hotmail.com" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="width:32px;height:32px;border-radius:8px;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.25);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">✉️</span>
+        <span style="font-size:12.5px;color:var(--gold-light);word-break:break-all;">elina_insurance@hotmail.com</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ SLIDE 2 – 什么是 Seg Fund ══════════════════════════════ -->
+<section class="slide" id="slide1">
+  <div class="page-header-deco"></div>
+  <div class="slide-num">01 / 基础概念</div>
+  <h2 class="slide-title">什么是<br><span class="gold">分隔基金？</span></h2>
+  <div class="divider"></div>
+
+  <div class="info-card">
+    <span class="card-icon">🏛️</span>
+    <div class="card-title">本质定义</div>
+    <div class="card-body">
+      Segregated Fund（分隔基金）是由<strong style="color:var(--gold-light)">保险公司独家发行</strong>的变额年金合同。投资者缴纳保费，资金由专业经理人投资于股票、债券等多元资产，但与保险公司自身资产<strong style="color:var(--gold-light)">严格分隔</strong>，受到省级保险法保护。
+    </div>
+  </div>
+
+  <div class="info-card">
+    <span class="card-icon">⚖️</span>
+    <div class="card-title">法律地位</div>
+    <div class="card-body">
+      在加拿大《所得税法》下，Seg Fund 被视为<strong style="color:var(--gold-light)">人寿保险合同</strong>（Para 138.1），受省级《保险法》监管，而非证券法——这一关键差异赋予了它独特的法律优势。
+    </div>
+  </div>
+
+  <div class="info-card">
+    <span class="card-icon">🛡️</span>
+    <div class="card-title">核心保障机制</div>
+    <div class="card-body">
+      合同必须保证在<strong style="color:var(--gold-light)">到期日或投保人身故时</strong>，偿还不低于已缴保费的 <strong style="color:var(--gold-light)">75%（部分产品为100%）</strong>。此保障为所有 Mutual Fund 和 ETF 所不具备。
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <div class="hb-title">🔑 一句话理解</div>
+    <div class="hb-body">Seg Fund = <strong style="color:var(--gold-light)">Mutual Fund 的投资增长潜力</strong> + <strong style="color:var(--gold-light)">人寿保险的法律保护</strong> + <strong style="color:var(--gold-light)">遗产传承的税务优势</strong></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ SLIDE 3 – 适合什么人 ══════════════════════════════ -->
+<section class="slide" id="slide2">
+  <div class="page-header-deco"></div>
+  <div class="slide-num">02 / 适用人群</div>
+  <h2 class="slide-title">哪些情况<br><span class="gold">最适合购买？</span></h2>
+  <div class="divider"></div>
+
+  <div class="scenario-card">
+    <span class="scenario-icon">👴</span>
+    <div>
+      <div class="scenario-title">临近退休或已退休人士</div>
+      <div class="scenario-body">担心市场大跌侵蚀退休积蓄？Seg Fund 的本金保障确保即使股市崩盘，到期日仍可取回至少75%的本金，是退休储蓄的安全护盾。</div>
+    </div>
+  </div>
+
+  <div class="scenario-card">
+    <span class="scenario-icon">💼</span>
+    <div>
+      <div class="scenario-title">自雇人士 / 小企业主</div>
+      <div class="scenario-body">如果您个人为公司债务担保，债权人可能追索您的个人资产。Seg Fund 在指定<strong style="color:var(--gold-light)">家庭成员为受益人</strong>时，可在破产或诉讼中获得债权人豁免保护。</div>
+    </div>
+  </div>
+
+  <div class="scenario-card">
+    <span class="scenario-icon">🏠</span>
+    <div>
+      <div class="scenario-title">注重遗产规划的家庭</div>
+      <div class="scenario-body">希望财富快速传递给子女，避免漫长的遗产认证流程？Seg Fund 指定受益人后，身故赔付<strong style="color:var(--gold-light)">直接支付给受益人，绕过遗产</strong>，两周内完成结算。</div>
+    </div>
+  </div>
+
+  <div class="scenario-card">
+    <span class="scenario-icon">🧾</span>
+    <div>
+      <div class="scenario-title">非注册账户的高收入投资者</div>
+      <div class="scenario-body">在非注册账户中，Seg Fund 是<strong style="color:var(--gold-light)">税务流通载体</strong>——亏损可直接传递给投资者用于抵税，这是 Mutual Fund 不具备的独特优势。</div>
+    </div>
+  </div>
+
+  <div class="scenario-card">
+    <span class="scenario-icon">🌟</span>
+    <div>
+      <div class="scenario-title">追求财富安全感的任何人</div>
+      <div class="scenario-body">Seg Fund 没有年龄限制，任何希望将<strong style="color:var(--gold-light)">投资增长与保险保障</strong>结合的人，都可以从中受益。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ SLIDE 4 – 三者对比 ══════════════════════════════ -->
+<section class="slide" id="slide3">
+  <div class="page-header-deco"></div>
+  <div class="slide-num">03 / 产品对比</div>
+  <h2 class="slide-title">Seg Fund vs<br><span class="gold">Mutual Fund vs ETF</span></h2>
+  <div class="divider"></div>
+
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="seg">SEG FUND</th>
+        <th class="mutual">共同基金</th>
+        <th class="etf">ETF</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>本金保障</td>
+        <td class="seg"><span class="tick">✓</span> 75-100%</td>
+        <td><span class="cross">✗</span></td>
+        <td><span class="cross">✗</span></td>
+      </tr>
+      <tr>
+        <td>死亡受益人</td>
+        <td class="seg"><span class="tick">✓</span> 可指定</td>
+        <td><span class="cross">✗</span></td>
+        <td><span class="cross">✗</span></td>
+      </tr>
+      <tr>
+        <td>绕过遗产认证</td>
+        <td class="seg"><span class="tick">✓</span></td>
+        <td><span class="cross">✗</span></td>
+        <td><span class="cross">✗</span></td>
+      </tr>
+      <tr>
+        <td>债权人保护</td>
+        <td class="seg"><span class="tick">✓</span> 可获得</td>
+        <td><span class="cross">✗</span></td>
+        <td><span class="cross">✗</span></td>
+      </tr>
+      <tr>
+        <td>亏损可传递</td>
+        <td class="seg"><span class="tick">✓</span></td>
+        <td><span class="cross">✗</span></td>
+        <td><span class="partial">△</span></td>
+      </tr>
+      <tr>
+        <td>重置保障功能</td>
+        <td class="seg"><span class="tick">✓</span> 锁定高点</td>
+        <td><span class="cross">✗</span></td>
+        <td><span class="cross">✗</span></td>
+      </tr>
+      <tr>
+        <td>受监管机构</td>
+        <td class="seg">省级保险法</td>
+        <td>证券法</td>
+        <td>证券法</td>
+      </tr>
+      <tr>
+        <td>管理费MER</td>
+        <td class="seg">较高</td>
+        <td>中等</td>
+        <td>最低</td>
+      </tr>
+      <tr>
+        <td>专业管理</td>
+        <td class="seg"><span class="tick">✓</span></td>
+        <td><span class="tick">✓</span></td>
+        <td><span class="partial">△</span></td>
+      </tr>
+      <tr>
+        <td>保险公司破产保护</td>
+        <td class="seg"><span class="tick">✓</span> ASSURIS</td>
+        <td><span class="cross">✗</span></td>
+        <td><span class="cross">✗</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box">
+    <div class="hb-title">📌 关键结论</div>
+    <div class="hb-body">ETF费用最低，但<strong style="color:var(--gold-light)">零保障</strong>。Mutual Fund费用居中，但同样<strong style="color:var(--gold-light)">没有遗产或债权人保护</strong>。Seg Fund管理费虽高，但提供的<strong style="color:var(--gold-light)">保险级别保护</strong>是其他产品无法复制的。</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ SLIDE 5 – 优缺点 ══════════════════════════════ -->
+<section class="slide" id="slide4">
+  <div class="page-header-deco"></div>
+  <div class="slide-num">04 / 深度分析</div>
+  <h2 class="slide-title">Seg Fund 的<br><span class="gold">优点与缺点</span></h2>
+  <div class="divider"></div>
+
+  <div class="pro-con">
+    <div class="pro-box">
+      <div class="box-title">✅ 核心优势</div>
+      <ul>
+        <li>本金保障75-100%</li>
+        <li>指定受益人，绕过遗产</li>
+        <li>债权人保护机制</li>
+        <li>亏损可传递给投资者</li>
+        <li>可锁定市值高点（重置）</li>
+        <li>保险公司破产时有ASSURIS保护</li>
+        <li>快速遗产结算（约2周）</li>
+        <li>省工夫、免律师费</li>
+      </ul>
+    </div>
+    <div class="con-box">
+      <div class="box-title">⚠️ 注意事项</div>
+      <ul>
+        <li>MER管理费较高</li>
+        <li>部分产品有DSC赎回费</li>
+        <li>产品相对复杂</li>
+        <li>保障条款需仔细阅读</li>
+        <li>短期交易有短期费用</li>
+        <li>并非所有人都需要</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <div class="hb-title">💡 费用权衡真相</div>
+    <div class="hb-body">
+      根据iA Financial Group的实际案例：<br>
+      <strong style="color:var(--gold-light)">25年后，Seg Fund净值（＄209,000）比Mutual Fund净值（＄200,440）多出＄8,560</strong>——这还是在MER更高的情况下，因为Seg Fund节省了约＄13,360的遗产认证费、律师费和遗产执行费。
+    </div>
+  </div>
+
+  <div class="info-card">
+    <span class="card-icon">🔄</span>
+    <div class="card-title">重置功能（Reset）的威力</div>
+    <div class="card-body">当市场上涨，您可以<strong style="color:var(--gold-light)">重置保障基数到新高点</strong>，锁定涨幅。例如：投资$100,000涨至$150,000后重置，即使之后跌至$80,000，到期日仍保障$150,000的75%（$112,500）。</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ SLIDE 6 – 人死后的遗产优势 ══════════════════════════════ -->
+<section class="slide" id="slide5">
+  <div class="page-header-deco"></div>
+  <div class="slide-num">05 / 遗产传承</div>
+  <h2 class="slide-title">人身故后的<br><span class="gold">关键优势</span></h2>
+  <div class="divider"></div>
+
+  <div class="death-flow">
+    <div class="flow-item">
+      <div class="flow-circle gold">⚡</div>
+      <div>
+        <div class="flow-title">直接绕过遗产认证（Probate）</div>
+        <div class="flow-body">Seg Fund 不属于遗产资产，<strong style="color:var(--gold-light)">直接支付给指定受益人</strong>。安大略省遗产认证税高达约1.5%，对大额遗产可省下数万元。</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-circle green">🚀</div>
+      <div>
+        <div class="flow-title">极速结算：约2周内完成</div>
+        <div class="flow-body">普通遗产结算通常需要<strong style="color:var(--gold-light)">数月到数年</strong>。Seg Fund受益人<strong style="color:var(--gold-light)">两周内即可获得资金</strong>，可立即用于支付丧葬费、税务债务等紧急需求。</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-circle blue">🔒</div>
+      <div>
+        <div class="flow-title">死亡保障：至少75%本金</div>
+        <div class="flow-body">即使身故时市场处于低点，受益人仍可获得<strong style="color:var(--gold-light)">不低于保费75%的保障金额</strong>（部分产品为100%），而非市场当前价值。</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-circle gold">🛡️</div>
+      <div>
+        <div class="flow-title">私密性：无需公开披露</div>
+        <div class="flow-body">遗产认证是公开程序，任何人都可查阅。Seg Fund 的受益人支付<strong style="color:var(--gold-light)">完全私密</strong>，不对公众公开，保护家庭财务隐私。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comparison: Death scenario -->
+  <div class="death-compare">
+    <div class="dc-row">
+      <div class="dc-cell header">死后费用对比</div>
+      <div class="dc-cell header" style="color:var(--gold);background:rgba(201,168,76,0.08)">SEG FUND</div>
+      <div class="dc-cell header">共同基金</div>
+    </div>
+    <div class="dc-row">
+      <div class="dc-cell">遗产认证税（~1.5%）</div>
+      <div class="dc-cell seg-cell good">$0</div>
+      <div class="dc-cell bad">~$2,460</div>
+    </div>
+    <div class="dc-row">
+      <div class="dc-cell">律师/会计费（~5%）</div>
+      <div class="dc-cell seg-cell good">$0</div>
+      <div class="dc-cell bad">~$4,500</div>
+    </div>
+    <div class="dc-row">
+      <div class="dc-cell">遗产执行人费（~5%）</div>
+      <div class="dc-cell seg-cell good">$0</div>
+      <div class="dc-cell bad">~$6,400</div>
+    </div>
+    <div class="dc-row">
+      <div class="dc-cell" style="font-weight:700">合计费用节省</div>
+      <div class="dc-cell seg-cell" style="font-size:14px;font-weight:800">节省$13,360</div>
+      <div class="dc-cell bad" style="font-size:13px;font-weight:700">-$13,360</div>
+    </div>
+  </div>
+  <p style="font-size:10px;color:var(--text-muted);margin-top:-8px">*基于iA Financial Group实际案例，安大略省税率，外部遗产执行人。</p>
+</section>
+
+<!-- ══════════════════════════════ SLIDE 7 – 税务优势 ══════════════════════════════ -->
+<section class="slide" id="slide6">
+  <div class="page-header-deco"></div>
+  <div class="slide-num">06 / 税务优势</div>
+  <h2 class="slide-title">不可忽视的<br><span class="gold">税务优势</span></h2>
+  <div class="divider"></div>
+
+  <div class="tax-item">
+    <div class="tax-badge">亏损<br>传递</div>
+    <div class="tax-content">
+      <div class="tax-title">资本亏损可直接传递给投资者</div>
+      <div class="tax-body">Seg Fund 的亏损可在年末分配给投资者，投资者可用于<strong style="color:var(--gold-light)">抵扣当年资本收益</strong>，降低税单。Mutual Fund 的亏损只能在基金内部结转，无法传递给单位持有人。</div>
+    </div>
+  </div>
+
+  <div class="tax-item">
+    <div class="tax-badge">税务<br>流通</div>
+    <div class="tax-content">
+      <div class="tax-title">收益性质保留（Flow-Through）</div>
+      <div class="tax-body">Seg Fund 如同"税务导管"——股息、利息、资本收益在传递给投资者时<strong style="color:var(--gold-light)">保留原有税务性质</strong>，以T3税单呈报。资本收益可享受50%计入优惠。</div>
+    </div>
+  </div>
+
+  <div class="tax-item">
+    <div class="tax-badge">购入<br>时间</div>
+    <div class="tax-content">
+      <div class="tax-title">不因购入时间而被"套税"</div>
+      <div class="tax-body">部分Seg Fund采用<strong style="color:var(--gold-light)">持有时间比例计税</strong>，年底购入的投资者不必为全年的基金收益负责，而Mutual Fund则会对年末购入者征收全年税。</div>
+    </div>
+  </div>
+
+  <div class="tax-item">
+    <div class="tax-badge">赠款<br>税务</div>
+    <div class="tax-content">
+      <div class="tax-title">死亡受益不触发额外税务</div>
+      <div class="tax-body">受益人通过Seg Fund收到的<strong style="color:var(--gold-light)">保险赔付无需缴纳受益税</strong>，完整金额到达受益人手中，相比遗产通过遗嘱传递更高效。</div>
+    </div>
+  </div>
+
+  <div class="tax-item">
+    <div class="tax-badge">RRSP/<br>TFSA</div>
+    <div class="tax-content">
+      <div class="tax-title">可放入注册账户使用</div>
+      <div class="tax-body">Seg Fund 完全兼容 RRSP、RRIF、TFSA 等注册账户，叠加注册账户的税务递延或免税优势，<strong style="color:var(--gold-light)">双重税务优化</strong>。</div>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top:16px">
+    <div class="hb-title">⚠️ 与 Mutual Fund 的关键税务差异</div>
+    <div class="hb-body">Mutual Fund 的<strong style="color:var(--gold-light)">资本亏损不分配给投资者</strong>，只能在基金内部结转。而 Seg Fund 亏损可传递，是非注册投资者在熊市的税务缓冲器。</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ SLIDE 8 – 投资回报实例 ══════════════════════════════ -->
+<section class="slide" id="slide7">
+  <div class="page-header-deco"></div>
+  <div class="slide-num">07 / 投资回报实例</div>
+  <h2 class="slide-title">Advanced Allocation<br><span class="gold">十年回报分析</span></h2>
+  <div class="divider"></div>
+
+  <p class="body">以 <strong>Canada Life Generations™ Advanced Allocation</strong>（进取型配置基金）为例——资产配置为80%股票、20%债券，历史数据截至2025年12月31日。</p>
+
+  <!-- Bar chart -->
+  <div class="chart-wrap">
+    <div class="chart-title">年度回报率（Generations 级别）</div>
+    <div class="bar-chart" id="barChart">
+      <!-- bars built by JS -->
+    </div>
+    <div id="yearLabels" style="display:flex;gap:5px"></div>
+  </div>
+
+  <div class="return-stats">
+    <div class="rs-item">
+      <div class="rs-label">十年平均年回报</div>
+      <div class="rs-value">5.54%</div>
+      <div class="rs-sub">Generations 级别</div>
+    </div>
+    <div class="rs-item">
+      <div class="rs-label">$1,000 → 十年后</div>
+      <div class="rs-value">$1,714</div>
+      <div class="rs-sub">净增长71.4%</div>
+    </div>
+    <div class="rs-item">
+      <div class="rs-label">正收益年份</div>
+      <div class="rs-value">8 / 10</div>
+      <div class="rs-sub">稳健胜率</div>
+    </div>
+    <div class="rs-item">
+      <div class="rs-label">基金规模</div>
+      <div class="rs-value">$419M</div>
+      <div class="rs-sub">总资产</div>
+    </div>
+  </div>
+
+  <!-- Investment example -->
+  <div class="dollar-flow">
+    <div style="font-size:12px;color:var(--gold);font-weight:700;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px">📊 投资增长示例</div>
+    <div class="df-row">
+      <span class="df-label">初始投资（2015年末）</span>
+      <span class="df-val gold">$100,000</span>
+    </div>
+    <div class="df-row">
+      <span class="df-label">十年后价值（2025年末）</span>
+      <span class="df-val green">$171,454</span>
+    </div>
+    <div class="df-row">
+      <span class="df-label">本金保障（75%）</span>
+      <span class="df-val gold">$75,000</span>
+    </div>
+    <div class="df-row">
+      <span class="df-label">净盈利（即使市场下跌也受保障）</span>
+      <span class="df-val green">+$71,454</span>
+    </div>
+  </div>
+
+  <p style="font-size:10px;color:var(--text-muted);line-height:1.6">*过去业绩不代表未来表现。回报已扣除基金费用比率（FER）。数据来源：Canada Life Generations™ Fund Facts，2025年12月31日。</p>
+</section>
+
+<!-- ══════════════════════════════ SLIDE 9 – 投资保障全景 ══════════════════════════════ -->
+<section class="slide" id="slide8">
+  <div class="page-header-deco"></div>
+  <div class="slide-num">08 / 多重保障</div>
+  <h2 class="slide-title">Seg Fund 的<br><span class="gold">五层保障体系</span></h2>
+  <div class="divider"></div>
+
+  <div class="info-card">
+    <span class="card-icon">🔵</span>
+    <div class="card-title">第一层：到期日本金保障</div>
+    <div class="card-body">在合同到期日（通常10年后），保证返还已缴保费的至少<strong style="color:var(--gold-light)">75%（部分为100%）</strong>。即使基金净值跌至$0，您仍可获得保障金额。</div>
+  </div>
+
+  <div class="info-card">
+    <span class="card-icon">🟡</span>
+    <div class="card-title">第二层：死亡保障</div>
+    <div class="card-body">投保人身故时，受益人可获得<strong style="color:var(--gold-light)">当时基金市值与保障金额（75-100%保费）中的较高者</strong>，确保受益人不因市场时机不好而损失本金。</div>
+  </div>
+
+  <div class="info-card">
+    <span class="card-icon">🟢</span>
+    <div class="card-title">第三层：重置功能（Reset）</div>
+    <div class="card-body">当基金净值上涨时，投资者可主动<strong style="color:var(--gold-light)">重置保障基数至更高的当前市值</strong>，锁定投资收益作为新的保障底线，让保障跟随财富增长。</div>
+  </div>
+
+  <div class="info-card">
+    <span class="card-icon">🔴</span>
+    <div class="card-title">第四层：债权人保护</div>
+    <div class="card-body">当受益人为<strong style="color:var(--gold-light)">直系家庭成员（配偶、子女、父母）</strong>时，Seg Fund 资产可豁免于破产或诉讼的债权人追索——自营职业者的重要保障。</div>
+  </div>
+
+  <div class="info-card">
+    <span class="card-icon">🟣</span>
+    <div class="card-title">第五层：ASSURIS 监管保障</div>
+    <div class="card-body">即使发行 Seg Fund 的保险公司倒闭，<strong style="color:var(--gold-light)">ASSURIS（加拿大非政府保险监管机构）</strong>将保障投资者获得合同权益的至少85%（最低$60,000）。</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ SLIDE 10 – 总结 CTA ══════════════════════════════ -->
+<section class="slide cta-slide" id="slide9">
+  <div class="cta-ring">
+    <span class="cta-icon">💎</span>
+  </div>
+  <h2 class="cta-title">是时候重新<br>认识 <span class="gold">Seg Fund</span></h2>
+  <p class="cta-desc">
+    在加拿大，Seg Fund 是唯一将<strong style="color:var(--gold-light)">投资增长、本金保障、遗产传承、税务优化、债权人保护</strong>集于一体的金融工具。
+  </p>
+
+  <div style="width:100%;max-width:340px;margin-bottom:28px">
+    <div class="highlight-box" style="text-align:left">
+      <div class="hb-title">✅ 核心价值回顾</div>
+      <div class="hb-body" style="font-size:12px">
+        <strong style="color:var(--gold-light)">投资增长：</strong>专业管理，多元资产配置<br>
+        <strong style="color:var(--gold-light)">本金保障：</strong>最高100%到期/身故保障<br>
+        <strong style="color:var(--gold-light)">遗产传承：</strong>绕过认证，2周极速结算<br>
+        <strong style="color:var(--gold-light)">税务优化：</strong>亏损传递，收益性质保留<br>
+        <strong style="color:var(--gold-light)">债权保护：</strong>破产诉讼中保护家庭财富
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Contact Block -->
+  <div style="width:100%;max-width:340px;margin-bottom:24px;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.28);border-radius:14px;padding:20px 18px;">
+    <div style="font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:14px;font-weight:700;text-align:left;">🌟 立即联系顾问</div>
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+      <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#C9A84C,#8A6B28);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">👩</div>
+      <div style="text-align:left;">
+        <div style="font-family:'Noto Serif SC',serif;font-size:18px;font-weight:700;color:#fff;">Elina</div>
+        <div style="font-size:11px;color:var(--text-muted);">持牌保险及理财顾问</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;text-align:left;">
+      <a href="tel:4168267591" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="width:30px;height:30px;border-radius:7px;background:rgba(52,199,123,0.12);border:1px solid rgba(52,199,123,0.25);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;">📞</span>
+        <span style="font-size:14px;font-weight:600;color:#34C77B;">416-826-7591</span>
+      </a>
+      <a href="https://wa.me/14168267591" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="width:30px;height:30px;border-radius:7px;background:rgba(52,199,123,0.12);border:1px solid rgba(52,199,123,0.25);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;">💬</span>
+        <span style="font-size:13px;color:#34C77B;">WhatsApp: 416-826-7591</span>
+      </a>
+      <a href="mailto:elina_insurance@hotmail.com" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="width:30px;height:30px;border-radius:7px;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.25);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;">✉️</span>
+        <span style="font-size:12px;color:var(--gold-light);word-break:break-all;">elina_insurance@hotmail.com</span>
+      </a>
+    </div>
+  </div>
+
+  <p class="cta-disclaimer">
+    本演示稿仅供一般教育目的，不构成个人投资、税务或法律建议。投资决策前请咨询持牌理财顾问及税务专业人士。过去的投资回报不代表未来表现。基金投资存在风险，价值可能下降。<br><br>
+    数据来源：Canada Life Generations™ Fund Facts（2025年12月31日）、iA Financial Group（F13-1133A）、Empire Life STEPUP（Vol.18 No.05）。
+  </p>
+</section>
+
+<script>
+// Bar chart data for Advanced Allocation
+const barData = [
+  { year: '2016', val: 6.14 },
+  { year: '2017', val: 6.18 },
+  { year: '2018', val: -5.59 },
+  { year: '2019', val: 10.41 },
+  { year: '2020', val: 7.20 },
+  { year: '2021', val: 11.76 },
+  { year: '2022', val: -9.89 },
+  { year: '2023', val: 8.44 },
+  { year: '2024', val: 13.63 },
+  { year: '2025', val: 9.69 },
+];
+
+const maxAbs = Math.max(...barData.map(d => Math.abs(d.val)));
+const chartH = 120;
+
+const chartEl = document.getElementById('barChart');
+const labelEl = document.getElementById('yearLabels');
+
+barData.forEach(d => {
+  const colDiv = document.createElement('div');
+  colDiv.className = 'bar-col';
+
+  const barH = Math.round((Math.abs(d.val) / maxAbs) * (chartH * 0.85));
+  const bar = document.createElement('div');
+  bar.className = 'bar ' + (d.val >= 0 ? 'pos' : 'neg');
+  bar.style.height = barH + 'px';
+  colDiv.appendChild(bar);
+
+  const valLabel = document.createElement('div');
+  valLabel.className = 'bar-val';
+  valLabel.textContent = (d.val > 0 ? '+' : '') + d.val + '%';
+  colDiv.appendChild(valLabel);
+
+  chartEl.appendChild(colDiv);
+
+  const yl = document.createElement('div');
+  yl.style.cssText = 'flex:1;text-align:center;font-size:8px;color:var(--text-muted)';
+  yl.textContent = d.year.slice(2);
+  labelEl.appendChild(yl);
+});
+
+// Nav dots scroll tracking
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+
+function scrollToSlide(i) {
+  slides[i].scrollIntoView({ behavior: 'smooth' });
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const idx = Array.from(slides).indexOf(entry.target);
+      dots.forEach(d => d.classList.remove('active'));
+      if (dots[idx]) dots[idx].classList.add('active');
+    }
+  });
+}, { threshold: 0.5 });
+
+slides.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
