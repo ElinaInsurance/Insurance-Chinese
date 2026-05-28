@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta property="og:title" content="重大疾病保险 — 加拿大免费医疗之外，你还需要它 2026">
+<meta property="og:description" content="2/5加拿大人一生中将患癌症。公费医疗不够用——重疾险才是真正的财务安全网">
+<title>重大疾病保险 | 2026完全指南</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --crimson: #C0392B;
+  --crimson2: #E74C3C;
+  --crimson-light: #F1948A;
+  --crimson-glow: rgba(192,57,43,0.18);
+  --bg: #0F0A0A;
+  --bg2: #1A0D0D;
+  --bg3: #221212;
+  --amber: #E8A020;
+  --amber-light: #F5C842;
+  --green: #27AE60;
+  --green-light: #2ECC71;
+  --blue: #2980B9;
+  --blue-light: #5DADE2;
+  --text: #F5EFEF;
+  --text-muted: #9A8A8A;
+  --card-bg: rgba(255,255,255,0.04);
+  --card-border: rgba(255,255,255,0.07);
+  --purple: #8E44AD;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'Noto Sans SC',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── SLIDES ── */
+.slide {
+  min-height:100vh;
+  width:100%;
+  max-width:480px;
+  margin:0 auto;
+  padding:52px 26px 64px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  border-bottom:1px solid rgba(192,57,43,0.2);
+  overflow:hidden;
+}
+.slide::before {
+  content:'';
+  position:absolute;
+  width:260px; height:260px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(192,57,43,0.12) 0%,transparent 70%);
+  top:-50px; right:-50px;
+  pointer-events:none;
+}
+.page-line {
+  position:absolute;
+  top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg,transparent,var(--crimson),transparent);
+  opacity:0.6;
+}
+
+/* ── HERO ── */
+.hero {
+  background:linear-gradient(160deg,#0F0A0A 0%,#1C0808 50%,#0A0808 100%);
+  padding-top:68px;
+}
+.hero::after {
+  content:'';
+  position:absolute;
+  bottom:0; left:0; right:0; height:200px;
+  background:linear-gradient(transparent,rgba(192,57,43,0.07));
+  pointer-events:none;
+}
+.hero-eyebrow {
+  display:inline-block;
+  background:rgba(192,57,43,0.15);
+  border:1px solid rgba(192,57,43,0.4);
+  color:var(--crimson-light);
+  font-size:10px; letter-spacing:3px;
+  padding:5px 14px; border-radius:2px;
+  margin-bottom:24px; text-transform:uppercase;
+}
+.hero-title {
+  font-family:'Noto Serif SC',serif;
+  font-size:30px; font-weight:700;
+  line-height:1.3; margin-bottom:10px; color:#fff;
+}
+.hero-title .accent { color:var(--crimson-light); }
+.hero-sub {
+  font-size:13px; color:var(--text-muted);
+  line-height:1.75; margin-bottom:36px; max-width:360px;
+}
+.hero-sub strong { color:var(--amber-light); }
+
+/* hero warning banner */
+.warning-banner {
+  background:rgba(192,57,43,0.15);
+  border:1px solid rgba(192,57,43,0.4);
+  border-left:4px solid var(--crimson2);
+  border-radius:8px; padding:14px 16px;
+  margin-bottom:28px;
+}
+.wb-title { font-size:12.5px; font-weight:700; color:var(--crimson-light); margin-bottom:6px; }
+.wb-body { font-size:11.5px; color:#C8B0B0; line-height:1.65; }
+.wb-body strong { color:var(--amber-light); }
+
+/* hero stats */
+.stat-row {
+  display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:28px;
+}
+.stat-box {
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:10px; padding:13px 10px; text-align:center;
+}
+.stat-n {
+  font-family:'Noto Serif SC',serif; font-size:17px;
+  font-weight:700; color:var(--crimson-light); display:block; margin-bottom:4px;
+}
+.stat-l { font-size:9px; color:var(--text-muted); line-height:1.35; }
+
+/* contact */
+.contact-card {
+  background:rgba(192,57,43,0.09);
+  border:1px solid rgba(192,57,43,0.28); border-radius:14px; padding:17px;
+}
+.contact-label { font-size:9.5px; letter-spacing:2.5px; color:var(--crimson-light); text-transform:uppercase; font-weight:700; margin-bottom:12px; }
+.contact-person { display:flex; align-items:center; gap:12px; margin-bottom:13px; }
+.contact-avatar {
+  width:44px; height:44px; border-radius:50%;
+  background:linear-gradient(135deg,#C0392B,#7B241C);
+  display:flex; align-items:center; justify-content:center;
+  font-size:19px; flex-shrink:0;
+}
+.contact-name { font-family:'Noto Serif SC',serif; font-size:18px; font-weight:700; color:#fff; }
+.contact-role { font-size:10.5px; color:var(--text-muted); margin-top:2px; }
+.contact-links { display:flex; flex-direction:column; gap:8px; }
+.contact-link { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.clink-icon {
+  width:29px; height:29px; border-radius:7px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:12px; flex-shrink:0;
+}
+.clink-g { background:rgba(39,174,96,0.12); border:1px solid rgba(39,174,96,0.25); }
+.clink-r { background:rgba(192,57,43,0.15); border:1px solid rgba(192,57,43,0.3); }
+.ctext-g { font-size:13px; font-weight:600; color:var(--green-light); }
+.ctext-r { font-size:11.5px; color:var(--crimson-light); word-break:break-all; }
+
+/* ── TYPOGRAPHY ── */
+.slide-num { font-size:10px; letter-spacing:3px; color:var(--crimson-light); text-transform:uppercase; margin-bottom:26px; font-weight:500; opacity:0.85; }
+.slide-title { font-family:'Noto Serif SC',serif; font-size:23px; font-weight:700; line-height:1.4; margin-bottom:6px; color:#fff; }
+.slide-title .t { color:var(--crimson-light); }
+.divider { width:44px; height:3px; background:linear-gradient(90deg,var(--crimson),transparent); margin-bottom:24px; border-radius:2px; }
+p.bd { font-size:13px; line-height:1.82; color:#CCC0C0; margin-bottom:14px; }
+p.bd strong { color:var(--amber-light); font-weight:500; }
+
+/* ── CARDS ── */
+.card {
+  background:var(--card-bg); border:1px solid var(--card-border);
+  border-radius:12px; padding:15px 17px; margin-bottom:11px;
+}
+.card-icon { font-size:19px; margin-bottom:7px; display:block; }
+.card-title { font-size:12.5px; font-weight:700; color:var(--crimson-light); margin-bottom:5px; }
+.card-body { font-size:12px; color:#BEB0B0; line-height:1.72; }
+.card-body strong { color:var(--amber-light); font-weight:500; }
+
+/* ── HIGHLIGHT BOX ── */
+.hbox {
+  background:linear-gradient(135deg,rgba(192,57,43,0.13),rgba(192,57,43,0.04));
+  border:1px solid rgba(192,57,43,0.28); border-left:3px solid var(--crimson);
+  border-radius:8px; padding:13px 15px; margin-bottom:13px;
+}
+.hbox-title { font-size:11px; text-transform:uppercase; letter-spacing:1.5px; color:var(--crimson-light); margin-bottom:6px; font-weight:700; }
+.hbox-body { font-size:12.5px; line-height:1.75; color:#D0C4C4; }
+.hbox-body strong { color:var(--amber-light); }
+
+/* ── ALARM BOX (unique — red border all around) ── */
+.alarm-box {
+  background:rgba(192,57,43,0.13);
+  border:1.5px solid rgba(192,57,43,0.45);
+  border-radius:10px; padding:14px 16px; margin-bottom:13px;
+}
+.alarm-title { font-size:13px; font-weight:700; color:var(--crimson-light); margin-bottom:6px; }
+.alarm-body { font-size:12px; color:#C8B0B0; line-height:1.7; }
+.alarm-body strong { color:#F5C842; }
+
+/* ── NOT COVERED GRID ── */
+.not-covered {
+  display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:16px;
+}
+.nc-item {
+  background:rgba(192,57,43,0.08); border:1px solid rgba(192,57,43,0.22);
+  border-radius:10px; padding:12px; text-align:center;
+}
+.nc-icon { font-size:20px; margin-bottom:6px; }
+.nc-title { font-size:11px; font-weight:700; color:var(--crimson-light); margin-bottom:3px; }
+.nc-body { font-size:10.5px; color:#A89090; line-height:1.5; }
+
+/* ── STAT BAR ── */
+.stat-bar {
+  background:rgba(255,255,255,0.03); border-radius:12px;
+  border:1px solid rgba(255,255,255,0.06); padding:14px; margin-bottom:10px;
+}
+.sb-label { font-size:11.5px; color:#BEB0B0; margin-bottom:6px; }
+.sb-track { height:18px; background:rgba(255,255,255,0.06); border-radius:4px; overflow:hidden; position:relative; }
+.sb-fill { height:100%; border-radius:4px; }
+.sb-fill.crimson { background:linear-gradient(90deg,var(--crimson2),rgba(192,57,43,0.4)); }
+.sb-fill.amber { background:linear-gradient(90deg,var(--amber),rgba(232,160,32,0.4)); }
+.sb-fill.green { background:linear-gradient(90deg,var(--green),rgba(39,174,96,0.4)); }
+.sb-val { font-size:11px; font-weight:700; margin-top:4px; text-align:right; }
+
+/* ── COVERED VS NOT COVERED TABLE ── */
+.cover-table {
+  width:100%; border-collapse:separate; border-spacing:0;
+  margin-bottom:14px; font-size:11.5px;
+  border-radius:10px; overflow:hidden; border:1px solid rgba(255,255,255,0.07);
+}
+.cover-table th {
+  padding:9px 10px; font-size:10px; font-weight:700;
+  letter-spacing:0.5px; text-align:center; background:rgba(0,0,0,0.25);
+}
+.cover-table th:first-child { text-align:left; color:var(--text-muted); }
+.cover-table th.th-yes { color:var(--green-light); }
+.cover-table th.th-no { color:var(--crimson-light); }
+.cover-table td { padding:8px 10px; border-bottom:1px solid rgba(255,255,255,0.05); text-align:center; color:#BEB0B0; vertical-align:middle; }
+.cover-table td:first-child { text-align:left; font-size:11.5px; color:#D0C4C4; }
+.cover-table tr:last-child td { border-bottom:none; }
+.yes { color:var(--green-light); font-size:14px; }
+.no { color:var(--crimson2); font-size:14px; }
+.part { color:var(--amber); font-size:13px; }
+
+/* ── ILLNESS CARDS ── */
+.illness-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:16px; }
+.ill-item {
+  background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07);
+  border-radius:10px; padding:13px; text-align:center;
+}
+.ill-icon { font-size:22px; margin-bottom:6px; }
+.ill-name { font-size:12px; font-weight:700; color:#E8D8D8; margin-bottom:3px; }
+.ill-stat { font-size:10.5px; color:var(--crimson-light); font-weight:600; }
+
+/* ── PAYOUT FLOW ── */
+.payout-flow { display:flex; flex-direction:column; gap:0; margin-bottom:16px; }
+.pf-item { display:flex; align-items:flex-start; gap:13px; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.05); }
+.pf-item:last-child { border-bottom:none; }
+.pf-dot {
+  width:33px; height:33px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:13px; flex-shrink:0; margin-top:2px;
+}
+.pd-r { background:rgba(192,57,43,0.18); border:1.5px solid var(--crimson); }
+.pd-a { background:rgba(232,160,32,0.15); border:1.5px solid var(--amber); }
+.pd-g { background:rgba(39,174,96,0.12); border:1.5px solid var(--green); }
+.pd-b { background:rgba(41,128,185,0.12); border:1.5px solid var(--blue); }
+.pf-title { font-size:12.5px; font-weight:700; color:#E8D8D8; margin-bottom:3px; }
+.pf-body { font-size:11.5px; color:#9A8A8A; line-height:1.65; }
+.pf-body strong { color:var(--amber-light); }
+
+/* ── COMPARE: CI vs DI ── */
+.ci-di-table {
+  width:100%; border-collapse:separate; border-spacing:0;
+  margin-bottom:14px; font-size:11.5px;
+  border-radius:10px; overflow:hidden; border:1px solid rgba(255,255,255,0.07);
+}
+.ci-di-table th {
+  padding:9px 10px; font-size:10.5px; font-weight:700;
+  letter-spacing:0.5px; text-align:center; background:rgba(0,0,0,0.25);
+}
+.ci-di-table th:first-child { text-align:left; color:var(--text-muted); }
+.ci-di-table th.th-ci { color:var(--crimson-light); background:rgba(192,57,43,0.08); }
+.ci-di-table th.th-di { color:var(--blue-light); }
+.ci-di-table td { padding:8px 10px; border-bottom:1px solid rgba(255,255,255,0.05); text-align:center; color:#BEB0B0; vertical-align:middle; }
+.ci-di-table td:first-child { text-align:left; font-size:11.5px; color:#D0C4C4; font-weight:500; }
+.ci-di-table td.ci-v { background:rgba(192,57,43,0.05); color:var(--crimson-light); font-weight:600; }
+.ci-di-table td.di-v { color:var(--blue-light); }
+.ci-di-table tr:last-child td { border-bottom:none; }
+
+/* procon */
+.procon { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:14px; }
+.pro-box { background:rgba(39,174,96,0.07); border:1px solid rgba(39,174,96,0.2); border-radius:10px; padding:13px; }
+.con-box { background:rgba(192,57,43,0.07); border:1px solid rgba(192,57,43,0.2); border-radius:10px; padding:13px; }
+.pro-box .bt { color:var(--green-light); font-size:11px; font-weight:700; margin-bottom:8px; }
+.con-box .bt { color:var(--crimson-light); font-size:11px; font-weight:700; margin-bottom:8px; }
+.pro-box li, .con-box li { font-size:10.5px; line-height:1.65; color:#BEB0B0; list-style:none; padding-left:13px; position:relative; margin-bottom:5px; }
+.pro-box li::before { content:'✓'; position:absolute; left:0; color:var(--green); font-weight:700; }
+.con-box li::before { content:'×'; position:absolute; left:0; color:var(--crimson2); font-weight:700; }
+
+/* example box */
+.ex-box {
+  background:rgba(192,57,43,0.07); border:1px solid rgba(192,57,43,0.22);
+  border-radius:12px; padding:15px; margin-bottom:13px;
+}
+.ex-title { font-size:10.5px; font-weight:700; color:var(--crimson-light); text-transform:uppercase; letter-spacing:1px; margin-bottom:10px; }
+.ex-row { display:flex; justify-content:space-between; align-items:center; padding:5px 0; border-bottom:1px solid rgba(255,255,255,0.05); font-size:12px; }
+.ex-row:last-child { border-bottom:none; }
+.ex-l { color:#A89090; }
+.ex-v { font-weight:700; }
+.ev-g { color:var(--green-light); }
+.ev-r { color:var(--crimson-light); }
+.ev-a { color:var(--amber-light); }
+
+/* CTA */
+.cta-slide { background:linear-gradient(155deg,#100808 0%,#1A0C0C 100%); justify-content:center; align-items:center; text-align:center; }
+.cta-ring {
+  width:90px; height:90px; border-radius:50%;
+  border:2px solid rgba(192,57,43,0.4);
+  display:flex; align-items:center; justify-content:center;
+  margin:0 auto 22px; position:relative;
+}
+.cta-ring::after {
+  content:''; position:absolute; inset:6px; border-radius:50%;
+  background:rgba(192,57,43,0.1); border:1px solid rgba(192,57,43,0.2);
+}
+.cta-icon { font-size:32px; position:relative; z-index:1; }
+.cta-title { font-family:'Noto Serif SC',serif; font-size:25px; font-weight:700; line-height:1.3; margin-bottom:12px; }
+.cta-desc { font-size:12.5px; color:var(--text-muted); line-height:1.75; max-width:320px; margin:0 auto 26px; }
+.cta-disc { font-size:9px; color:#3E3030; line-height:1.6; max-width:340px; margin:0 auto; }
+
+/* nav dots */
+.nav-dots { position:fixed; right:12px; top:50%; transform:translateY(-50%); display:flex; flex-direction:column; gap:7px; z-index:100; }
+.dot { width:5px; height:5px; border-radius:50%; background:rgba(255,255,255,0.15); cursor:pointer; transition:all 0.3s; }
+.dot.active { background:var(--crimson-light); transform:scale(1.5); }
+
+@media (max-width:380px) {
+  .slide { padding:40px 20px 52px; }
+  .hero-title { font-size:26px; }
+  .slide-title { font-size:20px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav-dots">
+  <div class="dot active" onclick="goTo(0)"></div>
+  <div class="dot" onclick="goTo(1)"></div>
+  <div class="dot" onclick="goTo(2)"></div>
+  <div class="dot" onclick="goTo(3)"></div>
+  <div class="dot" onclick="goTo(4)"></div>
+  <div class="dot" onclick="goTo(5)"></div>
+  <div class="dot" onclick="goTo(6)"></div>
+  <div class="dot" onclick="goTo(7)"></div>
+  <div class="dot" onclick="goTo(8)"></div>
+  <div class="dot" onclick="goTo(9)"></div>
+</nav>
+
+<!-- ══ SLIDE 1 — HERO ══ -->
+<section class="slide hero" id="s0">
+  <div class="hero-eyebrow">重疾险完全指南 · 2026版</div>
+  <h1 class="hero-title">重大疾病保险<br><span class="accent">加拿大不能没有它</span></h1>
+  <p class="hero-sub">
+    "我有公费医疗，还需要买保险吗？"<br>
+    <strong>答案是：绝对需要。</strong>公费医疗只保救命治疗，不保你的收入、药费、护理、和家庭的正常运转。
+  </p>
+
+  <div class="warning-banner">
+    <div class="wb-title">⚠️ 你知道吗？</div>
+    <div class="wb-body">加拿大癌症患者平均每月自掏腰包 <strong>$290</strong> 的自付费用——而这只是公费系统不覆盖的部分。<strong>90%</strong> 的加拿大人认为突然确诊癌症将严重冲击家庭财务。</div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-box">
+      <span class="stat-n">2/5</span>
+      <span class="stat-l">加拿大人一生中将患癌症</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-n">$6,000</span>
+      <span class="stat-l">癌症口服药每月均价</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-n">免税</span>
+      <span class="stat-l">一次性赔付，自由支配</span>
+    </div>
+  </div>
+
+  <!-- SVG heart/pulse decoration -->
+  <div style="text-align:center;margin-bottom:22px;opacity:0.15;">
+    <svg width="140" height="60" viewBox="0 0 140 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="0,30 20,30 30,10 40,50 50,20 60,40 70,15 80,45 90,30 110,30 120,20 130,30 140,30" stroke="#C0392B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-label">📬 咨询顾问</div>
+    <div class="contact-person">
+      <div class="contact-avatar">👩</div>
+      <div>
+        <div class="contact-name">Elina</div>
+        <div class="contact-role">持牌保险及理财顾问</div>
+      </div>
+    </div>
+    <div class="contact-links">
+      <a href="tel:4168267591" class="contact-link">
+        <span class="clink-icon clink-g">📞</span><span class="ctext-g">416-826-7591</span>
+      </a>
+      <a href="https://wa.me/14168267591" class="contact-link">
+        <span class="clink-icon clink-g">💬</span><span class="ctext-g">WhatsApp: 416-826-7591</span>
+      </a>
+      <a href="mailto:elina_insurance@hotmail.com" class="contact-link">
+        <span class="clink-icon clink-r">✉️</span><span class="ctext-r">elina_insurance@hotmail.com</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 2 — 公费医疗的真相 ══ -->
+<section class="slide" id="s1">
+  <div class="page-line"></div>
+  <div class="slide-num">01 / 公费医疗的真相</div>
+  <h2 class="slide-title">免费医疗<br><span class="t">并不"免费"——差额你来付</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">加拿大的公费医疗（OHIP等省级计划）确实覆盖了<strong>医院内的手术、化疗、放疗</strong>等基本治疗，但一旦患上重大疾病，<strong>大量真实费用根本不在覆盖范围内</strong>：</p>
+
+  <div class="not-covered">
+    <div class="nc-item">
+      <div class="nc-icon">💊</div>
+      <div class="nc-title">口服癌症药物</div>
+      <div class="nc-body">院外处方药不在公费范围，均价 <strong style="color:var(--crimson-light)">$6,000/月</strong></div>
+    </div>
+    <div class="nc-item">
+      <div class="nc-icon">🏠</div>
+      <div class="nc-title">居家护理</div>
+      <div class="nc-body">聘请护士或护工<br>自费承担</div>
+    </div>
+    <div class="nc-item">
+      <div class="nc-icon">✈️</div>
+      <div class="nc-title">跨城市就医交通</div>
+      <div class="nc-body">前往专科中心的<br>住宿及交通费用</div>
+    </div>
+    <div class="nc-item">
+      <div class="nc-icon">💼</div>
+      <div class="nc-title">失业收入损失</div>
+      <div class="nc-body">停工期间家庭<br>收入断裂</div>
+    </div>
+    <div class="nc-item">
+      <div class="nc-icon">👶</div>
+      <div class="nc-title">子女照护</div>
+      <div class="nc-body">治疗及康复期间<br>的日托费用</div>
+    </div>
+    <div class="nc-item">
+      <div class="nc-icon">🧪</div>
+      <div class="nc-title">替代治疗</div>
+      <div class="nc-body">物理治疗、营养<br>补充等辅助疗法</div>
+    </div>
+  </div>
+
+  <div class="alarm-box">
+    <div class="alarm-title">🔴 数据说话</div>
+    <div class="alarm-body">加拿大癌症协会调查：癌症患者平均每月自付 <strong>$290</strong> 的非医疗费用。加拿大是全球<strong>唯一同时拥有全民医疗、却没有全民处方药保障</strong>的发达国家。</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 3 — 患病概率有多大 ══ -->
+<section class="slide" id="s2">
+  <div class="page-line"></div>
+  <div class="slide-num">02 / 患病风险</div>
+  <h2 class="slide-title">这不是<span class="t">"别人的事"</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">许多人认为重大疾病离自己很远。<strong>真实数据告诉你：它离每个加拿大人都很近。</strong></p>
+
+  <!-- probability bars -->
+  <div style="margin-bottom:18px;">
+    <div class="stat-bar">
+      <div class="sb-label">🎗️ 加拿大人一生中患癌概率</div>
+      <div class="sb-track"><div class="sb-fill crimson" style="width:44%"></div></div>
+      <div class="sb-val" style="color:var(--crimson-light)">男性44% · 女性43%</div>
+    </div>
+    <div class="stat-bar">
+      <div class="sb-label">❤️ 心脏病是加拿大第二大死因</div>
+      <div class="sb-track"><div class="sb-fill amber" style="width:28%"></div></div>
+      <div class="sb-val" style="color:var(--amber-light)">每年约 50,000 人死于心脏病</div>
+    </div>
+    <div class="stat-bar">
+      <div class="sb-label">🧠 中风每年影响人数</div>
+      <div class="sb-track"><div class="sb-fill amber" style="width:22%"></div></div>
+      <div class="sb-val" style="color:var(--amber-light)">每年约 62,000 人中风</div>
+    </div>
+    <div class="stat-bar">
+      <div class="sb-label">📋 重疾险三大理赔原因</div>
+      <div class="sb-track"><div class="sb-fill crimson" style="width:75%"></div></div>
+      <div class="sb-val" style="color:var(--crimson-light)">癌症、心脏病、中风 占索赔的约75%</div>
+    </div>
+  </div>
+
+  <div class="illness-grid">
+    <div class="ill-item">
+      <div class="ill-icon">🎗️</div>
+      <div class="ill-name">癌症</div>
+      <div class="ill-stat">加拿大第一大死因，占全部死亡30%</div>
+    </div>
+    <div class="ill-item">
+      <div class="ill-icon">💔</div>
+      <div class="ill-name">心脏病/心肌梗塞</div>
+      <div class="ill-stat">每7分钟一人因心脏病死亡</div>
+    </div>
+    <div class="ill-item">
+      <div class="ill-icon">🧠</div>
+      <div class="ill-name">中风</div>
+      <div class="ill-stat">每年6.2万人，致残率极高</div>
+    </div>
+    <div class="ill-item">
+      <div class="ill-icon">🫀</div>
+      <div class="ill-name">其他覆盖病种</div>
+      <div class="ill-stat">多发性硬化症、器官衰竭、帕金森等 25+ 种</div>
+    </div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">💡 存活率提升 = 财务压力更大</div>
+    <div class="hbox-body">现代医学的进步让更多重疾患者得以生存，但也意味着<strong>更长的康复期、更高的持续医疗成本</strong>。活下来了，却可能被账单压垮——这正是重疾险最关键的保护价值。</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 4 — 什么是重疾险 ══ -->
+<section class="slide" id="s3">
+  <div class="page-line"></div>
+  <div class="slide-num">03 / 产品定义</div>
+  <h2 class="slide-title">重大疾病保险<br><span class="t">是什么？怎么运作？</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">重大疾病保险（Critical Illness Insurance）是一种<strong>确诊即赔付的健康保险</strong>。一旦您被确诊为保单列明的重大疾病，您将收到一笔<strong>一次性免税赔款</strong>，无需说明用途，自由支配。</p>
+
+  <div class="payout-flow">
+    <div class="pf-item">
+      <div class="pf-dot pd-r">1</div>
+      <div>
+        <div class="pf-title">选择保额，缴纳保费</div>
+        <div class="pf-body">根据您的收入、负债及家庭需求确定保额（如$50,000–$500,000），定期缴纳保费。</div>
+      </div>
+    </div>
+    <div class="pf-item">
+      <div class="pf-dot pd-a">2</div>
+      <div>
+        <div class="pf-title">确诊保单涵盖的重大疾病</div>
+        <div class="pf-body">被医生确诊为保单所列病症（如癌症、心肌梗塞、中风等），通常需满足<strong>等待期（通常30天）</strong>方可申请。</div>
+      </div>
+    </div>
+    <div class="pf-item">
+      <div class="pf-dot pd-g">3</div>
+      <div>
+        <div class="pf-title">提出理赔申请</div>
+        <div class="pf-body">向保险公司提交确诊证明及相关医疗文件，由保险公司审核批准。</div>
+      </div>
+    </div>
+    <div class="pf-item">
+      <div class="pf-dot pd-b">4</div>
+      <div>
+        <div class="pf-title">收到<strong>一次性免税赔款</strong></div>
+        <div class="pf-body">理赔获批后，一次性收到全额赔款。<strong>免税，自由支配</strong>——可用于还贷款、支付药费、家庭开支、或任何您需要的地方。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">🔑 关键：钱用在哪里，你说了算</div>
+    <div class="hbox-body">不同于医疗报销险，重疾险赔款<strong>无需发票、无需说明用途</strong>。您可以还房贷、补收入、出国治疗、或让家人陪护——完全自主。</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 5 — 公费覆盖对比 ══ -->
+<section class="slide" id="s4">
+  <div class="page-line"></div>
+  <div class="slide-num">04 / 覆盖差距</div>
+  <h2 class="slide-title">公费医疗 vs 重疾险<br><span class="t">到底差了什么？</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">公费医疗提供<strong>基础救命治疗</strong>，但漏掉了重疾之后最痛的那些账单。重疾险填补这个空白：</p>
+
+  <table class="cover-table">
+    <thead>
+      <tr>
+        <th>费用类别</th>
+        <th class="th-yes">公费医疗</th>
+        <th class="th-yes" style="color:var(--crimson-light)">重疾险</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>医院内手术/化疗/放疗</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td>院外口服癌症药物</td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td>私人病房</td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td>居家护士/护工</td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td>收入损失补偿</td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td>家庭贷款/房贷</td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td>物理治疗/营养康复</td><td><span class="part">△</span>有限</td><td><span class="yes">✓</span></td></tr>
+      <tr><td>子女照护费用</td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td>跨城市就医交通住宿</td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td>海外最新疗法/临床试验</td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="alarm-box">
+    <div class="alarm-title">📍 真实场景</div>
+    <div class="alarm-body">Mary，45岁，确诊乳腺癌。公费系统支付了手术和化疗，但她每月还需自付：<strong>$2,800 口服靶向药 + $1,500 居家护工 + $600 停车/交通 + $1,200 收入缺口</strong> = 每月 <strong>$6,100</strong> 的自付压力。重疾险赔款可直接覆盖这笔缺口。</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 6 — 赔款用途 ══ -->
+<section class="slide" id="s5">
+  <div class="page-line"></div>
+  <div class="slide-num">05 / 赔款用途</div>
+  <h2 class="slide-title">这笔钱，<br><span class="t">可以用来做什么？</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">重疾险赔款是一笔<strong>完全免税的现金</strong>，收到之后您可以自由决定如何使用。以下是最常见的用途：</p>
+
+  <div class="payout-flow">
+    <div class="pf-item">
+      <div class="pf-dot pd-a">💰</div>
+      <div>
+        <div class="pf-title">补偿收入损失</div>
+        <div class="pf-body">治疗和康复期间无法全职工作，赔款可<strong>替代工资收入</strong>，维持家庭正常开支，不动用储蓄。</div>
+      </div>
+    </div>
+    <div class="pf-item">
+      <div class="pf-dot pd-r">🏠</div>
+      <div>
+        <div class="pf-title">保障房贷/租金</div>
+        <div class="pf-body">确保家人不因病失房，<strong>按时还贷、支付租金</strong>，不打乱家庭生活节奏。</div>
+      </div>
+    </div>
+    <div class="pf-item">
+      <div class="pf-dot pd-g">💊</div>
+      <div>
+        <div class="pf-title">支付自费药物与新疗法</div>
+        <div class="pf-body">获取最新的靶向药、免疫疗法等<strong>公费未覆盖的先进治疗</strong>，不因费用而妥协治疗方案。</div>
+      </div>
+    </div>
+    <div class="pf-item">
+      <div class="pf-dot pd-b">🛡️</div>
+      <div>
+        <div class="pf-title">保护退休储蓄</div>
+        <div class="pf-body">不必动用RRSP、TFSA等退休积蓄，<strong>保全长期财务规划</strong>，避免提前兑现带来的税务损失。</div>
+      </div>
+    </div>
+    <div class="pf-item">
+      <div class="pf-dot pd-a">🌐</div>
+      <div>
+        <div class="pf-title">获取顶尖医疗专家意见</div>
+        <div class="pf-body">Canada Life等保险公司还提供<strong>全球顶级5%专科医生会诊</strong>，获取第二诊断意见，制定最优治疗方案。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">💡 "退保返还"选项</div>
+    <div class="hbox-body">部分保单提供<strong>Return of Premium（保费返还）</strong>选项：如果满保单期限未发生理赔，可选择<strong>收回全部或部分已缴保费</strong>，真正做到"用到赚到，用不到不亏"。</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 7 — 重疾险 vs 残疾险 ══ -->
+<section class="slide" id="s6">
+  <div class="page-line"></div>
+  <div class="slide-num">06 / 产品对比</div>
+  <h2 class="slide-title">重疾险 vs 残疾险<br><span class="t">两者都需要吗？</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">很多人混淆重疾险和残疾险。两者<strong>保障范围不同，互补而非替代</strong>：</p>
+
+  <table class="ci-di-table">
+    <thead>
+      <tr>
+        <th>对比维度</th>
+        <th class="th-ci">重大疾病保险</th>
+        <th class="th-di">残疾保险</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>赔付方式</td>
+        <td class="ci-v">一次性免税整付</td>
+        <td class="di-v">每月收入替代</td>
+      </tr>
+      <tr>
+        <td>触发条件</td>
+        <td class="ci-v">确诊覆盖病种即赔</td>
+        <td class="di-v">无法工作才赔</td>
+      </tr>
+      <tr>
+        <td>等待期</td>
+        <td class="ci-v">部分病种无需等待</td>
+        <td class="di-v">通常需等待30-90天</td>
+      </tr>
+      <tr>
+        <td>保障年限</td>
+        <td class="ci-v">终身保障</td>
+        <td class="di-v">通常至65岁</td>
+      </tr>
+      <tr>
+        <td>资金用途</td>
+        <td class="ci-v">完全自由支配</td>
+        <td class="di-v">主要替代工资收入</td>
+      </tr>
+      <tr>
+        <td>最适合</td>
+        <td class="ci-v">大额一次性需求：药费、贷款、出国治疗</td>
+        <td class="di-v">长期月度生活开支保障</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="hbox">
+    <div class="hbox-title">✅ 最佳策略：两者搭配</div>
+    <div class="hbox-body">重疾险提供<strong>大额一次性现金流</strong>应对紧急高额支出，残疾险保障<strong>持续月度收入</strong>维持生活。两者搭配，才能全面对抗重大疾病带来的财务冲击。</div>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">🎯</span>
+    <div class="card-title">自雇人士尤其需要</div>
+    <div class="card-body">部分雇主提供团体重疾险，但<strong>自雇、自营业者无法享受</strong>团体保险。对于企业主、自由职业者，个人重疾险是抵御财务风险的重要防线。</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 8 — 保费计算与影响因素 ══ -->
+<section class="slide" id="s7">
+  <div class="page-line"></div>
+  <div class="slide-num">07 / 保费与规划</div>
+  <h2 class="slide-title">我需要多少保额？<br><span class="t">保费受哪些因素影响？</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">重疾险的保额应根据<strong>您的实际财务缺口</strong>来设计，而非随意选取：</p>
+
+  <div class="ex-box">
+    <div class="ex-title">📋 保额需求评估框架</div>
+    <div class="ex-row"><span class="ex-l">预计收入损失（6–24个月）</span><span class="ex-v ev-r">+$X</span></div>
+    <div class="ex-row"><span class="ex-l">未覆盖药物/治疗费用</span><span class="ex-v ev-r">+$X</span></div>
+    <div class="ex-row"><span class="ex-l">房贷/租金（6–12个月）</span><span class="ex-v ev-r">+$X</span></div>
+    <div class="ex-row"><span class="ex-l">居家护理/子女照护</span><span class="ex-v ev-r">+$X</span></div>
+    <div class="ex-row"><span class="ex-l">交通/住宿（就医）</span><span class="ex-v ev-r">+$X</span></div>
+    <div class="ex-row"><span class="ex-l">建议最低保额</span><span class="ex-v ev-a">$50,000 起</span></div>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">📊</span>
+    <div class="card-title">影响保费的主要因素</div>
+    <div class="card-body">
+      <strong>年龄：</strong>越早购买越便宜，年龄越大风险越高<br>
+      <strong>健康状况：</strong>既往病史、BMI、家族病史<br>
+      <strong>吸烟状态：</strong>吸烟者保费明显高于非吸烟者<br>
+      <strong>保额：</strong>保障金额越高，保费越高<br>
+      <strong>保障范围：</strong>覆盖病种越多（25种 vs 4种），保费越高<br>
+      <strong>附加条款：</strong>保费返还选项会增加保费
+    </div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">⏰ 越早买越合算</div>
+    <div class="hbox-body">以30岁非吸烟健康男性为例，$100,000保额的重疾险月保费约 <strong>$100–$150</strong>。同样保额，若等到50岁才购买，月保费可能高达 <strong>$400–$600</strong>，甚至因健康问题被拒保。</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 9 — 优缺点与注意事项 ══ -->
+<section class="slide" id="s8">
+  <div class="page-line"></div>
+  <div class="slide-num">08 / 全面分析</div>
+  <h2 class="slide-title">重疾险<br><span class="t">优缺点与购买注意事项</span></h2>
+  <div class="divider"></div>
+
+  <div class="procon">
+    <div class="pro-box">
+      <div class="bt">✅ 核心优势</div>
+      <ul>
+        <li>确诊即赔，一次性免税</li>
+        <li>资金用途完全自由</li>
+        <li>弥补公费医疗缺口</li>
+        <li>保护退休储蓄不被动用</li>
+        <li>赔款可偿还贷款</li>
+        <li>覆盖25+种重大疾病</li>
+        <li>可附加保费返还选项</li>
+        <li>提供专家医疗会诊</li>
+      </ul>
+    </div>
+    <div class="con-box">
+      <div class="bt">⚠️ 注意事项</div>
+      <ul>
+        <li>存在等待期（通常30天）</li>
+        <li>需满足病种定义才赔</li>
+        <li>保费随年龄增长</li>
+        <li>附加保费返还选项较贵</li>
+        <li>约17%理赔被拒（需仔细读条款）</li>
+        <li>已有既往症可能被排除</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">📋</span>
+    <div class="card-title">理赔被拒的主要原因——如何避免</div>
+    <div class="card-body">根据Munich Re 2024年调查，<strong>71%的被拒理赔</strong>是因为"病症不符合保单定义"或"病种不在保单范围内"。购买前务必：<br><br>
+    • <strong>仔细阅读病种定义</strong>（如癌症分早期和晚期）<br>
+    • 了解哪些病种在保障范围内<br>
+    • 如实申报既往病史<br>
+    • 咨询专业顾问选择适合保单</div>
+  </div>
+
+  <div class="alarm-box">
+    <div class="alarm-title">⚡ 最重要的建议</div>
+    <div class="alarm-body">重疾险条款复杂，不同保险公司的病种定义和覆盖范围差异很大。<strong>务必通过持牌顾问选购</strong>，对比多家保险公司的条款，找到最符合自己需求的方案。</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 10 — CTA ══ -->
+<section class="slide cta-slide" id="s9">
+  <div class="cta-ring">
+    <span class="cta-icon">❤️‍🩹</span>
+  </div>
+  <h2 class="cta-title">重大疾病不可预测<br><span style="color:var(--crimson-light)">财务准备可以提前</span></h2>
+  <p class="cta-desc">
+    加拿大免费医疗解决的是"活下来"的问题。重疾险解决的是<strong style="color:var(--amber-light)">"活下来之后，家庭还能正常运转"</strong>的问题。
+  </p>
+
+  <div style="width:100%;max-width:340px;margin-bottom:22px;">
+    <div class="hbox" style="text-align:left;">
+      <div class="hbox-title">✅ 重疾险核心价值</div>
+      <div class="hbox-body" style="font-size:12px;">
+        <strong style="color:var(--crimson-light)">填补公费缺口：</strong>口服药/护理/交通全覆盖<br>
+        <strong style="color:var(--crimson-light)">保障收入：</strong>患病停工期间家庭正常运转<br>
+        <strong style="color:var(--crimson-light)">免税现金：</strong>一次性赔款，完全自由支配<br>
+        <strong style="color:var(--crimson-light)">保护储蓄：</strong>不动用RRSP/TFSA<br>
+        <strong style="color:var(--crimson-light)">专家医疗：</strong>获取全球顶级专科医生会诊
+      </div>
+    </div>
+  </div>
+
+  <div style="width:100%;max-width:340px;margin-bottom:22px;background:rgba(192,57,43,0.09);border:1px solid rgba(192,57,43,0.28);border-radius:14px;padding:18px;">
+    <div style="font-size:9.5px;letter-spacing:2.5px;color:var(--crimson-light);text-transform:uppercase;margin-bottom:12px;font-weight:700;text-align:left;">🌟 立即咨询</div>
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+      <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#C0392B,#7B241C);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;">👩</div>
+      <div style="text-align:left;">
+        <div style="font-family:'Noto Serif SC',serif;font-size:17px;font-weight:700;color:#fff;">Elina</div>
+        <div style="font-size:10.5px;color:var(--text-muted);">持牌保险及理财顾问</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:9px;text-align:left;">
+      <a href="tel:4168267591" style="display:flex;align-items:center;gap:9px;text-decoration:none;">
+        <span style="width:28px;height:28px;border-radius:6px;background:rgba(39,174,96,0.12);border:1px solid rgba(39,174,96,0.25);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">📞</span>
+        <span style="font-size:13.5px;font-weight:600;color:var(--green-light);">416-826-7591</span>
+      </a>
+      <a href="https://wa.me/14168267591" style="display:flex;align-items:center;gap:9px;text-decoration:none;">
+        <span style="width:28px;height:28px;border-radius:6px;background:rgba(39,174,96,0.12);border:1px solid rgba(39,174,96,0.25);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">💬</span>
+        <span style="font-size:12px;color:var(--green-light);">WhatsApp: 416-826-7591</span>
+      </a>
+      <a href="mailto:elina_insurance@hotmail.com" style="display:flex;align-items:center;gap:9px;text-decoration:none;">
+        <span style="width:28px;height:28px;border-radius:6px;background:rgba(192,57,43,0.15);border:1px solid rgba(192,57,43,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">✉️</span>
+        <span style="font-size:11.5px;color:var(--crimson-light);word-break:break-all;">elina_insurance@hotmail.com</span>
+      </a>
+    </div>
+  </div>
+
+  <p class="cta-disc">本演示稿仅供一般教育目的，不构成个人投资、税务或医疗建议。统计数据来源：加拿大癌症协会（2024）、Canadian Partnership Against Cancer（2021）、Munich Re Canada（2024）、Canada Life、Sun Life、RBC Insurance。实际保费与理赔条款因保险公司和个人情况而异，购买前请咨询持牌保险顾问。</p>
+</section>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+function goTo(i) { slides[i].scrollIntoView({behavior:'smooth'}); }
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const i = Array.from(slides).indexOf(e.target);
+      dots.forEach(d => d.classList.remove('active'));
+      if (dots[i]) dots[i].classList.add('active');
+    }
+  });
+}, {threshold: 0.5});
+slides.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>
