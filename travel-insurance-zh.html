@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta property="og:title" content="旅游保险完全指南 2026 | Travel Insurance">
+<meta property="og:description" content="出国旅游 · 来加探亲 · 海外医疗费高达天文数字——旅游保险是每次出行必备">
+<title>旅游保险 | 2026完全指南</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ocean:#1A4F8A;--ocean2:#2065B0;--ocean-light:#4D9FE8;--ocean-pale:#A8D4F8;
+  --bg:#070C14;--bg2:#0C1420;--bg3:#101B2C;
+  --gold:#D4A832;--gold-light:#EDD060;
+  --green:#27AE70;--green-light:#2ECC80;
+  --red:#D44848;--red-light:#F07878;
+  --amber:#E09820;--amber-light:#F5BE40;
+  --sky:#56B4E8;--sky-dim:rgba(86,180,232,0.15);
+  --tugo-color:#E87820;--tugo-dim:rgba(232,120,32,0.15);
+  --allianz-color:#008BD2;--allianz-dim:rgba(0,139,210,0.12);
+  --manulife-color:#E03030;--manulife-dim:rgba(224,48,48,0.12);
+  --text:#EAF2FC;--text-muted:#708898;
+  --card-bg:rgba(255,255,255,0.04);--card-border:rgba(255,255,255,0.07);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans SC',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+
+.slide{min-height:100vh;width:100%;max-width:480px;margin:0 auto;padding:50px 26px 62px;position:relative;display:flex;flex-direction:column;border-bottom:1px solid rgba(26,79,138,0.22);overflow:hidden;}
+.slide::before{content:'';position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(26,79,138,0.15)0%,transparent 70%);top:-60px;right:-60px;pointer-events:none;}
+.page-line{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--ocean2),transparent);opacity:0.6;}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(158deg,#070C14 0%,#0C1E38 55%,#060A10 100%);padding-top:66px;}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:180px;background:linear-gradient(transparent,rgba(26,79,138,0.08));pointer-events:none;}
+.eyebrow{display:inline-block;background:rgba(26,79,138,0.18);border:1px solid rgba(77,159,232,0.4);color:var(--ocean-light);font-size:10px;letter-spacing:3px;padding:5px 14px;border-radius:2px;margin-bottom:22px;text-transform:uppercase;}
+.hero-title{font-family:'Noto Serif SC',serif;font-size:30px;font-weight:700;line-height:1.28;margin-bottom:10px;color:#fff;}
+.hero-title .acc{color:var(--ocean-light);}
+.hero-sub{font-size:13px;color:var(--text-muted);line-height:1.78;margin-bottom:30px;max-width:360px;}
+.hero-sub strong{color:var(--gold-light);}
+
+/* ALERT BANNER */
+.alert-banner{background:rgba(208,64,64,0.15);border:1px solid rgba(208,64,64,0.42);border-left:4px solid var(--red-light);border-radius:8px;padding:14px 16px;margin-bottom:26px;}
+.ab-title{font-size:12.5px;font-weight:700;color:var(--red-light);margin-bottom:6px;}
+.ab-body{font-size:11.5px;color:#C8B8B8;line-height:1.65;}
+.ab-body strong{color:var(--gold-light);}
+
+.stat-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin-bottom:26px;}
+.stat-box{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:13px 9px;text-align:center;}
+.stat-n{font-family:'Noto Serif SC',serif;font-size:16px;font-weight:700;color:var(--ocean-light);display:block;margin-bottom:3px;}
+.stat-l{font-size:9px;color:var(--text-muted);line-height:1.35;}
+
+/* CONTACT */
+.cc{background:rgba(26,79,138,0.1);border:1px solid rgba(26,79,138,0.32);border-radius:14px;padding:17px;}
+.cc-lbl{font-size:9.5px;letter-spacing:2.5px;color:var(--ocean-light);text-transform:uppercase;font-weight:700;margin-bottom:12px;}
+.cc-person{display:flex;align-items:center;gap:12px;margin-bottom:13px;}
+.cc-av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#1A4F8A,#0D2E55);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;}
+.cc-name{font-family:'Noto Serif SC',serif;font-size:18px;font-weight:700;color:#fff;}
+.cc-role{font-size:10.5px;color:var(--text-muted);margin-top:2px;}
+.cc-links{display:flex;flex-direction:column;gap:8px;}
+.cc-link{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.ci{width:29px;height:29px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;}
+.ci-g{background:rgba(46,204,128,0.12);border:1px solid rgba(46,204,128,0.25);}
+.ci-b{background:rgba(26,79,138,0.18);border:1px solid rgba(77,159,232,0.3);}
+.ct-g{font-size:13px;font-weight:600;color:var(--green-light);}
+.ct-b{font-size:11.5px;color:var(--ocean-pale);word-break:break-all;}
+
+/* TYPOGRAPHY */
+.snum{font-size:10px;letter-spacing:3px;color:var(--ocean-light);text-transform:uppercase;margin-bottom:24px;font-weight:500;opacity:0.85;}
+.stitle{font-family:'Noto Serif SC',serif;font-size:22px;font-weight:700;line-height:1.38;margin-bottom:6px;color:#fff;}
+.stitle .t{color:var(--ocean-light);}
+.divdr{width:44px;height:3px;background:linear-gradient(90deg,var(--ocean2),transparent);margin-bottom:22px;border-radius:2px;}
+p.bd{font-size:13px;line-height:1.82;color:#C0D0E0;margin-bottom:13px;}
+p.bd strong{color:var(--gold-light);font-weight:500;}
+
+/* CARDS */
+.card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:12px;padding:15px 17px;margin-bottom:11px;}
+.card-icon{font-size:19px;margin-bottom:7px;display:block;}
+.card-title{font-size:12.5px;font-weight:700;color:var(--ocean-light);margin-bottom:5px;}
+.card-body{font-size:12px;color:#B0C4D8;line-height:1.72;}
+.card-body strong{color:var(--gold-light);font-weight:500;}
+
+/* HBOX */
+.hbox{background:linear-gradient(135deg,rgba(26,79,138,0.18),rgba(26,79,138,0.05));border:1px solid rgba(26,79,138,0.32);border-left:3px solid var(--ocean2);border-radius:8px;padding:13px 15px;margin-bottom:12px;}
+.hbox-title{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--ocean-light);margin-bottom:6px;font-weight:700;}
+.hbox-body{font-size:12.5px;line-height:1.75;color:#C8D8EC;}
+.hbox-body strong{color:var(--gold-light);}
+
+/* ALARM BOX */
+.alarm{background:rgba(208,64,64,0.12);border:1.5px solid rgba(208,64,64,0.38);border-radius:10px;padding:14px 15px;margin-bottom:12px;}
+.alarm-title{font-size:13px;font-weight:700;color:var(--red-light);margin-bottom:6px;}
+.alarm-body{font-size:12px;color:#C8B0B0;line-height:1.7;}
+.alarm-body strong{color:var(--gold-light);}
+
+/* COST BARS */
+.cost-bar{background:rgba(255,255,255,0.03);border-radius:12px;border:1px solid rgba(255,255,255,0.06);padding:13px;margin-bottom:9px;}
+.cb-label{font-size:11.5px;color:#B0C4D8;margin-bottom:6px;}
+.cb-track{height:20px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;position:relative;}
+.cb-fill{height:100%;border-radius:4px;}
+.cb-r{background:linear-gradient(90deg,var(--red),rgba(212,72,72,0.35));}
+.cb-a{background:linear-gradient(90deg,var(--amber),rgba(224,152,32,0.35));}
+.cb-b{background:linear-gradient(90deg,var(--ocean2),rgba(26,79,138,0.35));}
+.cb-val{font-size:11px;font-weight:700;margin-top:4px;text-align:right;}
+
+/* DIRECTION CARDS */
+.direction-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+.dir-card{border-radius:12px;padding:16px;border:1px solid;text-align:center;}
+.dir-out{background:rgba(26,79,138,0.1);border-color:rgba(77,159,232,0.3);}
+.dir-in{background:rgba(46,204,128,0.08);border-color:rgba(46,204,128,0.28);}
+.dir-icon{font-size:28px;margin-bottom:8px;}
+.dir-title{font-size:13px;font-weight:700;margin-bottom:6px;}
+.dir-out .dir-title{color:var(--ocean-light);}
+.dir-in .dir-title{color:var(--green-light);}
+.dir-body{font-size:11px;color:#9AB0C8;line-height:1.6;}
+
+/* FLOW LIST */
+.flow-list{display:flex;flex-direction:column;gap:0;margin-bottom:16px;}
+.fi{display:flex;align-items:flex-start;gap:13px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.fi:last-child{border-bottom:none;}
+.fd{width:33px;height:33px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;margin-top:2px;}
+.fd-b{background:rgba(26,79,138,0.2);border:1.5px solid var(--ocean2);}
+.fd-g{background:rgba(46,204,128,0.12);border:1.5px solid var(--green);}
+.fd-a{background:rgba(224,152,32,0.14);border:1.5px solid var(--amber);}
+.fd-r{background:rgba(212,72,72,0.12);border:1.5px solid var(--red);}
+.fi-title{font-size:12.5px;font-weight:700;color:#D8E8F8;margin-bottom:3px;}
+.fi-body{font-size:11.5px;color:#7898B0;line-height:1.65;}
+.fi-body strong{color:var(--gold-light);}
+
+/* COMPANY SLIDES */
+.co-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:20px;margin-bottom:16px;font-size:12px;font-weight:700;}
+.tugo-badge{background:var(--tugo-dim);border:1px solid rgba(232,120,32,0.4);color:var(--tugo-color);}
+.allianz-badge{background:var(--allianz-dim);border:1px solid rgba(0,139,210,0.4);color:var(--allianz-color);}
+.manulife-badge{background:var(--manulife-dim);border:1px solid rgba(224,48,48,0.38);color:var(--manulife-color);}
+
+.co-header{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+.co-logo-wrap{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+.tugo-logo{background:var(--tugo-dim);border:1px solid rgba(232,120,32,0.35);}
+.allianz-logo{background:var(--allianz-dim);border:1px solid rgba(0,139,210,0.3);}
+.manulife-logo{background:var(--manulife-dim);border:1px solid rgba(224,48,48,0.3);}
+.co-name{font-family:'Noto Serif SC',serif;font-size:20px;font-weight:700;color:#fff;}
+.co-tagline{font-size:10.5px;color:var(--text-muted);margin-top:2px;}
+
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;}
+.feat-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px;text-align:center;}
+.feat-icon{font-size:19px;margin-bottom:5px;}
+.feat-title{font-size:11px;font-weight:700;margin-bottom:2px;}
+.feat-body{font-size:10px;color:var(--text-muted);line-height:1.5;}
+.tugo-accent .feat-title{color:var(--tugo-color);}
+.allianz-accent .feat-title{color:var(--allianz-color);}
+.manulife-accent .feat-title{color:var(--manulife-color);}
+
+/* PRO/CON */
+.procon{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px;}
+.pro-box{background:rgba(46,204,128,0.07);border:1px solid rgba(46,204,128,0.2);border-radius:10px;padding:13px;}
+.con-box{background:rgba(212,72,72,0.07);border:1px solid rgba(212,72,72,0.18);border-radius:10px;padding:13px;}
+.pro-box .bt{color:var(--green-light);font-size:11px;font-weight:700;margin-bottom:8px;}
+.con-box .bt{color:var(--red-light);font-size:11px;font-weight:700;margin-bottom:8px;}
+.pro-box li,.con-box li{font-size:10.5px;line-height:1.65;color:#A8B8C8;list-style:none;padding-left:13px;position:relative;margin-bottom:5px;}
+.pro-box li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700;}
+.con-box li::before{content:'×';position:absolute;left:0;color:var(--red);font-weight:700;}
+
+/* COMPANY COMPARISON TABLE */
+.co-cmp{width:100%;border-collapse:separate;border-spacing:0;margin-bottom:13px;font-size:10.5px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.07);}
+.co-cmp th{padding:8px 7px;font-size:9.5px;font-weight:700;letter-spacing:0.5px;text-align:center;background:rgba(0,0,0,0.28);}
+.co-cmp th:first-child{text-align:left;color:var(--text-muted);}
+.co-cmp th.h-tugo{color:var(--tugo-color);}
+.co-cmp th.h-allianz{color:var(--allianz-color);}
+.co-cmp th.h-man{color:var(--manulife-color);}
+.co-cmp td{padding:7px 7px;border-bottom:1px solid rgba(255,255,255,0.05);text-align:center;color:#98B0C8;vertical-align:middle;font-size:10px;}
+.co-cmp td:first-child{text-align:left;color:#B8C8D8;font-weight:500;font-size:10px;}
+.co-cmp td.v-t{color:var(--tugo-color);}
+.co-cmp td.v-a{color:var(--allianz-color);}
+.co-cmp td.v-m{color:var(--manulife-color);}
+.co-cmp tr:last-child td{border-bottom:none;}
+.ck{color:var(--green-light);font-size:13px;}
+.cx{color:var(--red-light);font-size:13px;}
+.cp{color:var(--amber-light);font-size:12px;}
+
+/* PLAN TYPES GRID */
+.plan-grid{display:flex;flex-direction:column;gap:8px;margin-bottom:14px;}
+.plan-item{background:rgba(26,79,138,0.08);border:1px solid rgba(26,79,138,0.22);border-radius:10px;padding:12px 14px;display:flex;align-items:flex-start;gap:12px;}
+.plan-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.plan-title{font-size:12px;font-weight:700;color:var(--ocean-light);margin-bottom:3px;}
+.plan-body{font-size:11px;color:#8898A8;line-height:1.6;}
+.plan-body strong{color:var(--gold-light);}
+
+/* CTA */
+.cta-slide{background:linear-gradient(155deg,#060A12 0%,#0A1628 100%);justify-content:center;align-items:center;text-align:center;}
+.cta-ring{width:88px;height:88px;border-radius:50%;border:2px solid rgba(26,79,138,0.42);display:flex;align-items:center;justify-content:center;margin:0 auto 22px;position:relative;}
+.cta-ring::after{content:'';position:absolute;inset:6px;border-radius:50%;background:rgba(26,79,138,0.12);border:1px solid rgba(77,159,232,0.2);}
+.cta-icon{font-size:30px;position:relative;z-index:1;}
+.cta-title{font-family:'Noto Serif SC',serif;font-size:24px;font-weight:700;line-height:1.3;margin-bottom:10px;}
+.cta-desc{font-size:12.5px;color:var(--text-muted);line-height:1.75;max-width:310px;margin:0 auto 24px;}
+.cta-disc{font-size:9px;color:#253540;line-height:1.6;max-width:340px;margin:0 auto;}
+
+/* NAV */
+.nav-dots{position:fixed;right:11px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:5px;z-index:100;}
+.dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,0.14);cursor:pointer;transition:all 0.3s;}
+.dot.active{background:var(--ocean-light);transform:scale(1.5);}
+
+@media(max-width:380px){.slide{padding:38px 20px 50px;}.hero-title{font-size:26px;}.stitle{font-size:19px;}}
+</style>
+</head>
+<body>
+
+<nav class="nav-dots">
+  <div class="dot active" onclick="goTo(0)"></div>
+  <div class="dot" onclick="goTo(1)"></div>
+  <div class="dot" onclick="goTo(2)"></div>
+  <div class="dot" onclick="goTo(3)"></div>
+  <div class="dot" onclick="goTo(4)"></div>
+  <div class="dot" onclick="goTo(5)"></div>
+  <div class="dot" onclick="goTo(6)"></div>
+  <div class="dot" onclick="goTo(7)"></div>
+  <div class="dot" onclick="goTo(8)"></div>
+  <div class="dot" onclick="goTo(9)"></div>
+  <div class="dot" onclick="goTo(10)"></div>
+  <div class="dot" onclick="goTo(11)"></div>
+  <div class="dot" onclick="goTo(12)"></div>
+</nav>
+
+<!-- ══ S1 HERO ══ -->
+<section class="slide hero" id="s0">
+  <div class="eyebrow">旅游保险完全指南 · 2026版</div>
+  <h1 class="hero-title">旅游保险<br><span class="acc">出行必备 · 不买真的不行</span></h1>
+  <p class="hero-sub">
+    无论是<strong>加拿大人出国旅游</strong>，还是<strong>亲友从国外来加探亲</strong>——海外医疗费用高达天文数字，一次住院就能让家庭陷入财务危机。
+  </p>
+  <div class="alert-banner">
+    <div class="ab-title">🚨 真实数据 — 没有保险后果有多严重？</div>
+    <div class="ab-body">美国ICU每天费用高达 <strong>$10,000–$30,000 USD</strong>；直升机紧急救援 <strong>$50,000–$100,000 USD</strong>；心脏手术可超 <strong>$200,000 USD</strong>。加拿大省医保在国外<strong>几乎不提供任何覆盖</strong>。</div>
+  </div>
+  <div class="stat-row">
+    <div class="stat-box"><span class="stat-n">$0</span><span class="stat-l">省医保在国外的实际报销</span></div>
+    <div class="stat-box"><span class="stat-n">3家</span><span class="stat-l">加拿大主要旅游险公司</span></div>
+    <div class="stat-box"><span class="stat-n">24/7</span><span class="stat-l">全球紧急援助热线</span></div>
+  </div>
+  <!-- plane SVG -->
+  <div style="text-align:center;margin-bottom:22px;opacity:0.14;">
+    <svg width="130" height="70" viewBox="0 0 130 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10,38 L55,18 L120,35 L55,42 Z" fill="#2065B0"/>
+      <path d="M35,42 L50,55 L60,42 Z" fill="#1A4F8A"/>
+      <path d="M75,38 L85,50 L95,38 Z" fill="#1A4F8A"/>
+      <circle cx="115" cy="35" r="5" fill="#4D9FE8" opacity="0.6"/>
+    </svg>
+  </div>
+  <div class="cc">
+    <div class="cc-lbl">📬 咨询顾问</div>
+    <div class="cc-person"><div class="cc-av">👩</div><div><div class="cc-name">Elina</div><div class="cc-role">持牌保险及理财顾问</div></div></div>
+    <div class="cc-links">
+      <a href="tel:4168267591" class="cc-link"><span class="ci ci-g">📞</span><span class="ct-g">416-826-7591</span></a>
+      <a href="https://wa.me/14168267591" class="cc-link"><span class="ci ci-g">💬</span><span class="ct-g">WhatsApp: 416-826-7591</span></a>
+      <a href="mailto:elina_insurance@hotmail.com" class="cc-link"><span class="ci ci-b">✉️</span><span class="ct-b">elina_insurance@hotmail.com</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ S2 为什么必须买 ══ -->
+<section class="slide" id="s1">
+  <div class="page-line"></div>
+  <div class="snum">01 / 为什么必须买</div>
+  <h2 class="stitle">省医保出国<br><span class="t">几乎等于没有保险</span></h2>
+  <div class="divdr"></div>
+  <p class="bd">很多人以为加拿大省医保（OHIP等）出国也能用。<strong>真相是：一旦离开加拿大，省医保的实际覆盖几乎为零</strong>，而海外医疗费用极高。</p>
+  <div class="cost-bar">
+    <div class="cb-label">🏥 美国ICU住院（每天）</div>
+    <div class="cb-track"><div class="cb-fill cb-r" style="width:95%"></div></div>
+    <div class="cb-val" style="color:var(--red-light)">$10,000–$30,000 USD / 天</div>
+  </div>
+  <div class="cost-bar">
+    <div class="cb-label">🚁 直升机紧急医疗救援</div>
+    <div class="cb-track"><div class="cb-fill cb-r" style="width:85%"></div></div>
+    <div class="cb-val" style="color:var(--red-light)">$50,000–$100,000 USD</div>
+  </div>
+  <div class="cost-bar">
+    <div class="cb-label">❤️ 心脏手术（美国）</div>
+    <div class="cb-track"><div class="cb-fill cb-a" style="width:90%"></div></div>
+    <div class="cb-val" style="color:var(--amber-light)">$100,000–$250,000 USD</div>
+  </div>
+  <div class="cost-bar">
+    <div class="cb-label">🍳 骨折急诊（美国急诊室）</div>
+    <div class="cb-track"><div class="cb-fill cb-b" style="width:55%"></div></div>
+    <div class="cb-val" style="color:var(--ocean-light)">$3,000–$15,000 USD</div>
+  </div>
+  <div class="cost-bar">
+    <div class="cb-label">✈️ 医疗专机遣返回加拿大</div>
+    <div class="cb-track"><div class="cb-fill cb-r" style="width:80%"></div></div>
+    <div class="cb-val" style="color:var(--red-light)">$25,000–$200,000 USD</div>
+  </div>
+  <div class="alarm">
+    <div class="alarm-title">💥 真实案例</div>
+    <div class="alarm-body">安大略省一位退休教师在美国佛罗里达旅游期间突发心脏病，ICU住院18天，总账单<strong>$347,000 USD</strong>（约47万加元）。她的省医保仅报销了不到<strong>$1,200 加元</strong>，其余全部自付。</div>
+  </div>
+</section>
+
+<!-- ══ S3 两个方向 ══ -->
+<section class="slide" id="s2">
+  <div class="page-line"></div>
+  <div class="snum">02 / 两大保障方向</div>
+  <h2 class="stitle">出去 · 进来<br><span class="t">两个方向都需要保险</span></h2>
+  <div class="divdr"></div>
+  <p class="bd">旅游保险覆盖<strong>两个完全不同的人群</strong>——不只是加拿大人出国，来加拿大探亲的家人同样面临高额医疗风险：</p>
+  <div class="direction-grid">
+    <div class="dir-card dir-out">
+      <div class="dir-icon">✈️</div>
+      <div class="dir-title">加拿大人出境</div>
+      <div class="dir-body">前往美国、欧洲、亚洲等地旅游、探亲、出差——省医保境外几乎无效，<strong>出发前必须购买旅游险</strong></div>
+    </div>
+    <div class="dir-card dir-in">
+      <div class="dir-icon">🏠</div>
+      <div class="dir-title">访客来加拿大</div>
+      <div class="dir-body">父母、亲友持访客签证或超级签证来加探亲——<strong>加拿大政府不为访客支付医疗费</strong>，强烈建议购买访客险</div>
+    </div>
+  </div>
+  <div class="flow-list">
+    <div class="fi"><div class="fd fd-r">🚨</div><div><div class="fi-title">访客来加风险最高</div><div class="fi-body">父母或亲友来加探亲，若突发心脏病、中风或骨折，<strong>一次住院账单可超$100,000加元</strong>，全部由家庭自付。加拿大政府明确建议所有访客购买健康保险。</div></div></div>
+    <div class="fi"><div class="fd fd-b">📋</div><div><div class="fi-title">超级签证必须购买访客险</div><div class="fi-body">申请超级签证（Super Visa）<strong>法律强制要求</strong>购买至少100万加元保额的医疗保险，且保单必须来自加拿大本地保险公司。</div></div></div>
+    <div class="fi"><div class="fd fd-a">🌏</div><div><div class="fi-title">省内旅行同样需要</div><div class="fi-body">跨省旅行时，Manulife等保险公司也提供<strong>省内旅游紧急医疗险</strong>——各省医保之间存在覆盖缺口，跨省就医也可能产生自付费用。</div></div></div>
+  </div>
+  <div class="hbox"><div class="hbox-title">🔑 记住这句话</div><div class="hbox-body">加拿大的公费医疗是给<strong>加拿大居民在加拿大境内</strong>使用的。一旦离境，或者身份不是居民——<strong>谁都没有保护，只有保险公司能救你</strong>。</div></div>
+</section>
+
+<!-- ══ S4 什么是旅游保险 ══ -->
+<section class="slide" id="s3">
+  <div class="page-line"></div>
+  <div class="snum">03 / 产品定义</div>
+  <h2 class="stitle">旅游保险<br><span class="t">覆盖哪些内容？</span></h2>
+  <div class="divdr"></div>
+  <p class="bd">旅游保险是针对<strong>出行期间突发意外和疾病</strong>的综合保障，覆盖从医疗救治到行程变更的多项风险：</p>
+  <div class="plan-grid">
+    <div class="plan-item"><div class="plan-icon">🏥</div><div><div class="plan-title">紧急医疗保险（核心）</div><div class="plan-body">突发疾病或意外的<strong>住院、手术、急诊、药物</strong>费用，救护车，X光及化验，最高可达$500万加元</div></div></div>
+    <div class="plan-item"><div class="plan-icon">✈️</div><div><div class="plan-title">行程取消与中断</div><div class="plan-body">因疾病、家庭紧急情况等<strong>被迫取消或提前回程</strong>的不可退款费用（机票、酒店等）</div></div></div>
+    <div class="plan-item"><div class="plan-icon">🧳</div><div><div class="plan-title">行李丢失与延误</div><div class="plan-body">行李被盗、丢失或延误时，<strong>赔偿个人物品</strong>及购买必需品的费用</div></div></div>
+    <div class="plan-item"><div class="plan-icon">🚁</div><div><div class="plan-title">医疗遣返与转送</div><div class="plan-body">病情需要时，安排<strong>医疗专机或医护人员陪护</strong>，将您安全转送回加拿大</div></div></div>
+    <div class="plan-item"><div class="plan-icon">⚡</div><div><div class="plan-title">意外死亡与伤残</div><div class="plan-body">因意外事故导致<strong>身故或永久伤残</strong>，向受益人支付一次性赔偿金</div></div></div>
+    <div class="plan-item"><div class="plan-icon">🦷</div><div><div class="plan-title">紧急牙科</div><div class="plan-body">旅途中意外导致的<strong>紧急牙科治疗</strong>费用（非常规检查）</div></div></div>
+  </div>
+  <div class="hbox"><div class="hbox-title">💡 全包型 vs 纯医疗型</div><div class="hbox-body"><strong>全包型（All-Inclusive）：</strong>覆盖医疗+行程取消+行李+意外，适合长途旅行。<strong>纯紧急医疗型：</strong>只保医疗，保费更低，适合探亲短途。根据行程目的选择最合适的方案。</div></div>
+</section>
+
+<!-- ══ S5 TuGo ══ -->
+<section class="slide" id="s4">
+  <div class="page-line"></div>
+  <div class="snum">04 / 公司详介</div>
+  <div class="co-header">
+    <div class="co-logo-wrap tugo-logo">🧡</div>
+    <div><div class="co-name">TuGo</div><div class="co-tagline">成立于1964年 · 加拿大本土旅游险领导品牌</div></div>
+  </div>
+  <span class="co-badge tugo-badge">🍁 创立60年 · 全球24/7援助</span>
+  <p class="bd">TuGo是加拿大历史最悠久的旅游保险公司之一，总部位于BC省列治文市，以<strong>来加访客险和灵活的既往病史覆盖</strong>著称，是华人家庭接父母来加的首选方案。</p>
+  <div class="feat-grid tugo-accent">
+    <div class="feat-item"><div class="feat-icon">💰</div><div class="feat-title">最高$500,000保额</div><div class="feat-body">访客紧急医疗险，含24小时意外险</div></div>
+    <div class="feat-item"><div class="feat-icon">👴</div><div class="feat-title">90岁以上可投保</div><div class="feat-body">填写医疗问卷后仍可获得保障</div></div>
+    <div class="feat-item"><div class="feat-icon">🩺</div><div class="feat-title">5次后续复诊</div><div class="feat-body">紧急治疗后14天内，最多5次后续复诊</div></div>
+    <div class="feat-item"><div class="feat-icon">🧠</div><div class="feat-title">免费情绪援助</div><div class="feat-body">全球24/7专业心理咨询，独家特色服务</div></div>
+    <div class="feat-item"><div class="feat-icon">🏥</div><div class="feat-title">既往病史可覆盖</div><div class="feat-body">79岁以下可添加"非稳定既往症"附加险</div></div>
+    <div class="feat-item"><div class="feat-icon">🌐</div><div class="feat-title">超级签证专属方案</div><div class="feat-body">满足政府要求，支持父母/祖父母访客险</div></div>
+  </div>
+  <div class="card"><span class="card-icon">📋</span><div class="card-title">既往病史等待期（年龄分级）</div><div class="card-body">• 59岁及以下：投保前<strong>90天</strong>病情稳定<br>• 60–69岁：投保前<strong>120天</strong>病情稳定（需医疗问卷）<br>• 70–85岁：投保前<strong>180天</strong>病情稳定（需医疗问卷）<br>• 86岁及以上：投保前<strong>365天</strong>病情稳定（需医疗问卷）</div></div>
+  <div class="procon">
+    <div class="pro-box"><div class="bt">✅ 优势</div><ul><li>来加访客险行业标杆</li><li>90岁以上仍可投保</li><li>独家情绪援助服务</li><li>既往症覆盖选项丰富</li><li>超级签证首选方案</li><li>可延期（未理赔前）</li></ul></div>
+    <div class="con-box"><div class="bt">⚠️ 注意</div><ul><li>访客险保额上限$500K</li><li>高龄客户保费较高</li><li>需填写医疗问卷（70+）</li><li>出发后不可新购保单</li></ul></div>
+  </div>
+</section>
+
+<!-- ══ S6 Allianz ══ -->
+<section class="slide" id="s5">
+  <div class="page-line"></div>
+  <div class="snum">05 / 公司详介</div>
+  <div class="co-header">
+    <div class="co-logo-wrap allianz-logo">🌍</div>
+    <div><div class="co-name">Allianz Global Assistance</div><div class="co-tagline">全球最大保险集团 · Air Canada官方合作伙伴</div></div>
+  </div>
+  <span class="co-badge allianz-badge">🌐 2024年全球9500万件案例处理</span>
+  <p class="bd">Allianz（安联）是<strong>全球最大的保险和资产管理集团之一</strong>，2024年旅游援助案例处理量达9500万件，是Air Canada的官方旅游保险合作伙伴，以<strong>全球医疗网络和快速理赔</strong>著称。</p>
+  <div class="feat-grid allianz-accent">
+    <div class="feat-item"><div class="feat-icon">🌎</div><div class="feat-title">全球医疗网络</div><div class="feat-body">遍布全球的医院和医疗合作网络，直付账单</div></div>
+    <div class="feat-item"><div class="feat-icon">✈️</div><div class="feat-title">Air Canada官方伙伴</div><div class="feat-body">购买机票时可同步投保，无缝整合</div></div>
+    <div class="feat-item"><div class="feat-icon">🏥</div><div class="feat-title">紧急医疗+行程取消</div><div class="feat-body">覆盖加拿大人出境及访客来加两个方向</div></div>
+    <div class="feat-item"><div class="feat-icon">📱</div><div class="feat-title">24/7数字理赔</div><div class="feat-body">App在线申请理赔，实时追踪进度</div></div>
+    <div class="feat-item"><div class="feat-icon">💼</div><div class="feat-title">商旅年度险</div><div class="feat-body">频繁出行者的年度多次出行保障方案</div></div>
+    <div class="feat-item"><div class="feat-icon">🚁</div><div class="feat-title">医疗遣返专业能力</div><div class="feat-body">全球协调医疗专机，2024年成功执行数千次</div></div>
+  </div>
+  <div class="card"><span class="card-icon">🏆</span><div class="card-title">Allianz核心优势</div><div class="card-body">Allianz Partners 2024年营收超过<strong>100亿欧元</strong>，在全球保险集团中排名前三。其在加拿大的tripcover.ca平台提供实时报价和即时购买，是<strong>规模出行和企业差旅</strong>的首选保险公司。</div></div>
+  <div class="procon">
+    <div class="pro-box"><div class="bt">✅ 优势</div><ul><li>全球最强医疗网络</li><li>Air Canada官方合作</li><li>数字化理赔体验好</li><li>品牌信誉全球认可</li><li>年度多次出行险</li><li>9500万案例处理经验</li></ul></div>
+    <div class="con-box"><div class="bt">⚠️ 注意</div><ul><li>保费相对较高</li><li>老年客户选项有限</li><li>既往症条款较严格</li><li>部分计划需在线购买</li></ul></div>
+  </div>
+</section>
+
+<!-- ══ S7 Manulife ══ -->
+<section class="slide" id="s6">
+  <div class="page-line"></div>
+  <div class="snum">06 / 公司详介</div>
+  <div class="co-header">
+    <div class="co-logo-wrap manulife-logo">❤️</div>
+    <div><div class="co-name">Manulife Financial</div><div class="co-tagline">宏利保险 · 加拿大最大保险公司</div></div>
+  </div>
+  <span class="co-badge manulife-badge">🍁 加拿大本土最大 · 产品线最全</span>
+  <p class="bd">宏利（Manulife）是加拿大最大的保险公司，旅游险产品线覆盖<strong>加拿大人出境、访客来加、学生险</strong>三大方向，且是<strong>唯一提供COVID-19大流行专项旅游险</strong>的主流保险公司。</p>
+  <div class="feat-grid manulife-accent">
+    <div class="feat-item"><div class="feat-icon">🦠</div><div class="feat-title">COVID-19专项方案</div><div class="feat-body">唯一提供专门COVID-19大流行旅游险的主流公司</div></div>
+    <div class="feat-item"><div class="feat-icon">🔁</div><div class="feat-title">多次出行年度险</div><div class="feat-body">全年多次出行，一次投保，比分次购买更划算</div></div>
+    <div class="feat-item"><div class="feat-icon">🏠</div><div class="feat-title">省内旅行也保</div><div class="feat-body">独有省内旅行紧急医疗险，填补跨省保障空白</div></div>
+    <div class="feat-item"><div class="feat-icon">🎓</div><div class="feat-title">学生险系列</div><div class="feat-body">国内生出境学习、留学生来加、国内跨省学生均可投保</div></div>
+    <div class="feat-item"><div class="feat-icon">📞</div><div class="feat-title">医疗险附加选项</div><div class="feat-body">Emergency Medical Top-Up，为已有基础险的客户补充保额</div></div>
+    <div class="feat-item"><div class="feat-icon">🌏</div><div class="feat-title">访客险全面覆盖</div><div class="feat-body">访客来加紧急医疗险，包括超级签证要求的合规方案</div></div>
+  </div>
+  <div class="card"><span class="card-icon">📋</span><div class="card-title">Manulife完整产品线</div><div class="card-body">单次出行：<strong>紧急医疗 · 全包型 · 省内旅行 · 行程取消 · COVID-19专项</strong><br>多次出行：<strong>紧急医疗年度险 · 全包型年度险</strong><br>附加选项：<strong>紧急医疗Top-Up补充险</strong><br>特殊人群：<strong>访客险 · 学生险（三方向）</strong></div></div>
+  <div class="procon">
+    <div class="pro-box"><div class="bt">✅ 优势</div><ul><li>产品线最全面</li><li>COVID-19专项险独家</li><li>省内旅行险覆盖</li><li>学生险三方向均有</li><li>宏利品牌信誉强</li><li>年度险价格划算</li></ul></div>
+    <div class="con-box"><div class="bt">⚠️ 注意</div><ul><li>中东旅行有特别限制</li><li>老年客户保费较高</li><li>既往症条款需仔细阅读</li><li>网站信息量大较复杂</li></ul></div>
+  </div>
+</section>
+
+<!-- ══ S8 三家对比 ══ -->
+<section class="slide" id="s7">
+  <div class="page-line"></div>
+  <div class="snum">07 / 三家横向对比</div>
+  <h2 class="stitle">TuGo · Allianz · Manulife<br><span class="t">功能全面对比</span></h2>
+  <div class="divdr"></div>
+  <table class="co-cmp">
+    <thead>
+      <tr>
+        <th>功能/特性</th>
+        <th class="h-tugo">TuGo</th>
+        <th class="h-allianz">Allianz</th>
+        <th class="h-man">Manulife</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>来加访客险</td><td class="v-t"><span class="ck">✓</span>最强</td><td class="v-a"><span class="ck">✓</span></td><td class="v-m"><span class="ck">✓</span></td></tr>
+      <tr><td>加拿大人出境险</td><td class="v-t"><span class="ck">✓</span></td><td class="v-a"><span class="ck">✓</span>最强</td><td class="v-m"><span class="ck">✓</span></td></tr>
+      <tr><td>超级签证专项</td><td class="v-t"><span class="ck">✓</span>首选</td><td class="v-a"><span class="cp">△</span></td><td class="v-m"><span class="ck">✓</span></td></tr>
+      <tr><td>90岁以上可投保</td><td class="v-t"><span class="ck">✓</span></td><td class="v-a"><span class="cx">✗</span></td><td class="v-m"><span class="cp">△</span></td></tr>
+      <tr><td>COVID-19专项险</td><td class="v-t"><span class="cx">✗</span></td><td class="v-a"><span class="cp">△</span></td><td class="v-m"><span class="ck">✓</span>独家</td></tr>
+      <tr><td>省内旅行险</td><td class="v-t"><span class="cx">✗</span></td><td class="v-a"><span class="cx">✗</span></td><td class="v-m"><span class="ck">✓</span>独家</td></tr>
+      <tr><td>年度多次出行险</td><td class="v-t"><span class="ck">✓</span></td><td class="v-a"><span class="ck">✓</span></td><td class="v-m"><span class="ck">✓</span></td></tr>
+      <tr><td>学生险</td><td class="v-t"><span class="ck">✓</span></td><td class="v-a"><span class="cp">△</span></td><td class="v-m"><span class="ck">✓</span>最全</td></tr>
+      <tr><td>情绪心理援助</td><td class="v-t"><span class="ck">✓</span>独家</td><td class="v-a"><span class="cx">✗</span></td><td class="v-m"><span class="cx">✗</span></td></tr>
+      <tr><td>Air Canada合作</td><td class="v-t"><span class="cx">✗</span></td><td class="v-a"><span class="ck">✓</span>官方</td><td class="v-m"><span class="cx">✗</span></td></tr>
+      <tr><td>全球医疗网络规模</td><td class="v-t">强</td><td class="v-a">最强</td><td class="v-m">强</td></tr>
+      <tr><td>保费性价比</td><td class="v-t">高</td><td class="v-a">中</td><td class="v-m">高</td></tr>
+    </tbody>
+  </table>
+  <div class="hbox"><div class="hbox-title">📌 快速选择指南</div><div class="hbox-body"><strong style="color:var(--tugo-color);">TuGo：</strong>父母/亲友来加，超级签证首选 | <strong style="color:var(--allianz-color);">Allianz：</strong>加拿大人出境，商旅年度险 | <strong style="color:var(--manulife-color);">Manulife：</strong>学生险、省内旅行、COVID-19覆盖</div></div>
+</section>
+
+<!-- ══ S9 如何理赔 ══ -->
+<section class="slide" id="s8">
+  <div class="page-line"></div>
+  <div class="snum">08 / 理赔流程</div>
+  <h2 class="stitle">发生紧急情况<br><span class="t">第一时间怎么做？</span></h2>
+  <div class="divdr"></div>
+  <p class="bd">旅行中遇到医疗紧急情况，<strong>正确的行动顺序至关重要</strong>——错误处理可能导致理赔被拒：</p>
+  <div class="flow-list">
+    <div class="fi"><div class="fd fd-r">1</div><div><div class="fi-title">立即拨打保险公司紧急援助热线</div><div class="fi-body">出发前将<strong>24/7紧急热线号码保存在手机</strong>（TuGo/Allianz/Manulife均有全球热线）。医疗情况发生后<strong>优先致电，不要先自行就医</strong>，否则可能影响理赔。</div></div></div>
+    <div class="fi"><div class="fd fd-b">2</div><div><div class="fi-title">告知保险公司情况，获得授权</div><div class="fi-body">保险公司会协助安排<strong>指定医院或医生</strong>，并直接与医院沟通账单，避免您垫付高额费用再申请报销。</div></div></div>
+    <div class="fi"><div class="fd fd-a">3</div><div><div class="fi-title">保留所有收据和医疗记录</div><div class="fi-body">保存<strong>所有处方、收据、诊断报告</strong>。如需自付再报销，完整的医疗文件是理赔成功的关键。</div></div></div>
+    <div class="fi"><div class="fd fd-g">4</div><div><div class="fi-title">回国后提交理赔申请</div><div class="fi-body">根据保险公司要求提交理赔文件。TuGo和Manulife均支持<strong>在线提交</strong>，Allianz有App实时追踪进度。通常<strong>30天内处理完毕</strong>。</div></div></div>
+  </div>
+  <div class="alarm">
+    <div class="alarm-title">⚠️ 最常见的理赔被拒原因</div>
+    <div class="alarm-body">
+      • <strong>投保时未如实告知既往病史</strong>（最常见原因）<br>
+      • 未在发病后第一时间联系保险公司<br>
+      • 购买保单前已有相关症状<br>
+      • 旅行目的地在保单排除区域内<br>
+      • 保单已过期或未按时续期
+    </div>
+  </div>
+</section>
+
+<!-- ══ S10 购买建议 ══ -->
+<section class="slide" id="s9">
+  <div class="page-line"></div>
+  <div class="snum">09 / 购买指南</div>
+  <h2 class="stitle">怎么买才对？<br><span class="t">购买旅游险的7个关键</span></h2>
+  <div class="divdr"></div>
+  <div class="flow-list">
+    <div class="fi"><div class="fd fd-b">💰</div><div><div class="fi-title">保额要足够高</div><div class="fi-body">至少购买 <strong>$100万加元</strong> 保额——美国医疗费用极高，$10万$20万根本不够用。超级签证必须达到$100万以上。</div></div></div>
+    <div class="fi"><div class="fd fd-a">📅</div><div><div class="fi-title">出发前购买，不可等到出发后</div><div class="fi-body">所有保险公司都要求在<strong>出发前购买</strong>。出发后无法新购，已有症状后无法补充投保。</div></div></div>
+    <div class="fi"><div class="fd fd-g">🩺</div><div><div class="fi-title">如实申报既往病史</div><div class="fi-body">不要隐瞒高血压、糖尿病、心脏病等慢性病。<strong>如实申报才能确保理赔不被拒</strong>，否则出险时保险公司有权拒赔。</div></div></div>
+    <div class="fi"><div class="fd fd-r">🗺️</div><div><div class="fi-title">确认目的地是否在覆盖范围</div><div class="fi-body">部分保险计划不覆盖<strong>政府发布旅行警告的地区</strong>（如部分中东、战区）。出发前确认目的地是否在保单覆盖范围内。</div></div></div>
+    <div class="fi"><div class="fd fd-b">🔁</div><div><div class="fi-title">经常出行选年度险</div><div class="fi-body">每年出行2次以上，<strong>多次出行年度险比每次单独购买便宜30-50%</strong>，TuGo/Allianz/Manulife均提供。</div></div></div>
+    <div class="fi"><div class="fd fd-a">📞</div><div><div class="fi-title">出发前存好紧急热线</div><div class="fi-body">将保险公司<strong>24/7紧急援助电话</strong>存入手机，截图保单，告知同行家人保单号码。</div></div></div>
+    <div class="fi"><div class="fd fd-g">🤝</div><div><div class="fi-title">通过持牌顾问购买</div><div class="fi-body">保险顾问了解不同公司的条款差异，能<strong>根据您和家人的具体健康状况推荐最合适的方案</strong>，避免买错产品。</div></div></div>
+  </div>
+</section>
+
+<!-- ══ S11 真实案例 ══ -->
+<section class="slide" id="s10">
+  <div class="page-line"></div>
+  <div class="snum">10 / 真实案例</div>
+  <h2 class="stitle">这些悲剧<br><span class="t">本可以轻松避免</span></h2>
+  <div class="divdr"></div>
+  <div class="flow-list">
+    <div class="fi"><div class="fd fd-r">💔</div><div><div class="fi-title">案例一：父亲来加探亲心脏病发</div><div class="fi-body">王女士的父亲持超级签证来多伦多探亲，抵达后第3周突发心肌梗塞。由于购买了TuGo访客险（$100万保额），<strong>全部$142,000医疗费用由保险公司承担</strong>，家庭零自付。</div></div></div>
+    <div class="fi"><div class="fd fd-a">⚠️</div><div><div class="fi-title">案例二：没有保险的惨痛教训</div><div class="fi-body">李先生的母亲来加探亲，为节省开支未购保险。在温哥华摔倒骨折，股骨手术+康复住院11天，账单共计<strong>$98,000加元</strong>。家庭不得不变卖资产偿还债务。</div></div></div>
+    <div class="fi"><div class="fd fd-b">✈️</div><div><div class="fi-title">案例三：加拿大人在美国发病</div><div class="fi-body">张医生一家在佛罗里达度假，女儿突发急性阑尾炎。凭借Allianz旅游险，<strong>$67,000 USD的手术和住院费用全额理赔</strong>，保险公司还协助安排了回多伦多后的后续复诊。</div></div></div>
+    <div class="fi"><div class="fd fd-g">🎓</div><div><div class="fi-title">案例四：留学生无保险的困境</div><div class="fi-body">某来加留学生省学费而未购Manulife学生险，患急性肺炎住院5天，账单<strong>$28,000加元</strong>。最终靠家人从国内借款才得以出院，学业也被迫中断。</div></div></div>
+  </div>
+  <div class="hbox"><div class="hbox-title">💡 旅游险的真实意义</div><div class="hbox-body">旅游保险保费每天可能只需<strong>$3–$20加元</strong>。但一次医疗意外，可以让家庭负债数十万——<strong>保费是小数，保障是救命钱</strong>。</div></div>
+</section>
+
+<!-- ══ S12 谁需要 ══ -->
+<section class="slide" id="s11">
+  <div class="page-line"></div>
+  <div class="snum">11 / 适合人群</div>
+  <h2 class="stitle">哪些人<br><span class="t">一定要买旅游保险？</span></h2>
+  <div class="divdr"></div>
+  <div class="feat-grid" style="margin-bottom:14px;">
+    <div class="feat-item"><div class="feat-icon">👨‍👩‍👧</div><div class="feat-title" style="color:var(--ocean-light)">父母来加探亲</div><div class="feat-body">来加探亲的父母或祖父母，不在省医保范围内，发生意外费用极高</div></div>
+    <div class="feat-item"><div class="feat-icon">✈️</div><div class="feat-title" style="color:var(--ocean-light)">加拿大人出境</div><div class="feat-body">前往美国、欧洲、亚洲等任何境外地点旅游、出差、探亲</div></div>
+    <div class="feat-item"><div class="feat-icon">🎓</div><div class="feat-title" style="color:var(--ocean-light)">留学生</div><div class="feat-body">来加留学的国际学生或出国留学的加拿大学生，都在保障范围内</div></div>
+    <div class="feat-item"><div class="feat-icon">🏠</div><div class="feat-title" style="color:var(--ocean-light)">新移民/新居民</div><div class="feat-body">等待省医保生效的3个月等待期内，必须有旅游险或访客险覆盖</div></div>
+    <div class="feat-item"><div class="feat-icon">💼</div><div class="feat-title" style="color:var(--ocean-light)">商旅人士</div><div class="feat-body">频繁出差的商务人士，年度险性价比最高，一次购买全年保障</div></div>
+    <div class="feat-item"><div class="feat-icon">👴</div><div class="feat-title" style="color:var(--ocean-light)">超级签证家庭</div><div class="feat-body">申请父母/祖父母超级签证，法律强制要求$100万以上医疗险</div></div>
+  </div>
+  <div class="card"><span class="card-icon">📌</span><div class="card-title">跨省旅行也建议投保</div><div class="card-body">虽然各省医保之间有协议，但覆盖并不完整。在其他省就医可能产生<strong>账单差额、救护车费用</strong>等自付费用。Manulife的省内旅行险可填补这一空白。</div></div>
+  <div class="hbox"><div class="hbox-title">⏰ 最重要的原则</div><div class="hbox-body">旅游险<strong>必须在出发前购买</strong>。许多人在出发前才想起来——但有些情况下，已经出现的症状在购买后可能被视为既往症而不受保障。<strong>提前购买，才能完整保障</strong>。</div></div>
+</section>
+
+<!-- ══ S13 CTA ══ -->
+<section class="slide cta-slide" id="s12">
+  <div class="cta-ring"><span class="cta-icon">✈️</span></div>
+  <h2 class="cta-title">每次出行<br><span style="color:var(--ocean-light)">都值得被保护</span></h2>
+  <p class="cta-desc">无论是出国旅游还是亲友来加探亲，<strong style="color:var(--gold-light)">一张旅游保险单，保护的是整个家庭的财务安全</strong>。保费每天只需几元钱，但一次意外可以改变一切。</p>
+  <div style="width:100%;max-width:340px;margin-bottom:20px;">
+    <div class="hbox" style="text-align:left;">
+      <div class="hbox-title">✅ 三家公司各有所长</div>
+      <div class="hbox-body" style="font-size:11.5px;">
+        <strong style="color:var(--tugo-color);">TuGo：</strong>访客险首选，90岁可投，超级签证<br>
+        <strong style="color:var(--allianz-color);">Allianz：</strong>全球网络最强，Air Canada官方<br>
+        <strong style="color:var(--manulife-color);">Manulife：</strong>产品线最全，COVID险，学生险
+      </div>
+    </div>
+  </div>
+  <div style="width:100%;max-width:340px;margin-bottom:20px;background:rgba(26,79,138,0.12);border:1px solid rgba(26,79,138,0.32);border-radius:14px;padding:17px;">
+    <div style="font-size:9.5px;letter-spacing:2.5px;color:var(--ocean-light);text-transform:uppercase;margin-bottom:11px;font-weight:700;text-align:left;">🌟 立即咨询</div>
+    <div style="display:flex;align-items:center;gap:11px;margin-bottom:13px;">
+      <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#1A4F8A,#0D2E55);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">👩</div>
+      <div style="text-align:left;"><div style="font-family:'Noto Serif SC',serif;font-size:16px;font-weight:700;color:#fff;">Elina</div><div style="font-size:10px;color:var(--text-muted);">持牌保险及理财顾问</div></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;text-align:left;">
+      <a href="tel:4168267591" style="display:flex;align-items:center;gap:9px;text-decoration:none;"><span style="width:27px;height:27px;border-radius:6px;background:rgba(46,204,128,0.12);border:1px solid rgba(46,204,128,0.25);display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;">📞</span><span style="font-size:13px;font-weight:600;color:var(--green-light);">416-826-7591</span></a>
+      <a href="https://wa.me/14168267591" style="display:flex;align-items:center;gap:9px;text-decoration:none;"><span style="width:27px;height:27px;border-radius:6px;background:rgba(46,204,128,0.12);border:1px solid rgba(46,204,128,0.25);display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;">💬</span><span style="font-size:12px;color:var(--green-light);">WhatsApp: 416-826-7591</span></a>
+      <a href="mailto:elina_insurance@hotmail.com" style="display:flex;align-items:center;gap:9px;text-decoration:none;"><span style="width:27px;height:27px;border-radius:6px;background:rgba(26,79,138,0.18);border:1px solid rgba(77,159,232,0.3);display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;">✉️</span><span style="font-size:11px;color:var(--ocean-pale);word-break:break-all;">elina_insurance@hotmail.com</span></a>
+    </div>
+  </div>
+  <p class="cta-disc">本演示稿仅供一般教育目的，不构成个人保险建议。实际保费、保障条款及理赔规则因保险公司、投保人年龄、健康状况及行程目的地而异，购买前请咨询持牌保险顾问。医疗费用数据为近似值，实际账单因地区和情况而异。数据来源：TuGo（2024）、Allianz Global Assistance（2024）、Manulife Financial、Canadian Cancer Society、加拿大政府官网。</p>
+</section>
+
+<script>
+const slides=document.querySelectorAll('.slide');
+const dots=document.querySelectorAll('.dot');
+function goTo(i){slides[i].scrollIntoView({behavior:'smooth'});}
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const i=Array.from(slides).indexOf(e.target);dots.forEach(d=>d.classList.remove('active'));if(dots[i])dots[i].classList.add('active');}});},{threshold:0.5});
+slides.forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>
