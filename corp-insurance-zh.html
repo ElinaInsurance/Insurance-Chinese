@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta property="og:title" content="公司持有人寿保险 — 企业主完全指南 2026">
+<meta property="og:description" content="加拿大企业主最强税务工具：用公司税后低税资金，实现财富传承最大化">
+<title>公司持有人寿保险 | 企业主指南 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0B1628;
+  --navy2: #122040;
+  --teal: #0E7C7B;
+  --teal-light: #19B5B4;
+  --teal-glow: rgba(14,124,123,0.18);
+  --gold: #D4A847;
+  --gold-light: #ECC96A;
+  --text: #EEF0F5;
+  --text-muted: #8A95A8;
+  --green: #2ECC8F;
+  --red: #E05C5C;
+  --amber: #F0A500;
+  --card-bg: rgba(255,255,255,0.04);
+  --card-border: rgba(255,255,255,0.07);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'Noto Sans SC',sans-serif;
+  background:var(--navy);
+  color:var(--text);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── SLIDES ── */
+.slide {
+  min-height:100vh;
+  width:100%;
+  max-width:480px;
+  margin:0 auto;
+  padding:52px 26px 64px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  border-bottom:1px solid rgba(14,124,123,0.2);
+  overflow:hidden;
+}
+.slide::before {
+  content:'';
+  position:absolute;
+  width:280px; height:280px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(14,124,123,0.14) 0%,transparent 70%);
+  top:-60px; right:-60px;
+  pointer-events:none;
+}
+.page-line {
+  position:absolute;
+  top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg,transparent,var(--teal),transparent);
+  opacity:0.5;
+}
+
+/* ── HERO ── */
+.hero {
+  background:linear-gradient(155deg,#0B1628 0%,#0F2040 55%,#091520 100%);
+  justify-content:flex-start;
+  padding-top:72px;
+}
+.hero::after {
+  content:'';
+  position:absolute;
+  bottom:0; left:0; right:0; height:180px;
+  background:linear-gradient(transparent,rgba(14,124,123,0.06));
+  pointer-events:none;
+}
+.hero-eyebrow {
+  display:inline-block;
+  background:rgba(14,124,123,0.15);
+  border:1px solid rgba(14,124,123,0.4);
+  color:var(--teal-light);
+  font-size:10px;
+  letter-spacing:3px;
+  padding:5px 14px;
+  border-radius:2px;
+  margin-bottom:28px;
+  text-transform:uppercase;
+}
+.hero-title {
+  font-family:'Noto Serif SC',serif;
+  font-size:32px;
+  font-weight:700;
+  line-height:1.3;
+  margin-bottom:12px;
+  color:#fff;
+}
+.hero-title .accent { color:var(--teal-light); }
+.hero-sub {
+  font-size:13px;
+  color:var(--text-muted);
+  line-height:1.75;
+  margin-bottom:40px;
+  max-width:360px;
+}
+.hero-sub strong { color:var(--gold-light); }
+
+/* hero stat row */
+.stat-row {
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:10px;
+  margin-bottom:32px;
+}
+.stat-box {
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:10px;
+  padding:14px 10px;
+  text-align:center;
+}
+.stat-n {
+  font-family:'Noto Serif SC',serif;
+  font-size:18px;
+  font-weight:700;
+  color:var(--teal-light);
+  display:block;
+  margin-bottom:4px;
+}
+.stat-l { font-size:9.5px; color:var(--text-muted); line-height:1.35; }
+
+/* contact card */
+.contact-card {
+  background:rgba(14,124,123,0.1);
+  border:1px solid rgba(14,124,123,0.3);
+  border-radius:14px;
+  padding:18px;
+  margin-top:8px;
+}
+.contact-label {
+  font-size:9.5px;
+  letter-spacing:2.5px;
+  color:var(--teal-light);
+  text-transform:uppercase;
+  font-weight:700;
+  margin-bottom:14px;
+}
+.contact-person {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+}
+.contact-avatar {
+  width:46px; height:46px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#0E7C7B,#064E4D);
+  display:flex; align-items:center; justify-content:center;
+  font-size:20px; flex-shrink:0;
+}
+.contact-name {
+  font-family:'Noto Serif SC',serif;
+  font-size:19px; font-weight:700; color:#fff;
+}
+.contact-role { font-size:10.5px; color:var(--text-muted); margin-top:2px; }
+.contact-links { display:flex; flex-direction:column; gap:9px; }
+.contact-link {
+  display:flex; align-items:center; gap:10px;
+  text-decoration:none;
+}
+.clink-icon {
+  width:30px; height:30px;
+  border-radius:7px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:13px; flex-shrink:0;
+}
+.clink-icon.green { background:rgba(46,204,143,0.12); border:1px solid rgba(46,204,143,0.25); }
+.clink-icon.teal { background:rgba(14,124,123,0.15); border:1px solid rgba(14,124,123,0.3); }
+.clink-text-green { font-size:13.5px; font-weight:600; color:var(--green); }
+.clink-text-teal { font-size:12px; color:var(--teal-light); word-break:break-all; }
+
+/* ── TYPOGRAPHY ── */
+.slide-num {
+  font-size:10.5px;
+  letter-spacing:3px;
+  color:var(--teal-light);
+  text-transform:uppercase;
+  margin-bottom:28px;
+  font-weight:500;
+  opacity:0.85;
+}
+.slide-title {
+  font-family:'Noto Serif SC',serif;
+  font-size:24px;
+  font-weight:700;
+  line-height:1.4;
+  margin-bottom:6px;
+  color:#fff;
+}
+.slide-title .t { color:var(--teal-light); }
+.divider {
+  width:44px; height:3px;
+  background:linear-gradient(90deg,var(--teal),transparent);
+  margin-bottom:26px;
+  border-radius:2px;
+}
+p.bd { font-size:13.5px; line-height:1.8; color:#CDD2DC; margin-bottom:14px; }
+p.bd strong { color:var(--gold-light); font-weight:500; }
+
+/* ── CARDS ── */
+.card {
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  border-radius:12px;
+  padding:16px 18px;
+  margin-bottom:12px;
+}
+.card-icon { font-size:20px; margin-bottom:8px; display:block; }
+.card-title { font-size:13px; font-weight:700; color:var(--teal-light); margin-bottom:6px; }
+.card-body { font-size:12.5px; color:#BEC5D0; line-height:1.72; }
+.card-body strong { color:var(--gold-light); font-weight:500; }
+
+/* ── HIGHLIGHT BOX ── */
+.hbox {
+  background:linear-gradient(135deg,rgba(14,124,123,0.14),rgba(14,124,123,0.04));
+  border:1px solid rgba(14,124,123,0.28);
+  border-left:3px solid var(--teal);
+  border-radius:8px;
+  padding:14px 16px;
+  margin-bottom:14px;
+}
+.hbox-title {
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  color:var(--teal-light);
+  margin-bottom:7px;
+  font-weight:700;
+}
+.hbox-body { font-size:13px; line-height:1.75; color:#D4D9E4; }
+.hbox-body strong { color:var(--gold-light); }
+
+/* ── TAG ITEMS (use-cases) ── */
+.tag-grid {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:18px;
+}
+.tag {
+  background:rgba(14,124,123,0.12);
+  border:1px solid rgba(14,124,123,0.3);
+  color:var(--teal-light);
+  font-size:11.5px;
+  padding:5px 12px;
+  border-radius:20px;
+  font-weight:500;
+}
+
+/* ── COMPARISON: PERSONAL vs CORP ── */
+.versus {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:16px;
+}
+.v-box {
+  border-radius:12px;
+  padding:14px;
+}
+.v-corp {
+  background:rgba(14,124,123,0.1);
+  border:1px solid rgba(14,124,123,0.28);
+}
+.v-pers {
+  background:rgba(232,92,92,0.07);
+  border:1px solid rgba(232,92,92,0.2);
+}
+.v-title { font-size:11.5px; font-weight:700; margin-bottom:10px; }
+.v-corp .v-title { color:var(--teal-light); }
+.v-pers .v-title { color:var(--red); }
+.v-box li {
+  font-size:11px;
+  line-height:1.65;
+  color:#BEC5D0;
+  list-style:none;
+  padding-left:14px;
+  position:relative;
+  margin-bottom:5px;
+}
+.v-corp li::before { content:'✓'; position:absolute; left:0; color:var(--green); font-weight:700; font-size:11px; }
+.v-pers li::before { content:'→'; position:absolute; left:0; color:var(--red); font-size:11px; }
+
+/* ── DOLLAR FLOW EXAMPLE ── */
+.example-box {
+  background:rgba(14,124,123,0.07);
+  border:1px solid rgba(14,124,123,0.22);
+  border-radius:12px;
+  padding:16px;
+  margin-bottom:14px;
+}
+.example-title {
+  font-size:11px;
+  font-weight:700;
+  color:var(--teal-light);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:12px;
+}
+.ex-row {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:6px 0;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  font-size:12.5px;
+}
+.ex-row:last-child { border-bottom:none; }
+.ex-label { color:#A8B0BF; }
+.ex-val { font-weight:700; }
+.ex-val.teal { color:var(--teal-light); }
+.ex-val.green { color:var(--green); }
+.ex-val.red { color:var(--red); }
+.ex-val.gold { color:var(--gold-light); }
+
+/* ── CDA FLOW ── */
+.flow-list { display:flex; flex-direction:column; gap:0; margin-bottom:18px; }
+.flow-item {
+  display:flex; align-items:flex-start; gap:14px;
+  padding:13px 0;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+.flow-item:last-child { border-bottom:none; }
+.flow-dot {
+  width:34px; height:34px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:14px; flex-shrink:0; margin-top:2px;
+}
+.fd-teal { background:rgba(14,124,123,0.18); border:1.5px solid var(--teal); }
+.fd-gold { background:rgba(212,168,71,0.15); border:1.5px solid var(--gold); }
+.fd-green { background:rgba(46,204,143,0.12); border:1.5px solid var(--green); }
+.fd-red { background:rgba(224,92,92,0.12); border:1.5px solid var(--red); }
+.flow-title { font-size:12.5px; font-weight:700; color:#E8ECF5; margin-bottom:3px; }
+.flow-body { font-size:11.5px; color:#929DAE; line-height:1.65; }
+.flow-body strong { color:var(--gold-light); }
+
+/* ── ESTATE TABLE ── */
+.estate-table {
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  margin-bottom:14px;
+  font-size:12px;
+  border-radius:10px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.07);
+}
+.estate-table th {
+  background:rgba(0,0,0,0.25);
+  padding:9px 12px;
+  font-size:10.5px;
+  font-weight:700;
+  letter-spacing:0.5px;
+  text-align:center;
+}
+.estate-table th:first-child { text-align:left; color:var(--text-muted); }
+.estate-table th.corp-h { color:var(--teal-light); }
+.estate-table th.gic-h { color:var(--text-muted); }
+.estate-table td {
+  padding:9px 12px;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  text-align:center;
+  color:#BEC5D0;
+}
+.estate-table td:first-child { text-align:left; font-weight:600; color:#D0D5E0; }
+.estate-table td.corp-v { color:var(--green); font-weight:700; background:rgba(14,124,123,0.05); }
+.estate-table td.gic-v { color:var(--text-muted); }
+.estate-table tr:last-child td { border-bottom:none; }
+
+/* ── PRO/CON ── */
+.procon { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:16px; }
+.pro-box { background:rgba(46,204,143,0.07); border:1px solid rgba(46,204,143,0.2); border-radius:10px; padding:14px; }
+.con-box { background:rgba(224,92,92,0.07); border:1px solid rgba(224,92,92,0.2); border-radius:10px; padding:14px; }
+.pro-box .bt { color:var(--green); font-size:11.5px; font-weight:700; margin-bottom:9px; }
+.con-box .bt { color:var(--red); font-size:11.5px; font-weight:700; margin-bottom:9px; }
+.pro-box li, .con-box li {
+  font-size:11px; line-height:1.65; color:#BEC5D0;
+  list-style:none; padding-left:14px; position:relative; margin-bottom:5px;
+}
+.pro-box li::before { content:'✓'; position:absolute; left:0; color:var(--green); font-weight:700; }
+.con-box li::before { content:'×'; position:absolute; left:0; color:var(--red); font-weight:700; }
+
+/* ── INLINE IMAGE VISUAL ── */
+.visual-row {
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:8px;
+  margin-bottom:18px;
+}
+.vr-item {
+  background:rgba(14,124,123,0.08);
+  border:1px solid rgba(14,124,123,0.2);
+  border-radius:10px;
+  padding:14px 10px;
+  text-align:center;
+}
+.vr-icon { font-size:24px; margin-bottom:8px; }
+.vr-label { font-size:10px; color:var(--text-muted); line-height:1.4; }
+.vr-value { font-size:13px; font-weight:700; color:var(--teal-light); margin-top:4px; }
+
+/* ── CTA SLIDE ── */
+.cta-slide {
+  background:linear-gradient(155deg,#0A1525 0%,#0D1E38 100%);
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.cta-ring {
+  width:90px; height:90px; border-radius:50%;
+  border:2px solid rgba(14,124,123,0.35);
+  display:flex; align-items:center; justify-content:center;
+  margin:0 auto 24px; position:relative;
+}
+.cta-ring::after {
+  content:''; position:absolute; inset:6px; border-radius:50%;
+  background:rgba(14,124,123,0.1); border:1px solid rgba(14,124,123,0.18);
+}
+.cta-icon { font-size:32px; position:relative; z-index:1; }
+.cta-title {
+  font-family:'Noto Serif SC',serif;
+  font-size:26px; font-weight:700; line-height:1.3; margin-bottom:12px;
+}
+.cta-desc { font-size:13px; color:var(--text-muted); line-height:1.75; max-width:320px; margin:0 auto 28px; }
+.cta-disc { font-size:9.5px; color:#3E4855; line-height:1.6; max-width:340px; margin:0 auto; }
+
+/* ── NAV DOTS ── */
+.nav-dots {
+  position:fixed; right:12px; top:50%; transform:translateY(-50%);
+  display:flex; flex-direction:column; gap:7px; z-index:100;
+}
+.dot {
+  width:5px; height:5px; border-radius:50%;
+  background:rgba(255,255,255,0.15); cursor:pointer; transition:all 0.3s;
+}
+.dot.active { background:var(--teal-light); transform:scale(1.5); }
+
+@media (max-width:380px) {
+  .slide { padding:40px 20px 52px; }
+  .hero-title { font-size:27px; }
+  .slide-title { font-size:21px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav-dots" id="navDots">
+  <div class="dot active" onclick="goTo(0)"></div>
+  <div class="dot" onclick="goTo(1)"></div>
+  <div class="dot" onclick="goTo(2)"></div>
+  <div class="dot" onclick="goTo(3)"></div>
+  <div class="dot" onclick="goTo(4)"></div>
+  <div class="dot" onclick="goTo(5)"></div>
+  <div class="dot" onclick="goTo(6)"></div>
+  <div class="dot" onclick="goTo(7)"></div>
+  <div class="dot" onclick="goTo(8)"></div>
+  <div class="dot" onclick="goTo(9)"></div>
+</nav>
+
+<!-- ══ SLIDE 1 — HERO ══ -->
+<section class="slide hero" id="s0">
+  <div class="hero-eyebrow">企业主专属指南 · 2026版</div>
+  <h1 class="hero-title">公司持有<br><span class="accent">人寿保险</span></h1>
+  <p class="hero-sub">
+    加拿大企业主<strong>最被低估的税务工具</strong>——用公司低税资金购买保险，实现财富增值、遗产最大化与税务减免三重目标。
+  </p>
+
+  <div class="stat-row">
+    <div class="stat-box">
+      <span class="stat-n">最高51%</span>
+      <span class="stat-l">节省税率差</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-n">CDA</span>
+      <span class="stat-l">免税股息账户</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-n">2.2×+</span>
+      <span class="stat-l">遗产价值超GIC</span>
+    </div>
+  </div>
+
+  <!-- SVG decorative building/corporate icon -->
+  <div style="text-align:center;margin-bottom:24px;opacity:0.18;">
+    <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="20" y="20" width="30" height="60" rx="2" fill="#0E7C7B"/>
+      <rect x="55" y="5" width="45" height="75" rx="2" fill="#19B5B4"/>
+      <rect x="28" y="30" width="8" height="8" fill="#0B1628" opacity="0.6"/>
+      <rect x="38" y="30" width="6" height="8" fill="#0B1628" opacity="0.6"/>
+      <rect x="63" y="15" width="8" height="8" fill="#0B1628" opacity="0.6"/>
+      <rect x="75" y="15" width="8" height="8" fill="#0B1628" opacity="0.6"/>
+      <rect x="87" y="15" width="8" height="8" fill="#0B1628" opacity="0.6"/>
+      <rect x="63" y="30" width="8" height="8" fill="#0B1628" opacity="0.6"/>
+      <rect x="75" y="30" width="8" height="8" fill="#0B1628" opacity="0.6"/>
+      <rect x="87" y="30" width="8" height="8" fill="#0B1628" opacity="0.6"/>
+      <rect x="63" y="45" width="8" height="8" fill="#0B1628" opacity="0.6"/>
+      <rect x="75" y="45" width="8" height="8" fill="#0B1628" opacity="0.6"/>
+      <rect x="87" y="45" width="8" height="8" fill="#0B1628" opacity="0.6"/>
+    </svg>
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-label">📬 咨询顾问</div>
+    <div class="contact-person">
+      <div class="contact-avatar">👩</div>
+      <div>
+        <div class="contact-name">Elina</div>
+        <div class="contact-role">持牌保险及理财顾问</div>
+      </div>
+    </div>
+    <div class="contact-links">
+      <a href="tel:4168267591" class="contact-link">
+        <span class="clink-icon green">📞</span>
+        <span class="clink-text-green">416-826-7591</span>
+      </a>
+      <a href="https://wa.me/14168267591" class="contact-link">
+        <span class="clink-icon green">💬</span>
+        <span class="clink-text-green">WhatsApp: 416-826-7591</span>
+      </a>
+      <a href="mailto:elina_insurance@hotmail.com" class="contact-link">
+        <span class="clink-icon teal">✉️</span>
+        <span class="clink-text-teal">elina_insurance@hotmail.com</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 2 — 什么是公司持有寿险 ══ -->
+<section class="slide" id="s1">
+  <div class="page-line"></div>
+  <div class="slide-num">01 / 基础概念</div>
+  <h2 class="slide-title">什么是<br><span class="t">公司持有人寿保险？</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">企业主在购买人寿保险时，有两种持有方式：<strong>个人持有</strong>或<strong>公司持有</strong>。公司持有（Corporate-Owned Life Insurance，COLI）是指由公司作为投保人、缴费人，通常也是受益人的人寿保险安排。</p>
+
+  <div class="card">
+    <span class="card-icon">🏢</span>
+    <div class="card-title">核心运作机制</div>
+    <div class="card-body">公司用<strong>低税的营业收入</strong>（小企业税率约15%）直接缴纳保费。由于人寿保险保费通常<strong>不可税前抵扣</strong>，用公司资金缴费相比个人税后收入缴费，可显著减少所需税前收入。</div>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">💡</span>
+    <div class="card-title">Tracy的经典案例</div>
+    <div class="card-body">Tracy的年保费为$10,000，个人边际税率50%，公司小企业税率15%：<br><br>
+    • <strong>个人持有</strong>：公司需赚 <strong style="color:var(--red)">$20,000</strong> 才能税后支付$10,000保费<br>
+    • <strong>公司持有</strong>：公司只需赚 <strong style="color:var(--green)">$11,765</strong> 即可支付$10,000保费<br><br>
+    每年节省 <strong>$8,235</strong> 的税前收入！
+    </div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">🔑 一句话理解</div>
+    <div class="hbox-body">公司持有寿险 = <strong>低税缴费节省</strong> + <strong>免税现金值增长</strong> + <strong>CDA免税股息传承</strong></div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 3 — 税率对比可视化 ══ -->
+<section class="slide" id="s2">
+  <div class="page-line"></div>
+  <div class="slide-num">02 / 税率节省</div>
+  <h2 class="slide-title">个人 vs 公司<br><span class="t">缴费效率对比</span></h2>
+  <div class="divider"></div>
+
+  <!-- visual comparison bars -->
+  <div style="margin-bottom:20px;">
+    <div style="font-size:11px;color:var(--text-muted);margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;">每年$10,000保费所需税前收入</div>
+
+    <div style="margin-bottom:12px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;">
+        <span style="font-size:12px;color:#CDD2DC;">👤 个人持有（税率50%）</span>
+        <span style="font-size:13px;font-weight:700;color:var(--red);">$20,000</span>
+      </div>
+      <div style="height:22px;background:rgba(224,92,92,0.12);border-radius:4px;overflow:hidden;">
+        <div style="height:100%;width:100%;background:linear-gradient(90deg,rgba(224,92,92,0.6),rgba(224,92,92,0.3));border-radius:4px;position:relative;">
+          <span style="position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:10px;color:var(--red);">多花 $8,235</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;">
+        <span style="font-size:12px;color:#CDD2DC;">🏢 公司持有（税率15%）</span>
+        <span style="font-size:13px;font-weight:700;color:var(--green);">$11,765</span>
+      </div>
+      <div style="height:22px;background:rgba(14,124,123,0.12);border-radius:4px;overflow:hidden;">
+        <div style="height:100%;width:58.8%;background:linear-gradient(90deg,var(--teal),rgba(14,124,123,0.5));border-radius:4px;"></div>
+      </div>
+    </div>
+
+    <div style="background:rgba(46,204,143,0.08);border:1px solid rgba(46,204,143,0.2);border-radius:8px;padding:12px;text-align:center;">
+      <div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">每年实际节省</div>
+      <div style="font-size:26px;font-weight:700;color:var(--green);font-family:'Noto Serif SC',serif;">$8,235</div>
+      <div style="font-size:10px;color:var(--text-muted);">20年累计节省逾 $164,700</div>
+    </div>
+  </div>
+
+  <div class="versus">
+    <div class="v-box v-corp">
+      <div class="v-title">🏢 公司持有优势</div>
+      <ul>
+        <li>小企业税率约15%</li>
+        <li>资金留在公司层面</li>
+        <li>税后现金值免税增长</li>
+        <li>死亡理赔进入CDA</li>
+        <li>向股东发免税股息</li>
+      </ul>
+    </div>
+    <div class="v-box v-pers">
+      <div class="v-title">👤 个人持有劣势</div>
+      <ul>
+        <li>个人边际税率高达50%</li>
+        <li>需先发薪再缴税</li>
+        <li>资金已被高额征税</li>
+        <li>死亡理赔入遗产</li>
+        <li>遗产认证费及税务</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">💡 关键洞察</div>
+    <div class="hbox-body">企业主的大量资金沉淀在公司层面，<strong>公司资金的税率远低于个人</strong>。利用这一差距缴纳保费，是加拿大企业主最高效的税务规划策略之一。</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 4 — 适用场景 ══ -->
+<section class="slide" id="s3">
+  <div class="page-line"></div>
+  <div class="slide-num">03 / 适用场景</div>
+  <h2 class="slide-title">公司寿险<br><span class="t">九大战略用途</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">公司持有人寿保险不只是"保险"，更是<strong>多功能企业规划工具</strong>，可服务于以下核心需求：</p>
+
+  <div class="tag-grid">
+    <span class="tag">🔑 关键人保险</span>
+    <span class="tag">🏦 商业贷款保障</span>
+    <span class="tag">🤝 股东买卖协议</span>
+    <span class="tag">💝 慈善捐赠</span>
+    <span class="tag">📊 身故资本利得税</span>
+    <span class="tag">👔 高管薪酬补偿</span>
+    <span class="tag">🏖️ 退休资金规划</span>
+    <span class="tag">⚖️ 遗产税与均衡</span>
+    <span class="tag">💰 税务庇护财富积累</span>
+  </div>
+
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-dot fd-teal">🔑</div>
+      <div>
+        <div class="flow-title">关键人保险（Key Person）</div>
+        <div class="flow-body">当公司核心管理者或股东发生意外，<strong>保险赔款直接注入公司</strong>，维持运营、偿还债务或招募替代人才，保障企业持续经营。</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-gold">🤝</div>
+      <div>
+        <div class="flow-title">股东买卖协议（Buy-Sell）</div>
+        <div class="flow-body">通过预先约定的买卖协议，<strong>公司或其他股东</strong>在股东去世时用保险赔款购买其股份，避免家属被动成为股东造成管理冲突。</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-green">💰</div>
+      <div>
+        <div class="flow-title">税务庇护财富积累</div>
+        <div class="flow-body">对于已最大化RRSP/TFSA贡献的企业主，公司内税收豁免寿险政策提供<strong>额外的税延增长空间</strong>，现金值增长不受被动收入税率约束。</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-red">📊</div>
+      <div>
+        <div class="flow-title">身故资本利得税规划</div>
+        <div class="flow-body">加拿大居民去世时，持有资产按视同出售处理，可能产生大额资本利得税。<strong>提前规划公司寿险</strong>可为这笔税务提供专项资金来源。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 5 — CDA免税机制 ══ -->
+<section class="slide" id="s4">
+  <div class="page-line"></div>
+  <div class="slide-num">04 / 税务核心</div>
+  <h2 class="slide-title">CDA免税机制<br><span class="t">如何实现财富免税传承</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">公司持有寿险最关键的税务优势，在于<strong>资本股息账户（Capital Dividend Account，CDA）</strong>机制——这是加拿大税法赋予私人公司的独特免税通道。</p>
+
+  <!-- CDA flow diagram -->
+  <div style="background:rgba(14,124,123,0.07);border:1px solid rgba(14,124,123,0.2);border-radius:12px;padding:16px;margin-bottom:16px;">
+    <div style="font-size:10.5px;font-weight:700;color:var(--teal-light);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;">📐 CDA 运作流程</div>
+    <div style="display:flex;flex-direction:column;gap:0;">
+      <div style="display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+        <div style="width:28px;height:28px;border-radius:50%;background:rgba(14,124,123,0.2);border:1.5px solid var(--teal);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">1</div>
+        <div style="font-size:12px;color:#CDD2DC;">股东去世 → 公司收到<strong style="color:var(--gold-light)">死亡理赔金</strong></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+        <div style="width:28px;height:28px;border-radius:50%;background:rgba(14,124,123,0.2);border:1.5px solid var(--teal);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">2</div>
+        <div style="font-size:12px;color:#CDD2DC;">理赔金 − 保单调整成本基础（ACB）= <strong style="color:var(--teal-light)">CDA增额</strong></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+        <div style="width:28px;height:28px;border-radius:50%;background:rgba(14,124,123,0.2);border:1.5px solid var(--teal);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">3</div>
+        <div style="font-size:12px;color:#CDD2DC;">公司向CRA申报T2054 → 获批后发放<strong style="color:var(--green)">资本股息</strong></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:9px 0;">
+        <div style="width:28px;height:28px;border-radius:50%;background:rgba(46,204,143,0.15);border:1.5px solid var(--green);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">4</div>
+        <div style="font-size:12px;color:#CDD2DC;">股东（遗产/配偶/继承人）收到<strong style="color:var(--green)">完全免税</strong>的资本股息 ✓</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">📋</span>
+    <div class="card-title">ACB是什么？</div>
+    <div class="card-body">调整成本基础（ACB）= 已缴保费累计 − 纯保险净成本（NCPI）。随着时间推移，NCPI会逐渐将ACB降低至零。<strong>ACB为零时，CDA增额等于全额理赔金</strong>，即100%免税传承。</div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">⚠️ 重要提醒</div>
+    <div class="hbox-body">CDA机制要求<strong>公司同时是保单持有人和受益人</strong>。若股东直接作为受益人，保费可能被视为<strong style="color:var(--red)">应税股东利益</strong>，丧失全部税务优势。</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 6 — 遗产价值对比 ══ -->
+<section class="slide" id="s5">
+  <div class="page-line"></div>
+  <div class="slide-num">05 / 遗产增值</div>
+  <h2 class="slide-title">公司寿险 vs GIC<br><span class="t">遗产价值实际对比</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">假设Tracy，50岁，非吸烟者，标准风险。公司购买Canada Life参与型寿险，年保费$10,000，共缴20年。与同等金额GIC（4%利率）相比：</p>
+
+  <div class="example-box">
+    <div class="example-title">📊 假设条件</div>
+    <div class="ex-row">
+      <span class="ex-label">年保费</span>
+      <span class="ex-val teal">$10,000（缴费20年）</span>
+    </div>
+    <div class="ex-row">
+      <span class="ex-label">GIC利率</span>
+      <span class="ex-val gold">4%</span>
+    </div>
+    <div class="ex-row">
+      <span class="ex-label">公司被动收入税率</span>
+      <span class="ex-val red">51%</span>
+    </div>
+    <div class="ex-row">
+      <span class="ex-label">个人非合格股息税率</span>
+      <span class="ex-val red">45%</span>
+    </div>
+  </div>
+
+  <!-- Estate table -->
+  <table class="estate-table">
+    <thead>
+      <tr>
+        <th>年龄</th>
+        <th class="gic-h">GIC遗产价值</th>
+        <th class="corp-h">公司寿险遗产价值</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>75岁</td>
+        <td class="gic-v">$174,297</td>
+        <td class="corp-v">$391,693 <span style="font-size:10px;color:var(--teal-light)">（+125%）</span></td>
+      </tr>
+      <tr>
+        <td>85岁</td>
+        <td class="gic-v">$226,384</td>
+        <td class="corp-v">$578,719 <span style="font-size:10px;color:var(--teal-light)">（+156%）</span></td>
+      </tr>
+      <tr>
+        <td>95岁</td>
+        <td class="gic-v">$289,631</td>
+        <td class="corp-v">$816,810 <span style="font-size:10px;color:var(--teal-light)">（+182%）</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:9.5px;color:var(--text-muted);margin-bottom:14px;">*以上数据仅供说明，实际情况因个人而异。资料来源：Canada Life Estate Achiever Plus Max 20。</p>
+
+  <div class="hbox">
+    <div class="hbox-title">🏆 为什么差距如此之大？</div>
+    <div class="hbox-body">GIC利息按<strong>51%被动收入税率</strong>课税，死亡时还需以<strong>应税股息</strong>形式发放。而公司寿险现金值<strong>免税增长</strong>，死亡理赔通过<strong>CDA免税传承</strong>，双重优势叠加造就巨大差距。</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 7 — 现金值三大使用方式 ══ -->
+<section class="slide" id="s6">
+  <div class="page-line"></div>
+  <div class="slide-num">06 / 现金值运用</div>
+  <h2 class="slide-title">活着就能用：<br><span class="t">现金值三大策略</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">公司持有税收豁免寿险不只是死亡保障——在保单生效期间，<strong>积累的现金值</strong>可以为企业主提供灵活的资金来源。</p>
+
+  <div class="visual-row">
+    <div class="vr-item">
+      <div class="vr-icon">💸</div>
+      <div class="vr-value">方式一</div>
+      <div class="vr-label">部分/全额提取现金值</div>
+    </div>
+    <div class="vr-item">
+      <div class="vr-icon">🏦</div>
+      <div class="vr-value">方式二</div>
+      <div class="vr-label">向保险公司申请保单贷款</div>
+    </div>
+    <div class="vr-item">
+      <div class="vr-icon">🔗</div>
+      <div class="vr-value">方式三</div>
+      <div class="vr-label">以保单作抵押向银行贷款</div>
+    </div>
+  </div>
+
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-dot fd-red">⚠️</div>
+      <div>
+        <div class="flow-title">方式一/二：直接提取或保单贷款</div>
+        <div class="flow-body">会触发<strong>视同处置</strong>，可能产生<strong>应税保单增益</strong>，被视为公司被动收入征税。适合短期资金需求但需谨慎评估税务影响。</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-green">⭐</div>
+      <div>
+        <div class="flow-title">方式三（最推荐）：保单抵押贷款</div>
+        <div class="flow-body">以保单作为抵押物向银行申请贷款，<strong>不构成处置行为，不触发税务</strong>。贷款期间保单现金值继续免税增长，甚至可能超过贷款利率。可安排<strong>至死亡前无需还款</strong>，最大化现金流灵活性。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">💰 抵押贷款的额外优势</div>
+    <div class="hbox-body">贷款期间保单仍以<strong>税延基础持续增长</strong>，若增长率超过贷款利率，<strong>净收益为正</strong>。企业主可在零税务触发的情况下享受资金流动性，同时保单保障效力完全不变。</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 8 — 优缺点及注意事项 ══ -->
+<section class="slide" id="s7">
+  <div class="page-line"></div>
+  <div class="slide-num">07 / 全面分析</div>
+  <h2 class="slide-title">公司寿险<br><span class="t">优缺点与注意事项</span></h2>
+  <div class="divider"></div>
+
+  <div class="procon">
+    <div class="pro-box">
+      <div class="bt">✅ 核心优势</div>
+      <ul>
+        <li>低税公司资金缴费</li>
+        <li>现金值免税增长</li>
+        <li>CDA免税股息传承</li>
+        <li>规避高被动收入税</li>
+        <li>不占用小企业限额</li>
+        <li>保单可抵押变现</li>
+        <li>多重战略规划用途</li>
+        <li>遗产价值大幅超GIC</li>
+      </ul>
+    </div>
+    <div class="con-box">
+      <div class="bt">⚠️ 注意事项</div>
+      <ul>
+        <li>现金值无整体债权人保护</li>
+        <li>建议放在控股公司</li>
+        <li>遗产规划增加复杂度</li>
+        <li>转让可能产生税务</li>
+        <li>现金值影响股份价值</li>
+        <li>可能影响LCGE资格</li>
+        <li>出售公司前需专业评估</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">🏛️</span>
+    <div class="card-title">建议放在控股公司持有</div>
+    <div class="card-body">公司持有寿险的现金值<strong>不受营业公司债权人保护</strong>。最佳实践是将有现金值的保单放在<strong>控股公司（Holdco）</strong>而非营业公司（Opco），以隔离潜在债权人风险。</div>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">📊</span>
+    <div class="card-title">LCGE（终身资本利得豁免）影响</div>
+    <div class="card-body">保单现金值属于被动资产，若占公司资产价值超过<strong>10%</strong>，可能导致股东在出售公司股份时<strong>无法使用终身资本利得豁免额度</strong>（约$971,190 for 2023），需提前规划。</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 9 — 三种资金路径 ══ -->
+<section class="slide" id="s8">
+  <div class="page-line"></div>
+  <div class="slide-num">08 / 资金规划</div>
+  <h2 class="slide-title">三种缴费路径<br><span class="t">哪种最省税？</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">使用公司资金为保单缴费有三种结构方式，<strong>税务效率各不相同</strong>：</p>
+
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-dot fd-red">3️⃣</div>
+      <div>
+        <div class="flow-title">方式一（最低效）：公司发股息给个人</div>
+        <div class="flow-body">公司 → 发股息给业主 → 业主个人缴税后 → 个人缴保费 → <strong style="color:var(--red)">个人持有保单</strong><br><br>需要经历双重征税，税务摩擦最大。</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-gold">2️⃣</div>
+      <div>
+        <div class="flow-title">方式二（中等）：公司增加薪酬</div>
+        <div class="flow-body">公司 → 增加薪酬给业主 → 业主缴个人所得税 → 个人缴保费 → <strong style="color:var(--amber)">个人持有保单</strong><br><br>同样需个人缴税，效率较差。</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-teal">1️⃣</div>
+      <div>
+        <div class="flow-title">方式三（最高效 ⭐推荐）：公司直接缴费</div>
+        <div class="flow-body">公司 → 直接缴纳保费 → <strong style="color:var(--green)">公司持有保单</strong><br><br>无需个人层面征税，仅使用低税率公司资金，税务效率最高。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example-box">
+    <div class="example-title">💰 资金效率对比（$10,000保费）</div>
+    <div class="ex-row">
+      <span class="ex-label">方式一：个人股息路径所需税前收入</span>
+      <span class="ex-val red">~$28,000+</span>
+    </div>
+    <div class="ex-row">
+      <span class="ex-label">方式二：加薪路径所需税前收入</span>
+      <span class="ex-val red">~$20,000</span>
+    </div>
+    <div class="ex-row">
+      <span class="ex-label">方式三：公司直接缴费所需税前收入</span>
+      <span class="ex-val green">$11,765</span>
+    </div>
+    <div class="ex-row">
+      <span class="ex-label">方式三 vs 方式二节省</span>
+      <span class="ex-val gold">$8,235 / 年</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 10 — CTA ══ -->
+<section class="slide cta-slide" id="s9">
+  <div class="cta-ring">
+    <span class="cta-icon">🏢</span>
+  </div>
+  <h2 class="cta-title">您的公司，<br><span style="color:var(--teal-light)">是最强的税务工具</span></h2>
+  <p class="cta-desc">
+    加拿大企业主拥有独特的税务优势。<strong style="color:var(--gold-light)">公司持有人寿保险</strong>将低税缴费、免税增长与CDA免税传承集于一体，是实现财富最大化、保障家庭和遗产的终极策略。
+  </p>
+
+  <div style="width:100%;max-width:340px;margin-bottom:24px;">
+    <div class="hbox" style="text-align:left;">
+      <div class="hbox-title">✅ 核心价值总结</div>
+      <div class="hbox-body" style="font-size:12px;">
+        <strong style="color:var(--teal-light)">节税缴费：</strong>公司低税资金，每年省数千元<br>
+        <strong style="color:var(--teal-light)">免税增长：</strong>现金值不受被动收入税约束<br>
+        <strong style="color:var(--teal-light)">CDA免税：</strong>死亡理赔通过CDA免税传承<br>
+        <strong style="color:var(--teal-light)">多重用途：</strong>关键人、买卖协议、退休规划<br>
+        <strong style="color:var(--teal-light)">遗产最大化：</strong>远超GIC等传统投资工具
+      </div>
+    </div>
+  </div>
+
+  <!-- contact card -->
+  <div style="width:100%;max-width:340px;margin-bottom:22px;background:rgba(14,124,123,0.1);border:1px solid rgba(14,124,123,0.3);border-radius:14px;padding:18px;">
+    <div style="font-size:9.5px;letter-spacing:2.5px;color:var(--teal-light);text-transform:uppercase;margin-bottom:12px;font-weight:700;text-align:left;">🌟 立即咨询</div>
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+      <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#0E7C7B,#064E4D);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;">👩</div>
+      <div style="text-align:left;">
+        <div style="font-family:'Noto Serif SC',serif;font-size:17px;font-weight:700;color:#fff;">Elina</div>
+        <div style="font-size:10.5px;color:var(--text-muted);">持牌保险及理财顾问</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:9px;text-align:left;">
+      <a href="tel:4168267591" style="display:flex;align-items:center;gap:9px;text-decoration:none;">
+        <span style="width:28px;height:28px;border-radius:6px;background:rgba(46,204,143,0.12);border:1px solid rgba(46,204,143,0.25);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">📞</span>
+        <span style="font-size:13.5px;font-weight:600;color:var(--green);">416-826-7591</span>
+      </a>
+      <a href="https://wa.me/14168267591" style="display:flex;align-items:center;gap:9px;text-decoration:none;">
+        <span style="width:28px;height:28px;border-radius:6px;background:rgba(46,204,143,0.12);border:1px solid rgba(46,204,143,0.25);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">💬</span>
+        <span style="font-size:12px;color:var(--green);">WhatsApp: 416-826-7591</span>
+      </a>
+      <a href="mailto:elina_insurance@hotmail.com" style="display:flex;align-items:center;gap:9px;text-decoration:none;">
+        <span style="width:28px;height:28px;border-radius:6px;background:rgba(14,124,123,0.15);border:1px solid rgba(14,124,123,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">✉️</span>
+        <span style="font-size:11.5px;color:var(--teal-light);word-break:break-all;">elina_insurance@hotmail.com</span>
+      </a>
+    </div>
+  </div>
+
+  <p class="cta-disc">本演示稿仅供一般教育目的，不构成个人投资、税务或法律建议。企业主在实施任何策略前，应咨询持牌理财顾问、税务专业人士及法律顾问，以确保符合个人具体情况。税法可能变化，所有数据基于现行加拿大税务法规。<br><br>数据来源：Canada Life（2021年9月）、RBC Wealth Management（2020年3月）。</p>
+</section>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+function goTo(i) { slides[i].scrollIntoView({behavior:'smooth'}); }
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const i = Array.from(slides).indexOf(e.target);
+      dots.forEach(d => d.classList.remove('active'));
+      if (dots[i]) dots[i].classList.add('active');
+    }
+  });
+}, {threshold: 0.5});
+slides.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>
