@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>ROC 资本返还策略 | Linda案例 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--v:#5B3FA0;--v2:#7458C0;--vl:#A088E8;--vp:#D0C0FF;--bg:#08060F;--gl:#ECC050;--grl:#2ECC70;--gr:#22B060;--rdl:#F07070;--red:#D04040;--am:#E09A18;--aml:#F5BC38;--cyl:#3ED4E4;--cy:#20B8C8;--tx:#EDE8FF;--tm:#7868A8;--cb:rgba(255,255,255,.04);--cbr:rgba(255,255,255,.07);--rc:#3ED4E4;--rdim:rgba(62,212,228,.12);--nc:#F07070;--ndim:rgba(240,112,112,.10);}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans SC',sans-serif;background:var(--bg);color:var(--tx);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+.slide{min-height:100vh;width:100%;max-width:480px;margin:0 auto;padding:50px 24px 62px;position:relative;display:flex;flex-direction:column;border-bottom:1px solid rgba(91,63,160,.2);overflow:hidden;}
+.slide::before{content:'';position:absolute;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(91,63,160,.13) 0%,transparent 70%);top:-50px;right:-50px;pointer-events:none;}
+.pl{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--v2),transparent);opacity:.6;}
+.hero{background:linear-gradient(158deg,#08060F 0%,#120A22 55%,#06040C 100%);padding-top:64px;}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:180px;background:linear-gradient(transparent,rgba(91,63,160,.07));pointer-events:none;}
+.ey{display:inline-block;background:rgba(91,63,160,.18);border:1px solid rgba(160,136,232,.42);color:var(--vl);font-size:10px;letter-spacing:3px;padding:5px 14px;border-radius:2px;margin-bottom:22px;text-transform:uppercase;}
+.ht{font-family:'Noto Serif SC',serif;font-size:28px;font-weight:700;line-height:1.3;margin-bottom:10px;color:#fff;}
+.ht .ac{color:var(--cyl);}
+.hs{font-size:13px;color:var(--tm);line-height:1.78;margin-bottom:28px;}
+.hs strong{color:var(--gl);}
+.sr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin-bottom:24px;}
+.sb{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:13px 9px;text-align:center;}
+.sn{font-family:'Noto Serif SC',serif;font-size:15px;font-weight:700;color:var(--cyl);display:block;margin-bottom:3px;}
+.sl{font-size:9px;color:var(--tm);line-height:1.35;}
+.cc{background:rgba(91,63,160,.1);border:1px solid rgba(91,63,160,.32);border-radius:14px;padding:17px;}
+.ccl{font-size:9.5px;letter-spacing:2.5px;color:var(--vl);text-transform:uppercase;font-weight:700;margin-bottom:12px;}
+.ccp{display:flex;align-items:center;gap:12px;margin-bottom:13px;}
+.cca{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#5B3FA0,#331E6A);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;}
+.ccn{font-family:'Noto Serif SC',serif;font-size:18px;font-weight:700;color:#fff;}
+.ccr{font-size:10.5px;color:var(--tm);margin-top:2px;}
+.ccli{display:flex;flex-direction:column;gap:8px;}
+.cclink{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.cig{width:29px;height:29px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;background:rgba(46,204,112,.12);border:1px solid rgba(46,204,112,.25);}
+.civ{width:29px;height:29px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;background:rgba(91,63,160,.18);border:1px solid rgba(160,136,232,.3);}
+.ctg{font-size:13px;font-weight:600;color:var(--grl);}
+.ctv{font-size:11.5px;color:var(--vp);word-break:break-all;}
+.snum{font-size:10px;letter-spacing:3px;color:var(--vl);text-transform:uppercase;margin-bottom:24px;font-weight:500;opacity:.85;}
+.stitle{font-family:'Noto Serif SC',serif;font-size:22px;font-weight:700;line-height:1.38;margin-bottom:6px;color:#fff;}
+.stitle .t{color:var(--cyl);}
+.dv{width:44px;height:3px;background:linear-gradient(90deg,var(--v2),transparent);margin-bottom:22px;border-radius:2px;}
+p.bd{font-size:13px;line-height:1.82;color:#C8C0E0;margin-bottom:13px;}
+p.bd strong{color:var(--gl);font-weight:500;}
+.card{background:var(--cb);border:1px solid var(--cbr);border-radius:12px;padding:15px 17px;margin-bottom:11px;}
+.ci2{font-size:19px;margin-bottom:7px;display:block;}
+.ct2{font-size:12.5px;font-weight:700;color:var(--vl);margin-bottom:5px;}
+.cb2{font-size:12px;color:#B0A0D0;line-height:1.72;}
+.cb2 strong{color:var(--gl);font-weight:500;}
+.hb{background:linear-gradient(135deg,rgba(91,63,160,.18),rgba(91,63,160,.05));border:1px solid rgba(91,63,160,.32);border-left:3px solid var(--v2);border-radius:8px;padding:13px 15px;margin-bottom:12px;}
+.hbt{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--vl);margin-bottom:6px;font-weight:700;}
+.hbb{font-size:12.5px;line-height:1.75;color:#C8C0E0;}
+.hbb strong{color:var(--gl);}
+.lroc{display:inline-block;background:var(--rdim);border:1px solid rgba(62,212,228,.4);color:var(--rc);font-size:10px;font-weight:700;padding:3px 10px;border-radius:10px;}
+.lnroc{display:inline-block;background:var(--ndim);border:1px solid rgba(240,112,112,.38);color:var(--nc);font-size:10px;font-weight:700;padding:3px 10px;border-radius:10px;}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+.src{background:var(--rdim);border:1.5px solid rgba(62,212,228,.35);border-radius:12px;padding:15px;}
+.snc{background:var(--ndim);border:1.5px solid rgba(240,112,112,.32);border-radius:12px;padding:15px;}
+.sc-t{font-size:12px;font-weight:700;margin-bottom:10px;}
+.src .sc-t{color:var(--rc);}
+.snc .sc-t{color:var(--nc);}
+.sci{font-size:11px;color:#A898C8;line-height:1.7;margin-bottom:5px;}
+.src .sci strong{color:var(--rc);}
+.snc .sci strong{color:var(--nc);}
+.insight{background:linear-gradient(135deg,rgba(62,212,228,.14),rgba(62,212,228,.03));border:2px solid rgba(62,212,228,.42);border-radius:12px;padding:18px;margin-bottom:14px;text-align:center;}
+.in-n{font-family:'Noto Serif SC',serif;font-size:28px;font-weight:700;color:var(--cyl);margin-bottom:4px;}
+.in-s{font-size:11px;color:#A898C8;line-height:1.5;}
+.rt{width:100%;border-collapse:separate;border-spacing:0;margin-bottom:8px;font-size:9.5px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.07);}
+.rt thead th{padding:7px 5px;font-size:9px;font-weight:700;text-align:center;background:rgba(0,0,0,.35);letter-spacing:.3px;}
+.rt thead th:first-child{text-align:left;color:var(--tm);}
+.rt thead .thr{color:var(--rc);}
+.rt thead .thn{color:var(--nc);}
+.rt thead .thd{color:var(--grl);}
+.rt tbody td{padding:6px 5px;border-bottom:1px solid rgba(255,255,255,.045);text-align:center;vertical-align:middle;}
+.rt tbody td:first-child{text-align:left;font-weight:600;color:#D0C8E8;font-size:9.5px;}
+.rt tbody .tdr{color:var(--cyl);background:rgba(62,212,228,.04);}
+.rt tbody .tdn{color:#F09898;}
+.rt tbody .tdd{font-weight:700;color:var(--grl);}
+.rt tbody tr.gy{background:rgba(62,212,228,.025);}
+.rt tbody tr.by{background:rgba(240,80,80,.03);}
+.rt tbody tr:last-child td{border-bottom:none;}
+.tn{font-size:9px;color:var(--tm);line-height:1.5;margin-bottom:12px;}
+.sumbox{background:rgba(91,63,160,.1);border:1px solid rgba(91,63,160,.28);border-radius:12px;padding:16px;margin-bottom:14px;}
+.sumr{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:12px;}
+.sumr:last-child{border-bottom:none;}
+.suml{color:#A898C8;}
+.sumrc{font-weight:700;color:var(--rc);}
+.sumnc{color:var(--nc);}
+.sumd{font-weight:700;color:var(--gl);}
+.fl{display:flex;flex-direction:column;gap:0;margin-bottom:16px;}
+.fi{display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.05);}
+.fi:last-child{border-bottom:none;}
+.fd{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;margin-top:2px;}
+.fdv{background:rgba(91,63,160,.2);border:1.5px solid var(--v2);}
+.fdc{background:rgba(62,212,228,.12);border:1.5px solid var(--cy);}
+.fdg{background:rgba(34,176,96,.12);border:1.5px solid var(--gr);}
+.fda{background:rgba(224,154,24,.14);border:1.5px solid var(--am);}
+.fit{font-size:12.5px;font-weight:700;color:#DDD8F8;margin-bottom:3px;}
+.fib{font-size:11.5px;color:#7868A8;line-height:1.65;}
+.fib strong{color:var(--gl);}
+.pc{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px;}
+.prb{background:rgba(34,176,96,.07);border:1px solid rgba(34,176,96,.2);border-radius:10px;padding:13px;}
+.cnb{background:rgba(208,64,64,.07);border:1px solid rgba(208,64,64,.18);border-radius:10px;padding:13px;}
+.prb .bt{color:var(--grl);font-size:11px;font-weight:700;margin-bottom:8px;}
+.cnb .bt{color:var(--rdl);font-size:11px;font-weight:700;margin-bottom:8px;}
+.prb li,.cnb li{font-size:10.5px;line-height:1.65;color:#A898C8;list-style:none;padding-left:13px;position:relative;margin-bottom:5px;}
+.prb li::before{content:'✓';position:absolute;left:0;color:var(--gr);font-weight:700;}
+.cnb li::before{content:'→';position:absolute;left:0;color:var(--red);}
+.cta{background:linear-gradient(155deg,#06040C 0%,#0C0818 100%);justify-content:center;align-items:center;text-align:center;}
+.ctar{width:88px;height:88px;border-radius:50%;border:2px solid rgba(91,63,160,.42);display:flex;align-items:center;justify-content:center;margin:0 auto 22px;position:relative;}
+.ctar::after{content:'';position:absolute;inset:6px;border-radius:50%;background:rgba(91,63,160,.1);border:1px solid rgba(160,136,232,.2);}
+.ctai{font-size:30px;position:relative;z-index:1;}
+.ctat{font-family:'Noto Serif SC',serif;font-size:24px;font-weight:700;line-height:1.3;margin-bottom:10px;}
+.ctad{font-size:12.5px;color:var(--tm);line-height:1.75;max-width:310px;margin:0 auto 24px;}
+.ctadc{font-size:9px;color:#2C2040;line-height:1.6;max-width:340px;margin:0 auto;}
+.nd{position:fixed;right:11px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:6px;z-index:100;}
+.dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.14);cursor:pointer;transition:all .3s;}
+.dot.active{background:var(--vl);transform:scale(1.5);}
+@media(max-width:380px){.slide{padding:38px 18px 50px;}.ht{font-size:24px;}.stitle{font-size:19px;}}
+</style>
+</head>
+<body>
+<nav class="nd">
+  <div class="dot active" onclick="goTo(0)"></div>
+  <div class="dot" onclick="goTo(1)"></div>
+  <div class="dot" onclick="goTo(2)"></div>
+  <div class="dot" onclick="goTo(3)"></div>
+  <div class="dot" onclick="goTo(4)"></div>
+  <div class="dot" onclick="goTo(5)"></div>
+  <div class="dot" onclick="goTo(6)"></div>
+  <div class="dot" onclick="goTo(7)"></div>
+  <div class="dot" onclick="goTo(8)"></div>
+  <div class="dot" onclick="goTo(9)"></div>
+</nav>
+
+<!-- S1 HERO -->
+<section class="slide hero" id="s0">
+  <div class="ey">ROC 资本返还策略 · 2026版</div>
+  <h1 class="ht">每年到手一样的钱<br><span class="ac">ROC池子</span>却多出<br><span class="ac">$694,047</span></h1>
+  <p class="hs"><strong>核心逻辑：</strong>Linda每年到手净额完全相同（$80,000）。不用ROC，为了拿同样的钱需要多从池子取出$34,286去缴税。这笔多取的钱，<strong>无法再复利增长——10年后差距触目惊心。</strong></p>
+  <div class="sr">
+    <div class="sb"><span class="sn">同样</span><span class="sl">每年到手净额$80,000</span></div>
+    <div class="sb"><span class="sn">+$694K</span><span class="sl">ROC池子税前多出（第10年）</span></div>
+    <div class="sb"><span class="sn">省$119K</span><span class="sl">10年总税负节省</span></div>
+  </div>
+  <div style="text-align:center;margin-bottom:20px;opacity:0.14;">
+    <svg width="140" height="70" viewBox="0 0 140 70" fill="none">
+      <circle cx="20" cy="55" r="10" fill="#5B3FA0"/>
+      <circle cx="55" cy="38" r="15" fill="#7458C0"/>
+      <circle cx="95" cy="18" r="22" fill="#9070D8"/>
+      <circle cx="130" cy="8" r="13" fill="#3ED4E4" opacity="0.7"/>
+      <line x1="20" y1="55" x2="55" y2="38" stroke="#3ED4E4" stroke-width="1.5" opacity="0.5"/>
+      <line x1="55" y1="38" x2="95" y2="18" stroke="#3ED4E4" stroke-width="1.5" opacity="0.5"/>
+      <line x1="95" y1="18" x2="130" y2="8" stroke="#3ED4E4" stroke-width="1.5" opacity="0.5"/>
+    </svg>
+  </div>
+  <div class="cc">
+    <div class="ccl">📬 咨询顾问</div>
+    <div class="ccp"><div class="cca">👩</div><div><div class="ccn">Elina</div><div class="ccr">持牌保险及理财顾问</div></div></div>
+    <div class="ccli">
+      <a href="tel:4168267591" class="cclink"><span class="cig">📞</span><span class="ctg">416-826-7591</span></a>
+      <a href="https://wa.me/14168267591" class="cclink"><span class="cig">💬</span><span class="ctg">WhatsApp: 416-826-7591</span></a>
+      <a href="mailto:elina_insurance@hotmail.com" class="cclink"><span class="civ">✉️</span><span class="ctv">elina_insurance@hotmail.com</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- S2 核心逻辑 -->
+<section class="slide" id="s1">
+  <div class="pl"></div>
+  <div class="snum">01 / 核心逻辑</div>
+  <h2 class="stitle">为什么到手相同<br><span class="t">池子差了这么多？</span></h2>
+  <div class="dv"></div>
+  <p class="bd">Linda每年需要到手净额<strong>$80,000</strong>。两种方案都能达到这个目标，但对投资池子的"取款量"完全不同：</p>
+  <div class="sg">
+    <div class="src">
+      <div class="sc-t">🌟 ROC方案A</div>
+      <div class="sci">Linda要到手：<strong>$80,000</strong></div>
+      <div class="sci">从池子取出：<strong>$80,000</strong></div>
+      <div class="sci">当年税务：<strong>$0</strong></div>
+      <div class="sci">池子净损耗：<strong>$80,000</strong></div>
+    </div>
+    <div class="snc">
+      <div class="sc-t">⚠️ 常规方案B</div>
+      <div class="sci">Linda要到手：$80,000</div>
+      <div class="sci">从池子取出：<strong>$114,286</strong></div>
+      <div class="sci">缴税30%：<strong>$34,286</strong></div>
+      <div class="sci">池子净损耗：<strong>$114,286</strong></div>
+    </div>
+  </div>
+  <div class="insight">
+    <div class="in-n">每年多从池子取出 $34,286</div>
+    <div class="in-s">这$34,286本可留在池子里<br>以13%年化复利持续增值</div>
+  </div>
+  <div class="fl">
+    <div class="fi"><div class="fd fdc">1</div><div>
+      <div class="fit">常规方案：池子每年多流失$34,286</div>
+      <div class="fib">为了Linda到手$80,000，常规方案需从池子多取<strong>$34,286</strong>去缴税。这笔钱离开了池子，永远失去了在S&P 500里复利增长的机会。</div>
+    </div></div>
+    <div class="fi"><div class="fd fdv">2</div><div>
+      <div class="fit">复利效应：差距随时间指数级扩大</div>
+      <div class="fib">每年少的$34,286不只是少$34,286——它本可以以13%年化增长。市场上涨的年份，差距加速扩大。<strong>10年后，复利损耗累计超过$694,000。</strong></div>
+    </div></div>
+    <div class="fi"><div class="fd fdg">3</div><div>
+      <div class="fit">ROC：同样的到手，更小的池子损耗</div>
+      <div class="fib">ROC分配时$0税，池子每年只需流出$80,000。<strong>剩下的$34,286继续在池子里复利滚动。</strong>这就是ROC的核心优势——不是税务魔法，而是<strong>让更多本金留在池子里工作</strong>。</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- S3 案例参数 -->
+<section class="slide" id="s2">
+  <div class="pl"></div>
+  <div class="snum">02 / 案例参数</div>
+  <h2 class="stitle">Linda 委托$100万<br><span class="t">10年投资，参数详解</span></h2>
+  <div class="dv"></div>
+  <div class="card"><span class="ci2">👩</span><div class="ct2">投资参数</div><div class="cb2">初始委托：<strong>$1,000,000 加元</strong><br>每年到手净额：<strong>$80,000（两方案相同）</strong><br>投资期限：<strong>10年（2015年–2024年）</strong><br>挂钩标的：<strong>S&P 500实际年化收益率</strong><br>税率假设（常规方案）：<strong>30%</strong></div></div>
+  <div class="card"><span class="ci2">📊</span><div class="ct2">S&P 500 实际年化收益（2015–2024）</div><div class="cb2">
+    2015: <strong>+1.38%</strong> | 2016: <strong>+11.96%</strong> | 2017: <strong>+21.83%</strong> | 2018: <strong>-4.38%</strong> | 2019: <strong>+31.49%</strong><br>
+    2020: <strong>+18.40%</strong> | 2021: <strong>+28.89%</strong> | 2022: <strong>-18.11%</strong> | 2023: <strong>+26.29%</strong> | 2024: <strong>+25.02%</strong><br><br>
+    <strong>10年CAGR：13.12%</strong> | 10年累计：<strong>+243%</strong>
+  </div></div>
+  <div class="sg">
+    <div class="src">
+      <div class="sc-t">🌟 方案A：ROC</div>
+      <div class="sci">池子每年取出：<strong>$80,000</strong></div>
+      <div class="sci">税务：<strong>$0（延迟）</strong></div>
+      <div class="sci">ACB每年降$80K</div>
+      <div class="sci">退出时缴资本利得<br>有效税率约<strong>15%</strong></div>
+    </div>
+    <div class="snc">
+      <div class="sc-t">⚠️ 方案B：常规</div>
+      <div class="sci">池子每年取出：<strong>$114,286</strong></div>
+      <div class="sci">税务：<strong>每年$34,286</strong></div>
+      <div class="sci">Linda净得：$80,000</div>
+      <div class="sci">ACB不变（$1M）<br>退出仍有资本利得税</div>
+    </div>
+  </div>
+  <div class="hb"><div class="hbt">📌 重申核心</div><div class="hbb">两个方案，Linda每年<strong>到手完全相同的$80,000</strong>。数字差异只在于：从池子里取出多少。ROC取$80K，常规取$114K——这$34K的年度差距，通过S&P 500复利，10年后产生$694,047的池子差额。</div></div>
+</section>
+
+<!-- S4 年度数据表 -->
+<section class="slide" id="s3">
+  <div class="pl"></div>
+  <div class="snum">03 / 逐年对比表</div>
+  <h2 class="stitle">10年年度数据<br><span class="t">池子余额与差距扩大</span></h2>
+  <div class="dv"></div>
+  <p style="font-size:10.5px;color:var(--tm);margin-bottom:10px;">两方案Linda每年到手净额相同（$80,000）。常规方案池子每年多损耗$34,286。</p>
+  <div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
+    <span class="lroc">ROC：池子每年取$80,000</span>
+    <span class="lnroc">常规：池子每年取$114,286</span>
+  </div>
+
+  <table class="rt">
+    <thead>
+      <tr>
+        <th>年份</th>
+        <th>S&P500</th>
+        <th class="thr">ROC<br>池子余额</th>
+        <th class="thn">常规<br>池子余额</th>
+        <th class="thd">差额<br>ROC多出</th>
+        <th class="thn">常规<br>当年税</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="gy"><td>2015 第1年</td><td>+1.38%</td><td class="tdr">$933,800</td><td class="tdn">$899,514</td><td class="tdd">+$34,286</td><td class="tdn">$34,286</td></tr>
+      <tr class="gy"><td>2016 第2年</td><td>+11.96%</td><td class="tdr">$965,482</td><td class="tdn">$892,810</td><td class="tdd">+$72,672</td><td class="tdn">$34,286</td></tr>
+      <tr class="gy"><td>2017 第3年</td><td>+21.83%</td><td class="tdr">$1,096,247</td><td class="tdn">$973,425</td><td class="tdd">+$122,822</td><td class="tdn">$34,286</td></tr>
+      <tr class="by"><td>2018 第4年</td><td>-4.38%</td><td class="tdr">$968,232</td><td class="tdn">$816,504</td><td class="tdd">+$151,728</td><td class="tdn">$34,286</td></tr>
+      <tr class="gy"><td>2019 第5年</td><td>+31.49%</td><td class="tdr">$1,193,128</td><td class="tdn">$959,335</td><td class="tdd">+$233,793</td><td class="tdn">$34,286</td></tr>
+      <tr class="gy"><td>2020 第6年</td><td>+18.40%</td><td class="tdr">$1,332,663</td><td class="tdn">$1,021,567</td><td class="tdd">+$311,097</td><td class="tdn">$34,286</td></tr>
+      <tr class="gy"><td>2021 第7年</td><td>+28.89%</td><td class="tdr">$1,637,670</td><td class="tdn">$1,202,412</td><td class="tdd">+$435,258</td><td class="tdn">$34,286</td></tr>
+      <tr class="by"><td>2022 第8年</td><td>-18.11%</td><td class="tdr">$1,261,088</td><td class="tdn">$870,369</td><td class="tdd">+$390,719</td><td class="tdn">$34,286</td></tr>
+      <tr class="gy"><td>2023 第9年</td><td>+26.29%</td><td class="tdr">$1,512,628</td><td class="tdn">$984,903</td><td class="tdd">+$527,724</td><td class="tdn">$34,286</td></tr>
+      <tr style="background:rgba(62,212,228,.06);"><td>2024 第10年</td><td>+25.02%</td><td class="tdr" style="font-weight:700;font-size:10.5px;">$1,811,087</td><td class="tdn" style="font-size:10.5px;">$1,117,041</td><td class="tdd" style="font-size:11px;color:var(--cyl);">+$694,047 🏆</td><td class="tdn">$34,286</td></tr>
+    </tbody>
+  </table>
+  <p class="tn">两方案挂钩完全相同的S&P 500。差距来源：常规方案每年多取$34,286出池子缴税，导致复利基数持续缩小。牛市年份（+31%、+28%）差距加速拉大。</p>
+</section>
+
+<!-- S5 退出结算 -->
+<section class="slide" id="s4">
+  <div class="pl"></div>
+  <div class="snum">04 / 退出结算</div>
+  <h2 class="stitle">第10年退出<br><span class="t">最终税务与净值完整对比</span></h2>
+  <div class="dv"></div>
+  <p class="bd">10年结束，两方案全部清仓，计算最终净值。ROC方案因池子更大、税务更低，<strong>最终净值领先$469,940</strong>：</p>
+
+  <div class="sumbox">
+    <div class="sumr" style="background:rgba(62,212,228,.05);padding:8px;border-radius:6px;margin-bottom:6px;"><span class="suml" style="font-size:11px;font-weight:700;">📊 关键差异：池子取款量</span><span></span></div>
+    <div class="sumr"><span class="suml">每年从池子取出</span><span class="sumrc">$80,000</span><span class="sumnc">$114,286</span></div>
+    <div class="sumr"><span class="suml">每年税款（当年缴）</span><span class="sumrc">$0</span><span class="sumnc">$34,286</span></div>
+    <div class="sumr"><span class="suml">Linda每年到手净额</span><span class="sumrc">$80,000 ✓</span><span class="sumnc">$80,000 ✓</span></div>
+    <div class="sumr" style="border-top:1px solid rgba(255,255,255,.08);padding-top:8px;margin-top:4px;"><span class="suml" style="font-size:11px;font-weight:700;">📊 第10年清仓</span><span></span></div>
+    <div class="sumr"><span class="suml">池子价值（税前）</span><span class="sumrc">$1,811,087</span><span class="sumnc">$1,117,041</span></div>
+    <div class="sumr"><span class="suml">最终ACB</span><span class="sumrc">$200,000</span><span class="sumnc">$1,000,000</span></div>
+    <div class="sumr"><span class="suml">资本利得</span><span class="sumrc">$1,611,087</span><span class="sumnc">$117,041</span></div>
+    <div class="sumr"><span class="suml">退出税（15%有效）</span><span class="sumrc">$241,663</span><span class="sumnc">$17,556</span></div>
+    <div class="sumr"><span class="suml">池子净值（税后）</span><span class="sumrc">$1,569,424</span><span class="sumnc">$1,099,485</span></div>
+    <div class="sumr" style="border-top:1px solid rgba(255,255,255,.08);padding-top:8px;margin-top:4px;"><span class="suml" style="font-size:11px;font-weight:700;">📊 10年总税对比</span><span></span></div>
+    <div class="sumr"><span class="suml">10年分配时缴税</span><span class="sumrc">$0</span><span class="sumnc">$342,857</span></div>
+    <div class="sumr"><span class="suml">退出时缴税</span><span class="sumrc">$241,663</span><span class="sumnc">$17,556</span></div>
+    <div class="sumr"><span class="suml">总税负</span><span class="sumrc">$241,663</span><span class="sumnc">$360,413</span></div>
+    <div class="sumr"><span class="suml" style="font-weight:700;">ROC省税</span><span class="sumd">$118,750 节省</span></div>
+    <div class="sumr" style="background:rgba(62,212,228,.08);padding:8px;border-radius:6px;"><span class="suml" style="font-weight:700;font-size:12px;">ROC净值领先</span><span class="sumd" style="font-size:16px;">+$469,940 🏆</span></div>
+  </div>
+</section>
+
+<!-- S6 三大优势 -->
+<section class="slide" id="s5">
+  <div class="pl"></div>
+  <div class="snum">05 / 三大核心优势</div>
+  <h2 class="stitle">ROC的<br><span class="t">三大价值总结</span></h2>
+  <div class="dv"></div>
+
+  <div style="margin-bottom:18px;">
+    <div style="font-size:10px;color:var(--tm);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;">第10年池子净值对比（税后）</div>
+    <div style="margin-bottom:10px;">
+      <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:11px;color:var(--rc);">ROC方案A</span><span style="font-size:12px;font-weight:700;color:var(--rc);">$1,569,424</span></div>
+      <div style="height:26px;border-radius:5px;overflow:hidden;background:rgba(255,255,255,.05);"><div style="height:100%;width:100%;background:linear-gradient(90deg,rgba(62,212,228,.55),rgba(62,212,228,.2));border-radius:5px;display:flex;align-items:center;padding:0 10px;"><span style="font-size:9.5px;color:var(--rc);">比常规净值多 $469,940</span></div></div>
+    </div>
+    <div>
+      <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:11px;color:var(--nc);">常规方案B</span><span style="font-size:12px;font-weight:700;color:var(--nc);">$1,099,485</span></div>
+      <div style="height:26px;border-radius:5px;overflow:hidden;background:rgba(255,255,255,.05);"><div style="height:100%;width:70%;background:linear-gradient(90deg,rgba(240,112,112,.5),rgba(240,112,112,.2));border-radius:5px;display:flex;align-items:center;padding:0 10px;"><span style="font-size:9.5px;color:var(--nc);">每年多取$34K缴税，复利损耗</span></div></div>
+    </div>
+  </div>
+
+  <div class="fl">
+    <div class="fi"><div class="fd fdc">①</div><div>
+      <div class="fit">池子优势：$34,286留在池子复利</div>
+      <div class="fib">常规方案每年多从池子取$34,286缴税。ROC方案这笔钱留在池子里，以13%年化复利增长10年。<strong>复利放大后，最终差距达$694,047（税前）。</strong></div>
+    </div></div>
+    <div class="fi"><div class="fd fdv">②</div><div>
+      <div class="fit">税务优势：总税从$360K降至$242K</div>
+      <div class="fib">常规方案10年分配缴税$342,857（30%即期），退出再交$17,556，合计<strong>$360,413</strong>。ROC方案仅在退出时一次性缴税<strong>$241,663</strong>（15%资本利得有效税率）。<strong>节省$118,750。</strong></div>
+    </div></div>
+    <div class="fi"><div class="fd fdg">③</div><div>
+      <div class="fit">流动性优势：全额可用，零税款预留</div>
+      <div class="fib">每次收到$80,000全部可用，<strong>不需要单独预留税款</strong>——现金规划更简单。相比之下，常规方案每次分配后都需要为税务预留$34,286，真正可用资金要打折扣。</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- S7 ROC机制解析 -->
+<section class="slide" id="s6">
+  <div class="pl"></div>
+  <div class="snum">06 / 原理解析</div>
+  <h2 class="stitle">ROC的税务机制<br><span class="t">加拿大税法如何处理</span></h2>
+  <div class="dv"></div>
+  <p class="bd"><strong>Return of Capital（ROC）</strong>被加拿大税务局（CRA）认定为"归还你的本金"，而非投资收益。收到时完全不算当年应税收入。</p>
+  <div class="card"><span class="ci2">📋</span><div class="ct2">T3税单 Box 42 — 税务处理</div><div class="cb2">ROC分配显示在T3税单<strong>第42栏</strong>，属于"仅供参考"。<strong>不计入当年应税收入</strong>，但会逐年降低调整成本基础（ACB）。出售时才按资本利得税结算。</div></div>
+  <div class="card"><span class="ci2">🧮</span><div class="ct2">为什么ROC税率更低（退出时）</div><div class="cb2">
+    <strong>常规分配：30%即期收入税</strong>（每年交，税率高）<br><br>
+    <strong>ROC退出时：资本利得税</strong> = 利得 × 50%计入 × 30% = <strong>有效税率约15%</strong><br><br>
+    同样的金额，退出时交税比每年交税<strong>税率低一半</strong>，且延迟缴税让资金在账户里多工作10年。
+  </div></div>
+  <div class="hb"><div class="hbt">🔑 简单理解ROC</div><div class="hbb">ROC就是<strong>"先完整使用，10年后低税结账"</strong>。那笔"应该缴但还没缴"的税款所对应的资金，在这10年里一直在池子里帮你赚钱——这是ROC最本质的价值。</div></div>
+</section>
+
+<!-- S8 注意事项 -->
+<section class="slide" id="s7">
+  <div class="pl"></div>
+  <div class="snum">07 / 注意事项</div>
+  <h2 class="stitle">ROC是税务递延<br><span class="t">不是免税，使用前需了解</span></h2>
+  <div class="dv"></div>
+  <div class="pc">
+    <div class="prb"><div class="bt">✅ ROC优势</div><ul>
+      <li>分配时零税务</li>
+      <li>池子复利基数更大</li>
+      <li>退出税率仅15%</li>
+      <li>非注册账户无上限</li>
+      <li>全额现金流可用</li>
+      <li>可配合亏损结转</li>
+    </ul></div>
+    <div class="cnb"><div class="bt">⚠️ 注意</div><ul>
+      <li>ACB降低→退出利得更大</li>
+      <li>需手动追踪每年ACB</li>
+      <li>ACB归零后才开始计税</li>
+      <li>出售时需在Schedule 3计算</li>
+      <li>不代表投资质量高</li>
+      <li>需配合专业顾问规划</li>
+    </ul></div>
+  </div>
+  <div class="card"><span class="ci2">📋</span><div class="ct2">Linda案例ACB变化</div><div class="cb2">
+    初始ACB：<strong>$1,000,000</strong><br>
+    每年ROC分配$80,000 → ACB每年降$80,000<br>
+    第10年末ACB：$1,000,000 − $800,000 = <strong>$200,000</strong><br><br>
+    退出资本利得 = $1,811,087 − $200,000 = <strong>$1,611,087</strong><br>
+    退出税 = $1,611,087 × 50% × 30% = <strong>$241,663</strong>（有效税率13.3%）
+  </div></div>
+  <div class="hb"><div class="hbt">⭐ 最适合的投资者</div><div class="hbb">• RRSP/TFSA已满、有大量<strong>非注册账户</strong>的高税阶人士<br>• 需要稳定现金流、希望<strong>降低即期税负</strong>的退休投资者<br>• 持有资本亏损结转的投资者（可用于抵扣未来资本利得）<br>• 担心政府福利回拨的<strong>65岁以上高收入退休人士</strong></div></div>
+</section>
+
+<!-- S9 税务工具对比 -->
+<section class="slide" id="s8">
+  <div class="pl"></div>
+  <div class="snum">08 / 工具对比</div>
+  <h2 class="stitle">ROC vs RRSP vs TFSA<br><span class="t">三层税务规划最优组合</span></h2>
+  <div class="dv"></div>
+  <table class="rt">
+    <thead>
+      <tr>
+        <th>特性</th>
+        <th class="thr">ROC</th>
+        <th style="color:var(--gl);">RRSP</th>
+        <th style="color:var(--grl);">TFSA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>供款上限</td><td class="tdr">无上限</td><td style="color:var(--gl);">有年度上限</td><td style="color:var(--grl);">有年度上限</td></tr>
+      <tr><td>供款时抵税</td><td class="tdr">无</td><td style="color:var(--gl);">✓ 可减税</td><td style="color:var(--grl);">无</td></tr>
+      <tr><td>分配/提取税务</td><td class="tdr">$0（ROC阶段）</td><td style="color:var(--aml);">全额收入税</td><td style="color:var(--grl);">完全免税</td></tr>
+      <tr><td>最终退出税务</td><td class="tdr">资本利得~15%</td><td style="color:var(--aml);">全额收入税</td><td style="color:var(--grl);">完全免税</td></tr>
+      <tr><td>无上限 → 超额资金</td><td class="tdr">✓ 最佳选择</td><td style="color:var(--rdl);">✗</td><td style="color:var(--rdl);">✗</td></tr>
+      <tr><td>最适合时机</td><td class="tdr">RRSP/TFSA用满后</td><td style="color:var(--gl);">在职高收入阶段</td><td style="color:var(--grl);">所有人优先使用</td></tr>
+    </tbody>
+  </table>
+  <div class="hb"><div class="hbt">💡 最优三层叠加</div><div class="hbb">
+    <strong>第一层：</strong>最大化TFSA（每年约$7,000，完全免税）<br>
+    <strong>第二层：</strong>最大化RRSP（减少当年高收入应税额）<br>
+    <strong>第三层：</strong>剩余非注册资金 → <strong>ROC结构投资（无上限，税延15%，远优于GIC的30%利息税）</strong>
+  </div></div>
+</section>
+
+<!-- S10 CTA -->
+<section class="slide cta" id="s9">
+  <div class="ctar"><span class="ctai">💜</span></div>
+  <h2 class="ctat">同样到手$80,000<br><span style="color:var(--cyl)">10年后池子差$469,940</span></h2>
+  <p class="ctad">这不是税务魔法。这是<strong style="color:var(--gl)">让更多本金留在池子里，在13%年化收益下复利10年</strong>的结果。ROC的价值，就是把每年多取走缴税的那笔钱，变成了池子里继续工作的资产。</p>
+  <div style="width:100%;max-width:340px;margin-bottom:20px;">
+    <div class="hb" style="text-align:left;">
+      <div class="hbt">✅ Linda案例总结</div>
+      <div class="hbb" style="font-size:12px;">
+        <strong style="color:var(--rc);">每年到手：</strong>两方案完全相同 $80,000<br>
+        <strong style="color:var(--rc);">池子税前差：</strong>ROC多出 $694,047<br>
+        <strong style="color:var(--rc);">总税节省：</strong>$118,750（15% vs 30%）<br>
+        <strong style="color:var(--rc);">净值最终差：</strong>ROC多出 $469,940
+      </div>
+    </div>
+  </div>
+  <div style="width:100%;max-width:340px;margin-bottom:20px;background:rgba(91,63,160,.12);border:1px solid rgba(91,63,160,.32);border-radius:14px;padding:17px;">
+    <div style="font-size:9.5px;letter-spacing:2.5px;color:var(--vl);text-transform:uppercase;margin-bottom:11px;font-weight:700;text-align:left;">🌟 立即咨询</div>
+    <div style="display:flex;align-items:center;gap:11px;margin-bottom:13px;">
+      <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#5B3FA0,#331E6A);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">👩</div>
+      <div style="text-align:left;"><div style="font-family:'Noto Serif SC',serif;font-size:16px;font-weight:700;color:#fff;">Elina</div><div style="font-size:10px;color:var(--tm);">持牌保险及理财顾问</div></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;text-align:left;">
+      <a href="tel:4168267591" style="display:flex;align-items:center;gap:9px;text-decoration:none;"><span style="width:27px;height:27px;border-radius:6px;background:rgba(46,204,112,.12);border:1px solid rgba(46,204,112,.25);display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;">📞</span><span style="font-size:13px;font-weight:600;color:var(--grl);">416-826-7591</span></a>
+      <a href="https://wa.me/14168267591" style="display:flex;align-items:center;gap:9px;text-decoration:none;"><span style="width:27px;height:27px;border-radius:6px;background:rgba(46,204,112,.12);border:1px solid rgba(46,204,112,.25);display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;">💬</span><span style="font-size:12px;color:var(--grl);">WhatsApp: 416-826-7591</span></a>
+      <a href="mailto:elina_insurance@hotmail.com" style="display:flex;align-items:center;gap:9px;text-decoration:none;"><span style="width:27px;height:27px;border-radius:6px;background:rgba(91,63,160,.18);border:1px solid rgba(160,136,232,.3);display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;">✉️</span><span style="font-size:11px;color:var(--vp);word-break:break-all;">elina_insurance@hotmail.com</span></a>
+    </div>
+  </div>
+  <p class="ctadc">本演示稿仅供一般教育目的，不构成个人税务或投资建议。"Linda"为假设性示例，S&P 500历史回报不代表未来表现，投资存在风险。税务处理因个人情况和省份而异。实施任何策略前请咨询持牌理财顾问及税务专业人士。数据来源：Fidelity Canada、The Greenard Group/Scotia Wealth Management、RBC Global Asset Management、CRA。</p>
+</section>
+
+<script>
+const slides=document.querySelectorAll('.slide'),dots=document.querySelectorAll('.dot');
+function goTo(i){slides[i].scrollIntoView({behavior:'smooth'});}
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const i=Array.from(slides).indexOf(e.target);dots.forEach(d=>d.classList.remove('active'));if(dots[i])dots[i].classList.add('active');}});},{threshold:.5});
+slides.forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>
