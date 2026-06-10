@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>分红保险参与账户 — Canada Life</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1B4332;
+    --forest-mid: #2D6A4F;
+    --forest-light: #52B788;
+    --cream: #F8F3E8;
+    --warm: #E9C46A;
+    --warm-light: #F4D78A;
+    --rust: #D4694A;
+    --green-bright: #40C472;
+    --text-muted: #8BA897;
+    --card-bg: rgba(255,255,255,0.06);
+    --card-border: rgba(82,183,136,0.25);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-family: 'Noto Sans SC', sans-serif; }
+  body { background: #0D2018; color: #E8F0EC; max-width: 480px; margin: 0 auto; }
+
+  /* NAV DOTS */
+  .nav-dots { position: fixed; right: 12px; top: 50%; transform: translateY(-50%); z-index: 999; display: flex; flex-direction: column; gap: 8px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(82,183,136,0.3); cursor: pointer; transition: all 0.3s; }
+  .dot.active { background: var(--forest-light); transform: scale(1.4); }
+
+  /* SLIDE BASE */
+  .slide { min-height: 100vh; padding: 40px 24px 50px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; border-top: 3px solid transparent; border-image: linear-gradient(90deg, var(--forest-mid), var(--forest-light), var(--warm)) 1; }
+
+  /* TYPOGRAPHY */
+  .eyebrow { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--forest-light); margin-bottom: 10px; font-weight: 500; }
+  h1 { font-family: 'Noto Serif SC', serif; font-size: 30px; font-weight: 900; line-height: 1.25; color: #fff; margin-bottom: 8px; }
+  h2 { font-family: 'Noto Serif SC', serif; font-size: 22px; font-weight: 700; color: var(--cream); margin-bottom: 6px; line-height: 1.3; }
+  .subtitle { font-size: 14px; color: var(--text-muted); margin-bottom: 24px; line-height: 1.6; }
+  .section-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--warm); margin-bottom: 16px; font-weight: 500; }
+
+  /* HERO */
+  #s1 { background: linear-gradient(160deg, #0D2018, #152B20, #0A1A10); }
+  .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(82,183,136,0.15); border: 1px solid rgba(82,183,136,0.35); border-radius: 20px; padding: 5px 14px; font-size: 12px; color: var(--forest-light); margin-bottom: 20px; }
+  .hero-badge span { background: var(--forest-light); color: #0D2018; padding: 1px 7px; border-radius: 10px; font-size: 10px; font-weight: 700; }
+  .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 22px 0; }
+  .stat-box { background: rgba(82,183,136,0.1); border: 1px solid rgba(82,183,136,0.2); border-radius: 12px; padding: 14px 8px; text-align: center; }
+  .stat-num { font-family: 'Noto Serif SC', serif; font-size: 22px; font-weight: 900; color: var(--forest-light); line-height: 1; }
+  .stat-label { font-size: 10px; color: var(--text-muted); margin-top: 5px; line-height: 1.4; }
+
+  /* CONTACT CARD */
+  .contact-card { background: rgba(82,183,136,0.1); border: 1px solid rgba(82,183,136,0.25); border-radius: 14px; padding: 16px; margin-top: 20px; display: flex; align-items: center; gap: 14px; }
+  .contact-avatar { width: 46px; height: 46px; border-radius: 50%; background: linear-gradient(135deg, var(--forest-mid), var(--forest-light)); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+  .contact-name { font-family: 'Noto Serif SC', serif; font-size: 16px; font-weight: 700; color: #fff; }
+  .contact-title { font-size: 10px; color: var(--text-muted); margin: 2px 0 8px; }
+  .contact-btns { display: flex; gap: 8px; }
+  .contact-btn { padding: 5px 12px; border-radius: 20px; font-size: 11px; text-decoration: none; font-weight: 600; }
+  .btn-green { background: var(--forest-light); color: #0D2018; }
+  .btn-outline { background: transparent; border: 1px solid var(--forest-light); color: var(--forest-light); }
+
+  /* CARDS */
+  .card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 18px; margin-bottom: 12px; }
+  .card-icon { font-size: 24px; margin-bottom: 10px; display: block; }
+  .card-title { font-family: 'Noto Serif SC', serif; font-size: 15px; font-weight: 700; color: var(--cream); margin-bottom: 6px; }
+  .card-body { font-size: 13px; color: #A8C4B0; line-height: 1.65; }
+  .card-body strong { color: var(--forest-light); }
+
+  /* HBOX */
+  .hbox { background: linear-gradient(135deg, rgba(27,67,50,0.6), rgba(45,106,79,0.4)); border: 1px solid rgba(82,183,136,0.3); border-radius: 14px; padding: 18px; margin: 14px 0; }
+  .hbox-title { font-size: 12px; letter-spacing: 1px; color: var(--warm); margin-bottom: 8px; font-weight: 600; text-transform: uppercase; }
+  .hbox-body { font-size: 13px; color: #C8DDD0; line-height: 1.7; }
+  .hbox-body strong { color: #fff; }
+
+  /* FLOW LIST */
+  .flow-list { display: flex; flex-direction: column; gap: 14px; margin: 16px 0; }
+  .flow-item { display: flex; align-items: flex-start; gap: 14px; }
+  .flow-dot { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+  .fd-green { background: rgba(82,183,136,0.2); border: 1.5px solid var(--forest-light); color: var(--forest-light); }
+  .fd-warm { background: rgba(233,196,106,0.15); border: 1.5px solid var(--warm); color: var(--warm); }
+  .flow-title { font-family: 'Noto Serif SC', serif; font-size: 14px; font-weight: 700; color: var(--cream); margin-bottom: 3px; }
+  .flow-body { font-size: 12px; color: #8BA897; line-height: 1.55; }
+
+  /* COMPARE TABLE */
+  .compare-table { width: 100%; border-collapse: collapse; margin: 14px 0; }
+  .compare-table th { background: rgba(27,67,50,0.7); color: var(--forest-light); font-size: 11px; padding: 10px 8px; text-align: center; letter-spacing: 0.5px; }
+  .compare-table th:first-child { text-align: left; }
+  .compare-table td { padding: 10px 8px; font-size: 12px; border-bottom: 1px solid rgba(82,183,136,0.1); text-align: center; color: #A8C4B0; }
+  .compare-table td:first-child { text-align: left; color: #C8DDD0; font-weight: 500; }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .tick { color: var(--green-bright); font-size: 16px; }
+  .cross { color: var(--rust); font-size: 16px; }
+  .neutral { color: var(--warm); font-size: 13px; }
+
+  /* BAR CHART */
+  .bar-group { margin: 10px 0; }
+  .bar-label-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+  .bar-name { font-size: 12px; color: #C8DDD0; font-weight: 500; }
+  .bar-val { font-size: 13px; font-weight: 700; }
+  .bar-track { height: 28px; background: rgba(255,255,255,0.05); border-radius: 6px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 11px; font-weight: 600; transition: width 1s ease; }
+  .bar-green { background: linear-gradient(90deg, var(--forest-mid), var(--forest-light)); color: #0D2018; }
+  .bar-warm { background: linear-gradient(90deg, #b8963a, var(--warm)); color: #0D2018; }
+  .bar-grey { background: linear-gradient(90deg, #3a4a40, #506055); color: #8BA897; }
+  .bar-rust { background: linear-gradient(90deg, #8c3e28, var(--rust)); color: #fff; }
+
+  /* EXAMPLE BOX */
+  .example-box { background: rgba(27,67,50,0.5); border: 1px solid rgba(82,183,136,0.25); border-radius: 14px; padding: 18px; margin: 14px 0; }
+  .example-title { font-size: 12px; color: var(--warm); margin-bottom: 14px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
+  .ex-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(82,183,136,0.1); }
+  .ex-row:last-child { border-bottom: none; }
+  .ex-label { font-size: 12px; color: #8BA897; }
+  .ex-val { font-size: 13px; font-weight: 700; }
+  .ev-green { color: var(--green-bright); }
+  .ev-warm { color: var(--warm); }
+  .ev-muted { color: #8BA897; }
+
+  /* PROCON */
+  .procon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+  .pro-col, .con-col { border-radius: 12px; padding: 14px; }
+  .pro-col { background: rgba(64,196,114,0.08); border: 1px solid rgba(64,196,114,0.2); }
+  .con-col { background: rgba(212,105,74,0.08); border: 1px solid rgba(212,105,74,0.2); }
+  .pc-header { font-size: 11px; font-weight: 700; letter-spacing: 1px; margin-bottom: 10px; text-transform: uppercase; }
+  .pc-header.pro { color: var(--green-bright); }
+  .pc-header.con { color: var(--rust); }
+  .pc-item { font-size: 11.5px; color: #A8C4B0; margin-bottom: 7px; padding-left: 14px; position: relative; line-height: 1.5; }
+  .pc-item::before { position: absolute; left: 0; }
+  .pro .pc-item::before { content: "✓"; color: var(--green-bright); }
+  .con .pc-item::before { content: "◦"; color: var(--rust); }
+
+  /* DSIR TABLE */
+  .dsir-table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 12px; }
+  .dsir-table th { background: rgba(27,67,50,0.8); color: var(--forest-light); padding: 8px 6px; text-align: center; font-size: 11px; }
+  .dsir-table td { padding: 7px 6px; text-align: center; border-bottom: 1px solid rgba(82,183,136,0.1); color: #A8C4B0; }
+  .dsir-table tr:last-child td { border-bottom: none; font-weight: 700; color: var(--forest-light); }
+  .dsir-table .highlight-row td { background: rgba(82,183,136,0.1); color: var(--cream); }
+
+  /* FINAL CTA */
+  #s10 { background: linear-gradient(160deg, #0D2018, #152B20, #1B3A25); }
+  .ring-icon { width: 70px; height: 70px; border-radius: 50%; border: 3px solid var(--forest-light); display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 20px; background: rgba(82,183,136,0.1); }
+  .disclaimer { font-size: 10px; color: rgba(139,168,151,0.6); margin-top: 24px; line-height: 1.6; border-top: 1px solid rgba(82,183,136,0.15); padding-top: 16px; }
+
+  /* DECORATIVE */
+  .deco-circle { position: absolute; border-radius: 50%; opacity: 0.06; pointer-events: none; }
+  .tag { display: inline-block; background: rgba(82,183,136,0.12); border: 1px solid rgba(82,183,136,0.25); border-radius: 20px; padding: 4px 12px; font-size: 11px; color: var(--forest-light); margin: 4px 3px; }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(82,183,136,0.3), transparent); margin: 16px 0; }
+</style>
+</head>
+<body>
+
+<nav class="nav-dots" id="navDots"></nav>
+
+<!-- SLIDE 1: HERO -->
+<section class="slide" id="s1">
+  <div class="deco-circle" style="width:280px;height:280px;background:var(--forest-mid);top:-80px;right:-100px;"></div>
+  <div class="deco-circle" style="width:180px;height:180px;background:var(--warm);bottom:-50px;left:-60px;"></div>
+
+  <div class="hero-badge">🌿 分红保险参与账户 <span>2026版</span></div>
+  <h1>稳健增长<br>低波动<br>超越GIC</h1>
+  <p class="subtitle">Canada Life 分红人寿保险 — 30年历史验证的稳定回报</p>
+
+  <div class="stat-row">
+    <div class="stat-box">
+      <div class="stat-num" style="color:var(--warm);">5.5%</div>
+      <div class="stat-label">2024年<br>分红利率</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">30年</div>
+      <div class="stat-label">标准差<br>仅1.47%</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" style="color:var(--green-bright);">低风险</div>
+      <div class="stat-label">平稳穿越<br>多次危机</div>
+    </div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">🔑 核心优势</div>
+    <div class="hbox-body">参与账户将保单持有人的资金统一投资于<strong>债券、股票、房地产</strong>等多元资产，通过<strong>平滑机制</strong>将波动降至最低，同时提供终身保障。</div>
+  </div>
+
+  <div style="margin-top:20px;background:rgba(82,183,136,0.08);border:1px solid rgba(82,183,136,0.28);border-radius:14px;padding:20px 18px;">
+    <div style="font-size:10px;letter-spacing:2px;color:var(--forest-light);text-transform:uppercase;margin-bottom:14px;font-weight:700;">📬 咨询顾问</div>
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
+      <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--forest-mid),var(--forest-light));display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">👩</div>
+      <div>
+        <div style="font-family:'Noto Serif SC',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.2;">Elina</div>
+        <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">持牌保险及理财顾问</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <a href="tel:4168267591" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="width:32px;height:32px;border-radius:8px;background:rgba(82,183,136,0.12);border:1px solid rgba(82,183,136,0.25);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">📞</span>
+        <span style="font-size:14px;font-weight:600;color:var(--forest-light);letter-spacing:0.5px;">416-826-7591</span>
+      </a>
+      <a href="https://wa.me/14168267591" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="width:32px;height:32px;border-radius:8px;background:rgba(82,183,136,0.12);border:1px solid rgba(82,183,136,0.25);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">💬</span>
+        <span style="font-size:13px;color:var(--forest-light);">WhatsApp: 416-826-7591</span>
+      </a>
+      <a href="mailto:elina_insurance@hotmail.com" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="width:32px;height:32px;border-radius:8px;background:rgba(233,196,106,0.12);border:1px solid rgba(233,196,106,0.25);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">✉️</span>
+        <span style="font-size:12.5px;color:var(--warm-light);word-break:break-all;">elina_insurance@hotmail.com</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 2: 什么是参与账户 -->
+<section class="slide" id="s2">
+  <div class="eyebrow">基础认识</div>
+  <h2>什么是参与账户？</h2>
+  <p class="subtitle">分红人寿保险的核心投资引擎</p>
+
+  <div class="card">
+    <span class="card-icon">🏦</span>
+    <div class="card-title">参与账户的定义</div>
+    <div class="card-body">Canada Life 按照《保险公司法》要求，将所有<strong>分红保险保单</strong>的资产单独管理在"参与账户"中，与其他账户完全隔离，专款专用。</div>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">📊</span>
+    <div class="card-title">如何产生收益？</div>
+    <div class="card-body">当参与账户在<strong>投资收益、死亡率、费用及税务</strong>等方面的实际表现优于定价假设时，产生盈余 — 这些盈余将以<strong>保单红利</strong>形式分配给保单持有人。</div>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">🔄</span>
+    <div class="card-title">2020年合并升级</div>
+    <div class="card-body">2020年1月1日，原大西部人寿、伦敦人寿、加拿大人寿三家公司的参与账户<strong>合并为一个更大的参与账户</strong>，风险更分散，管理费用更低，红利更稳定。</div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">📌 关键机制</div>
+    <div class="hbox-body">董事会每年审批投资政策，注册精算师每年向董事会报告费用及收益分配的<strong>公平性</strong>。参与账户受《保险公司法》第461条监管。</div>
+  </div>
+</section>
+
+<!-- SLIDE 3: 与GIC比较 -->
+<section class="slide" id="s3">
+  <div class="eyebrow">核心比较</div>
+  <h2>参与账户 vs GIC</h2>
+  <p class="subtitle">同样低风险，回报相差悬殊</p>
+
+  <div class="section-label">📈 历史平均年化回报（2024年12月31日）</div>
+
+  <div class="bar-group">
+    <div class="bar-label-row">
+      <span class="bar-name">🌿 Canada Life 分红利率（30年）</span>
+      <span class="bar-val" style="color:var(--forest-light);">7.22%</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill bar-green" style="width:82%">7.22%</div></div>
+  </div>
+
+  <div class="bar-group" style="margin-top:12px">
+    <div class="bar-label-row">
+      <span class="bar-name">🌿 Canada Life 分红利率（10年）</span>
+      <span class="bar-val" style="color:var(--forest-light);">5.52%</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill bar-green" style="width:63%">5.52%</div></div>
+  </div>
+
+  <div class="bar-group" style="margin-top:12px">
+    <div class="bar-label-row">
+      <span class="bar-name">💛 5年期GIC（10年均值）</span>
+      <span class="bar-val" style="color:var(--warm);">2.06%</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill bar-warm" style="width:24%">2.06%</div></div>
+  </div>
+
+  <div class="bar-group" style="margin-top:12px">
+    <div class="bar-label-row">
+      <span class="bar-name">🏛️ 加拿大政府债券（10年均值）</span>
+      <span class="bar-val" style="color:#8BA897;">1.89%</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill bar-grey" style="width:22%">1.89%</div></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <table class="compare-table">
+    <tr>
+      <th>对比项目</th>
+      <th>🌿 参与账户</th>
+      <th>💛 GIC</th>
+    </tr>
+    <tr>
+      <td>长期回报</td>
+      <td><span class="tick">✓ 高</span></td>
+      <td><span class="cross">✗ 低</span></td>
+    </tr>
+    <tr>
+      <td>波动性</td>
+      <td><span class="tick">✓ 极低</span></td>
+      <td><span class="neutral">● 固定</span></td>
+    </tr>
+    <tr>
+      <td>通胀保护</td>
+      <td><span class="tick">✓ 较强</span></td>
+      <td><span class="cross">✗ 弱</span></td>
+    </tr>
+    <tr>
+      <td>终身保障</td>
+      <td><span class="tick">✓ 有</span></td>
+      <td><span class="cross">✗ 无</span></td>
+    </tr>
+    <tr>
+      <td>身故赔付</td>
+      <td><span class="tick">✓ 有</span></td>
+      <td><span class="cross">✗ 无</span></td>
+    </tr>
+  </table>
+</section>
+
+<!-- SLIDE 4: 稳定性 -->
+<section class="slide" id="s4">
+  <div class="eyebrow">核心优势</div>
+  <h2>穿越危机的稳定性</h2>
+  <p class="subtitle">30年标准差仅1.47% — 远低于股市的15.62%</p>
+
+  <div class="section-label">📅 重大经济危机中的表现</div>
+
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-dot fd-green">💹</div>
+      <div>
+        <div class="flow-title">2000年 互联网泡沫破灭</div>
+        <div class="flow-body">TSX暴跌，GIC利率直线下降，而分红利率保持在 <strong style="color:var(--forest-light)">8.71%–8.96%</strong>，纹丝不动</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-green">🏦</div>
+      <div>
+        <div class="flow-title">2008–2009年 金融海啸</div>
+        <div class="flow-body">TSX全年跌幅达33%，GIC利率跌破2%，参与账户分红利率稳守 <strong style="color:var(--forest-light)">7.71%</strong></div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-green">🦠</div>
+      <div>
+        <div class="flow-title">2020年 新冠疫情冲击</div>
+        <div class="flow-body">全球市场大幅波动，GIC近乎零利率，参与账户分红利率 <strong style="color:var(--forest-light)">5.10%</strong>，远超同类</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-warm">📈</div>
+      <div>
+        <div class="flow-title">2022年 加息通胀冲击</div>
+        <div class="flow-body">债券大跌，TSX下跌5.84%，但参与账户分红利率<strong style="color:var(--warm)">逆势上升至5.25%</strong>，开启新一轮回升</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">🔑 平滑机制的力量</div>
+    <div class="hbox-body">参与账户通过将<strong>多年投资收益平滑分配</strong>的方式，避免了短期市场波动对红利的冲击。这是GIC无法复制的核心竞争力。</div>
+  </div>
+</section>
+
+<!-- SLIDE 5: 投资机制 -->
+<section class="slide" id="s5">
+  <div class="eyebrow">运作机制</div>
+  <h2>参与账户如何运作？</h2>
+  <p class="subtitle">多元资产配置 + 专业管理</p>
+
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-dot fd-green">1</div>
+      <div>
+        <div class="flow-title">资产分配</div>
+        <div class="flow-body">账户资产分为<strong style="color:var(--forest-light)">近期（10年内）</strong>和<strong style="color:var(--forest-light)">长期</strong>两部分，分别配置固定收益和多元资产，满足保单现金流需求</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-green">2</div>
+      <div>
+        <div class="flow-title">多元化投资</div>
+        <div class="flow-body">长期资产配置：<strong style="color:var(--forest-light)">1-10年固定收益 + 长期债券 + 普通股 + 私募股权 + 房地产</strong>，风险高度分散</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-green">3</div>
+      <div>
+        <div class="flow-title">收益平滑处理</div>
+        <div class="flow-body">采用<strong style="color:var(--forest-light)">平滑机制</strong>将多期投资回报均摊，分红利率变化平缓，不因单年市场波动而大起大落</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-warm">4</div>
+      <div>
+        <div class="flow-title">年度红利分配</div>
+        <div class="flow-body">注册精算师每年综合评估<strong style="color:var(--warm)">投资、死亡率、费用、税务</strong>等因素，合理制定红利比例，分配给保单持有人</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-warm">5</div>
+      <div>
+        <div class="flow-title">董事会监督</div>
+        <div class="flow-body">董事会每年审批投资政策，确保参与账户管理<strong style="color:var(--warm)">公平合理</strong>，保护保单持有人利益</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 6: 历史数据 -->
+<section class="slide" id="s6">
+  <div class="eyebrow">真实数据</div>
+  <h2>历史分红利率数据</h2>
+  <p class="subtitle">30年数据，一目了然</p>
+
+  <div class="example-box">
+    <div class="example-title">📊 Canada Life 分红利率 vs 市场利率（部分年份）</div>
+    <div class="ex-row">
+      <span class="ex-label">年份</span>
+      <span class="ex-val ev-green">分红利率</span>
+      <span class="ex-val" style="color:var(--warm);font-size:12px">5年GIC</span>
+    </div>
+    <div class="ex-row">
+      <span class="ex-label">2008（金融危机）</span>
+      <span class="ex-val ev-green">7.71%</span>
+      <span class="ex-val ev-muted">3.01%</span>
+    </div>
+    <div class="ex-row">
+      <span class="ex-label">2016（超低息时代）</span>
+      <span class="ex-val ev-green">6.00%</span>
+      <span class="ex-val ev-muted">1.42%</span>
+    </div>
+    <div class="ex-row">
+      <span class="ex-label">2020（新冠疫情）</span>
+      <span class="ex-val ev-green">5.10%</span>
+      <span class="ex-val ev-muted">1.28%</span>
+    </div>
+    <div class="ex-row">
+      <span class="ex-label">2022（高通胀加息）</span>
+      <span class="ex-val ev-green">5.25%</span>
+      <span class="ex-val" style="color:var(--warm)">2.87%</span>
+    </div>
+    <div class="ex-row" style="background:rgba(82,183,136,0.08);border-radius:8px;padding:8px;">
+      <span class="ex-label" style="color:var(--cream);font-weight:700">2024</span>
+      <span class="ex-val ev-green" style="font-size:16px">5.50%</span>
+      <span class="ex-val" style="color:var(--warm)">3.67%</span>
+    </div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">📐 关键数字</div>
+    <div class="hbox-body">
+      <strong>30年平均分红利率：7.22%</strong><br>
+      30年标准差：<strong>仅1.47%</strong>（低波动）<br>
+      同期TSX标准差：<strong>15.62%</strong>（高波动）<br>
+      30年平均GIC利率：<strong>2.98%</strong>（低回报）
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 7: 适合人群 -->
+<section class="slide" id="s7">
+  <div class="eyebrow">适合人群</div>
+  <h2>哪些人最适合参与账户？</h2>
+  <p class="subtitle">稳健型投资者的理想选择</p>
+
+  <div class="card">
+    <span class="card-icon">👴</span>
+    <div class="card-title">GIC到期、不知何处投资</div>
+    <div class="card-body">GIC到期后利率大幅下降？参与账户提供<strong>更高历史回报</strong>，同时附带终身保障，一举两得</div>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">💰</span>
+    <div class="card-title">担心通胀侵蚀储蓄</div>
+    <div class="card-body">GIC利率常常低于通胀率，实际购买力下降。参与账户<strong>30年平均7.22%</strong>，历史上稳定跑赢通胀</div>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">🛡️</span>
+    <div class="card-title">注重财富传承与保障</div>
+    <div class="card-body">在享受稳定回报的同时，保单持有人可将<strong>身故赔付免税传承</strong>给子女，GIC无此功能</div>
+  </div>
+
+  <div class="section-label" style="margin-top:8px">适合人群标签</div>
+  <div>
+    <span class="tag">50-65岁中高净值</span>
+    <span class="tag">保守型投资者</span>
+    <span class="tag">GIC到期转型</span>
+    <span class="tag">注重稳定收益</span>
+    <span class="tag">传承规划需求</span>
+    <span class="tag">长期持有意愿</span>
+  </div>
+</section>
+
+<!-- SLIDE 8: 优缺点 -->
+<section class="slide" id="s8">
+  <div class="eyebrow">全面评估</div>
+  <h2>优势与注意事项</h2>
+  <p class="subtitle">客观全面，做出明智决策</p>
+
+  <div class="procon-grid">
+    <div class="pro-col">
+      <div class="pc-header pro">✦ 优势</div>
+      <div class="pro">
+        <div class="pc-item">历史回报显著高于GIC</div>
+        <div class="pc-item">30年波动率仅1.47%</div>
+        <div class="pc-item">终身寿险保障</div>
+        <div class="pc-item">身故赔付免税</div>
+        <div class="pc-item">平滑机制抵御市场波动</div>
+        <div class="pc-item">红利可复利增长</div>
+        <div class="pc-item">多元资产分散风险</div>
+      </div>
+    </div>
+    <div class="con-col">
+      <div class="pc-header con">◦ 注意事项</div>
+      <div class="con">
+        <div class="pc-item">红利非保证（随经验调整）</div>
+        <div class="pc-item">需长期持有效果最佳</div>
+        <div class="pc-item">提前退保有现金价值损失</div>
+        <div class="pc-item">需通过核保</div>
+        <div class="pc-item">短期灵活性低于GIC</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:8px">
+    <span class="card-icon">💡</span>
+    <div class="card-title">红利虽非保证，但历史记录极佳</div>
+    <div class="card-body">Canada Life 即便在2008年金融危机、2020年疫情等极端环境下，<strong>从未停止发放红利</strong>，历史记录高度可信。</div>
+  </div>
+</section>
+
+<!-- SLIDE 9: 如何开始 -->
+<section class="slide" id="s9">
+  <div class="eyebrow">行动指南</div>
+  <h2>如何开始布局分红保险？</h2>
+  <p class="subtitle">简单四步，开启稳健增值之路</p>
+
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-dot fd-green">1</div>
+      <div>
+        <div class="flow-title">评估现有资产配置</div>
+        <div class="flow-body">盘点GIC、储蓄账户等<strong>低回报资产</strong>，评估可转化至参与账户的金额及时间节点</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-green">2</div>
+      <div>
+        <div class="flow-title">健康核保申请</div>
+        <div class="flow-body">完成简单的<strong>健康问卷</strong>，Elina协助您选择最适合的保单类型和缴费方式（一次性缴清或分期）</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-green">3</div>
+      <div>
+        <div class="flow-title">选择红利使用方式</div>
+        <div class="flow-body">红利可选择<strong>购买额外保额</strong>（复利增长）、抵扣保费、现金提取或存储生息，灵活适配需求</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-warm">4</div>
+      <div>
+        <div class="flow-title">长期持有、定期回顾</div>
+        <div class="flow-body">参与账户价值随时间持续积累，Elina每年为您<strong>回顾保单表现</strong>，确保符合财务目标</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">💡 最优策略</div>
+    <div class="hbox-body">将GIC到期资金分批转入分红保险，以<strong>红利购买额外保额</strong>的方式实现复利增长，同时保留一部分流动资金以备不时之需。</div>
+  </div>
+</section>
+
+<!-- SLIDE 10: FINAL CTA -->
+<section class="slide" id="s10">
+  <div class="deco-circle" style="width:250px;height:250px;background:var(--forest-mid);top:-80px;right:-80px;"></div>
+
+  <div class="ring-icon">🌿</div>
+  <h2 style="text-align:center;font-size:24px;margin-bottom:8px">开始您的<br>稳健增值之旅</h2>
+  <p class="subtitle" style="text-align:center">分红保险参与账户 — 比GIC更聪明的选择</p>
+
+  <div class="hbox" style="margin:20px 0">
+    <div class="hbox-title">🌿 为什么选择参与账户？</div>
+    <div class="hbox-body">
+      ✓ <strong>30年平均回报7.22%</strong>，远超GIC的2.98%<br>
+      ✓ <strong>极低波动率1.47%</strong>，穿越多次危机<br>
+      ✓ <strong>终身保障+红利增长</strong>，双重价值<br>
+      ✓ 2024年分红利率：<strong>5.50%</strong>
+    </div>
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-avatar">👩‍💼</div>
+    <div>
+      <div class="contact-name">Elina</div>
+      <div class="contact-title">持牌保险及理财顾问 · 416-826-7591</div>
+      <div class="contact-btns">
+        <a href="tel:4168267591" class="contact-btn btn-green">📞 立即致电</a>
+        <a href="https://wa.me/14168267591" class="contact-btn btn-outline">💬 WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin:10px 0">
+    <a href="mailto:elina_insurance@hotmail.com" style="font-size:12px;color:var(--text-muted);text-decoration:none">📧 elina_insurance@hotmail.com</a>
+  </div>
+
+  <div class="disclaimer">本演示稿仅供一般教育目的，不构成个人投资、税务或法律建议。投资决策前请咨询持牌理财顾问及税务专业人士。过去的投资回报不代表未来表现。红利不受保证，反映参与账户的实际经验。基金投资存在风险，价值可能下降。</div>
+</section>
+
+<script>
+  const slideIds = ['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10'];
+  const navDots = document.getElementById('navDots');
+  slideIds.forEach((id, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'dot';
+    dot.onclick = () => document.getElementById(id).scrollIntoView({behavior:'smooth'});
+    navDots.appendChild(dot);
+  });
+  const dots = document.querySelectorAll('.dot');
+  const slides = slideIds.map(id => document.getElementById(id));
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const i = slides.indexOf(e.target);
+        dots.forEach(d => d.classList.remove('active'));
+        if (dots[i]) dots[i].classList.add('active');
+      }
+    });
+  }, {threshold: 0.5});
+  slides.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>
