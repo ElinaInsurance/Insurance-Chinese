@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>百万宝贝计划 — 从出生开始的财富规划</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --royal: #1E5FA8; --royal-light: #3A80CC; --sky: #EBF4FF; --sky2: #D6EAFF;
+  --blue-mid: #5B9BD5; --gold: #B8832A; --gold-light: #D4A440; --gold-pale: #FDF3DC;
+  --green: #1A9E5C; --red: #D94040; --purple: #7A5BA8;
+  --text-dark: #1A2A3A; --text-mid: #3D556B; --text-muted: #7A96B0;
+  --bg-page: #F4F8FF; --bg-card: #FFFFFF;
+  --border: rgba(30,95,168,0.18); --border-light: rgba(30,95,168,0.10);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { background: var(--bg-page); color: var(--text-dark); font-family: 'Noto Sans SC', sans-serif; max-width: 480px; margin: 0 auto; overflow-x: hidden; }
+
+.nav-dots { position: fixed; right: 10px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 8px; z-index: 100; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(30,95,168,0.2); border: 1.5px solid rgba(30,95,168,0.35); cursor: pointer; transition: all 0.3s; }
+.dot.active { background: var(--royal); transform: scale(1.4); border-color: var(--royal); }
+
+.slide { min-height: 100vh; padding: 52px 22px 44px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+.slide::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--royal), var(--blue-mid), var(--gold)); }
+
+/* HERO */
+.slide-hero { background: linear-gradient(160deg, #1A4A8C 0%, #1E5FA8 45%, #1A4070 100%); color: #fff; }
+.hero-badge { display: inline-block; background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.35); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; padding: 5px 14px; border-radius: 20px; margin-bottom: 22px; }
+.hero-title { font-family: 'Noto Serif SC', serif; font-size: 34px; font-weight: 700; line-height: 1.2; color: #fff; margin-bottom: 8px; }
+.hero-title span { background: linear-gradient(135deg, #FFE08A, #F0C040); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-sub { font-size: 13px; color: rgba(255,255,255,0.78); margin-bottom: 26px; line-height: 1.6; }
+.stat-row { display: flex; gap: 10px; margin-bottom: 28px; }
+.stat-box { flex: 1; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.28); border-radius: 12px; padding: 12px 8px; text-align: center; }
+.stat-num { font-family: 'Noto Serif SC', serif; font-size: 18px; font-weight: 700; color: #FFE08A; }
+.stat-label { font-size: 10px; color: rgba(255,255,255,0.72); margin-top: 3px; line-height: 1.3; }
+
+.hero-contact { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.28); border-radius: 16px; padding: 20px 18px; margin-top: 6px; }
+.hc-label { font-size: 10px; letter-spacing: 2px; color: #FFE08A; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
+.hc-name-row { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.hc-avatar { width: 50px; height: 50px; border-radius: 50%; background: rgba(255,255,255,0.22); border: 2px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+.hc-name { font-family: 'Noto Serif SC', serif; font-size: 20px; font-weight: 700; color: #fff; }
+.hc-title { font-size: 11px; color: rgba(255,255,255,0.68); margin-top: 2px; }
+.hc-links { display: flex; flex-direction: column; gap: 10px; }
+.hc-link { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.hc-icon { width: 34px; height: 34px; border-radius: 9px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 15px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); }
+.hc-link-text { font-size: 14px; font-weight: 600; color: #AAE8C8; letter-spacing: 0.3px; }
+.hc-link-text.gold { color: #FFE08A; font-size: 13px; word-break: break-all; font-weight: 500; }
+
+/* HEADERS */
+.slide-label { font-size: 10px; letter-spacing: 2px; color: var(--royal); text-transform: uppercase; font-weight: 700; margin-bottom: 6px; }
+.slide-title { font-family: 'Noto Serif SC', serif; font-size: 22px; font-weight: 700; line-height: 1.3; color: var(--text-dark); margin-bottom: 5px; }
+.slide-title .accent { color: var(--royal); }
+.slide-subtitle { font-size: 12px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.55; }
+.divider-line { height: 2px; background: linear-gradient(90deg, var(--royal), var(--blue-mid), transparent); margin-bottom: 20px; border-radius: 2px; }
+
+/* CARDS */
+.cards { display: flex; flex-direction: column; gap: 10px; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; box-shadow: 0 2px 8px rgba(30,95,168,0.06); }
+.card-icon { font-size: 20px; margin-bottom: 6px; display: block; }
+.card-title { font-size: 13px; font-weight: 700; color: var(--royal); margin-bottom: 4px; }
+.card-body { font-size: 12px; color: var(--text-mid); line-height: 1.6; }
+
+/* HBOX */
+.hbox { background: linear-gradient(135deg, #EBF4FF, #D6EAFF); border: 1px solid rgba(30,95,168,0.22); border-radius: 12px; padding: 14px 16px; margin-top: 14px; }
+.hbox-title { font-size: 12px; font-weight: 700; color: var(--gold); margin-bottom: 6px; }
+.hbox-body { font-size: 12px; color: var(--text-mid); line-height: 1.65; }
+.hbox.warm { background: linear-gradient(135deg, #FDF3DC, #FBEBC8); border-color: rgba(184,131,42,0.25); }
+
+/* FLOW */
+.flow-list { display: flex; flex-direction: column; gap: 12px; }
+.flow-item { display: flex; align-items: flex-start; gap: 12px; }
+.flow-dot { width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #fff; background: linear-gradient(135deg, var(--royal), var(--blue-mid)); box-shadow: 0 3px 10px rgba(30,95,168,0.25); }
+.flow-title { font-size: 13px; font-weight: 700; color: var(--text-dark); margin-bottom: 2px; }
+.flow-body { font-size: 11px; color: var(--text-muted); line-height: 1.55; }
+
+/* BIG STAT CALLOUT */
+.callout-row { display: flex; gap: 10px; margin-bottom: 14px; }
+.callout { flex: 1; background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 14px 10px; text-align: center; box-shadow: 0 2px 8px rgba(30,95,168,0.06); }
+.callout-num { font-family: 'Noto Serif SC', serif; font-size: 22px; font-weight: 700; color: var(--royal); line-height: 1.1; }
+.callout-num.green { color: var(--green); }
+.callout-num.gold { color: var(--gold); }
+.callout-label { font-size: 10px; color: var(--text-muted); margin-top: 4px; line-height: 1.3; }
+
+/* TABLE */
+.data-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-variant-numeric: tabular-nums; }
+.data-table th { font-size: 10px; color: var(--royal); font-weight: 700; padding: 8px 5px; text-align: center; border-bottom: 2px solid var(--border); background: var(--sky2); }
+.data-table td { font-size: 11px; color: var(--text-mid); padding: 8px 5px; text-align: center; border-bottom: 1px solid var(--border-light); }
+.data-table tr:last-child td { border-bottom: none; }
+.data-table td.age { font-weight: 700; color: var(--text-dark); }
+.data-table td.withdraw { color: var(--red); font-weight: 700; }
+.data-table td.divi { color: var(--gold); font-weight: 600; }
+.data-table td.total { color: var(--green); font-weight: 700; }
+.data-table tr.hl td { background: rgba(217,64,64,0.06); }
+.table-box { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 12px; box-shadow: 0 2px 8px rgba(30,95,168,0.06); }
+.table-note { font-size: 10px; color: var(--text-muted); margin-top: 8px; line-height: 1.4; }
+
+/* SCENARIO PILL */
+.scenario-pill { display: inline-block; font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 20px; margin-bottom: 12px; background: var(--sky2); color: var(--royal); border: 1px solid var(--border); }
+
+/* CTA */
+.cta-ring { width: 74px; height: 74px; border-radius: 50%; border: 3px solid var(--royal); background: linear-gradient(135deg, var(--sky), #fff); display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 20px; box-shadow: 0 4px 20px rgba(30,95,168,0.18); }
+.cta-contact { background: #fff; border: 1.5px solid var(--border); border-radius: 16px; padding: 20px 18px; margin-bottom: 16px; box-shadow: 0 4px 16px rgba(30,95,168,0.09); }
+.cta-label { font-size: 10px; letter-spacing: 2px; color: var(--royal); text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
+.cc-name-row { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.cc-avatar { width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, var(--royal), var(--blue-mid)); border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+.cc-name { font-family: 'Noto Serif SC', serif; font-size: 20px; font-weight: 700; color: var(--text-dark); }
+.cc-title { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.cc-links { display: flex; flex-direction: column; gap: 10px; }
+.cc-link { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.cc-icon { width: 34px; height: 34px; border-radius: 9px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 15px; background: rgba(26,158,92,0.1); border: 1px solid rgba(26,158,92,0.25); }
+.cc-icon.gold-bg { background: rgba(184,131,42,0.1); border-color: rgba(184,131,42,0.25); }
+.cc-link-text { font-size: 14px; font-weight: 600; color: var(--green); letter-spacing: 0.3px; }
+.cc-link-text.gold { color: var(--gold); font-size: 13px; word-break: break-all; font-weight: 500; }
+.disclaimer { font-size: 10px; color: var(--text-muted); line-height: 1.6; border-top: 1px solid var(--border-light); padding-top: 12px; margin-top: 4px; }
+
+.slide-2 { background: #F4F8FF; } .slide-3 { background: #EEF4FC; } .slide-4 { background: #F6F9FF; }
+.slide-5 { background: #F4F8FF; } .slide-6 { background: #EEF4FC; } .slide-7 { background: #FBF8F2; }
+.slide-8 { background: #F4F8FF; } .slide-9 { background: #EEF4FC; }
+.slide-cta { background: linear-gradient(160deg, #EBF4FF 0%, #F4F8FF 60%, #FDF3DC 100%); }
+</style>
+</head>
+<body>
+
+<nav class="nav-dots" id="navDots">
+  <div class="dot active" onclick="goTo(0)"></div>
+  <div class="dot" onclick="goTo(1)"></div>
+  <div class="dot" onclick="goTo(2)"></div>
+  <div class="dot" onclick="goTo(3)"></div>
+  <div class="dot" onclick="goTo(4)"></div>
+  <div class="dot" onclick="goTo(5)"></div>
+  <div class="dot" onclick="goTo(6)"></div>
+  <div class="dot" onclick="goTo(7)"></div>
+  <div class="dot" onclick="goTo(8)"></div>
+  <div class="dot" onclick="goTo(9)"></div>
+</nav>
+
+<!-- SLIDE 1: HERO -->
+<section class="slide slide-hero" id="s0">
+  <div class="hero-badge">从出生开始的财富规划 · 2026版</div>
+  <div class="hero-title">百万<span>宝贝计划</span></div>
+  <div class="hero-sub">孩子0岁开始，每年存$12,000，共20年<br>一份保单，陪伴孩子读书、创业、退休、传承</div>
+  <div class="stat-row">
+    <div class="stat-box">
+      <div class="stat-num">$24万</div>
+      <div class="stat-label">20年总投入<br>($12,000×20)</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">$116万</div>
+      <div class="stat-label">第1年即生效<br>身故保障</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">$1,615万</div>
+      <div class="stat-label">孩子100岁<br>账户价值</div>
+    </div>
+  </div>
+
+  <div class="hero-contact">
+    <div class="hc-label">📬 咨询顾问</div>
+    <div class="hc-name-row">
+      <div class="hc-avatar">👩</div>
+      <div>
+        <div class="hc-name">Elina</div>
+        <div class="hc-title">持牌保险及理财顾问</div>
+      </div>
+    </div>
+    <div class="hc-links">
+      <a href="tel:4168267591" class="hc-link"><span class="hc-icon">📞</span><span class="hc-link-text">416-826-7591</span></a>
+      <a href="https://wa.me/14168267591" class="hc-link"><span class="hc-icon">💬</span><span class="hc-link-text">WhatsApp: 416-826-7591</span></a>
+      <a href="mailto:elina_insurance@hotmail.com" class="hc-link"><span class="hc-icon">✉️</span><span class="hc-link-text gold">elina_insurance@hotmail.com</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 2: 计划怎么规划 -->
+<section class="slide slide-2" id="s1">
+  <div class="slide-label">计划概览</div>
+  <div class="slide-title">百万宝贝计划<span class="accent">怎么规划</span>？</div>
+  <div class="divider-line"></div>
+  <div class="slide-subtitle">从孩子出生那一刻开始，为一生打下财富基础</div>
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-dot">1</div>
+      <div>
+        <div class="flow-title">孩子0岁投保</div>
+        <div class="flow-body">为刚出生的宝宝设立一份$116万保额的终身保单，保障立即生效、陪伴一生</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot">2</div>
+      <div>
+        <div class="flow-title">每年存 $12,000，连续20年</div>
+        <div class="flow-body">父母每年投入$12,000（约每月$1,000），20年总投入$24万，之后无需再缴费</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot">3</div>
+      <div>
+        <div class="flow-title">账户自动滚动增值</div>
+        <div class="flow-body">账户以稳定回报持续免税增长，价值只涨不跌，父母始终掌握控制权</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot">4</div>
+      <div>
+        <div class="flow-title">按需灵活取用</div>
+        <div class="flow-body">读大学、创业、买房、退休都可以从账户提取现金，用不完的部分继续增值传承给下一代</div>
+      </div>
+    </div>
+  </div>
+  <div class="hbox warm">
+    <div class="hbox-title">💡 核心理念</div>
+    <div class="hbox-body">父母只在头20年投入，孩子却能享用<strong>一辈子</strong>。一份保单，同时解决教育金、创业金、退休金和财富传承四大需求。</div>
+  </div>
+</section>
+
+<!-- SLIDE 3: 案例设定 -->
+<section class="slide slide-3" id="s2">
+  <div class="slide-label">案例设定</div>
+  <div class="slide-title">一个真实的<span class="accent">规划案例</span></div>
+  <div class="divider-line"></div>
+  <div class="callout-row">
+    <div class="callout">
+      <div class="callout-num">0岁</div>
+      <div class="callout-label">受保人年龄<br>（刚出生的孩子）</div>
+    </div>
+    <div class="callout">
+      <div class="callout-num gold">$12,000</div>
+      <div class="callout-label">每年保费<br>20年付清</div>
+    </div>
+  </div>
+  <div class="callout-row">
+    <div class="callout">
+      <div class="callout-num green">$116万</div>
+      <div class="callout-label">初始保额<br>终身保障</div>
+    </div>
+    <div class="callout">
+      <div class="callout-num">$24万</div>
+      <div class="callout-label">总投入<br>（本金）</div>
+    </div>
+  </div>
+  <div class="cards" style="margin-top:6px;">
+    <div class="card">
+      <span class="card-icon">👶</span>
+      <div class="card-title">方案：终身人寿保险</div>
+      <div class="card-body">受保人为0岁孩子，保额<strong>$1,160,542</strong>终身有效，年缴保费<strong>$12,000</strong>，20年付清后不再缴费。</div>
+    </div>
+  </div>
+  <div class="hbox">
+    <div class="hbox-title">⚠️ 重要提示：父母的保障要先做好</div>
+    <div class="hbox-body">在为孩子规划之前，请<strong>先确保父母自己有足够的保障</strong>。父母是家庭的经济支柱，只有大人保障到位，孩子的计划才能真正稳固。</div>
+  </div>
+</section>
+
+<!-- SLIDE 4: 账户如何增长（主表） -->
+<section class="slide slide-4" id="s3">
+  <div class="slide-label">账户如何增长</div>
+  <div class="slide-title">存$24万，<span class="accent">滚成千万</span></div>
+  <div class="divider-line"></div>
+  <div class="slide-subtitle">每年存$12,000共20年，之后账户持续免税滚动增值</div>
+  <div class="table-box">
+    <table class="data-table">
+      <tr><th>孩子年龄</th><th>账户现金价值<br>(总分红累积)</th><th>身故保障<br>(总保险金额)</th></tr>
+      <tr><td class="age">1岁</td><td class="divi">$464</td><td>$116.6万</td></tr>
+      <tr><td class="age">10岁</td><td class="divi">$4.5万</td><td>$134.8万</td></tr>
+      <tr><td class="age">20岁</td><td class="divi">$29.9万</td><td>$201.9万</td></tr>
+      <tr><td class="age">30岁</td><td class="divi">$57.1万</td><td>$296.1万</td></tr>
+      <tr><td class="age">50岁</td><td class="total">$172.9万</td><td>$488.2万</td></tr>
+      <tr><td class="age">65岁</td><td class="total">$370.8万</td><td>$677.3万</td></tr>
+      <tr><td class="age">85岁</td><td class="total">$905.7万</td><td>$1,071万</td></tr>
+      <tr class="hl"><td class="age">100岁</td><td class="total">$1,615万</td><td>$1,615万</td></tr>
+    </table>
+    <div class="table-note">*所有数字四舍五入，基于稳定分红假设，实际结果可能不同。完整逐年数据可向顾问索取。</div>
+  </div>
+  <div class="hbox warm">
+    <div class="hbox-title">📈 复利的力量</div>
+    <div class="hbox-body">本金只投入$24万，但因为长时间免税滚动，到孩子100岁时账户价值高达<strong style="color:var(--green)">$1,615万</strong>——增长超过<strong>67倍</strong>。</div>
+  </div>
+</section>
+
+<!-- SLIDE 5: 用途1 教育金 -->
+<section class="slide slide-5" id="s4">
+  <div class="scenario-pill">用途 ① 教育金 / 零花钱</div>
+  <div class="slide-title">18岁上大学，<span class="accent">取教育费</span></div>
+  <div class="divider-line"></div>
+  <div class="slide-subtitle">孩子18-21岁读大学，每年提取$30,000，4年共取$120,000</div>
+  <div class="table-box">
+    <table class="data-table">
+      <tr><th>孩子年龄</th><th>提取教育金</th><th>账户余额<br>(现金价值)</th></tr>
+      <tr class="hl"><td class="age">18岁</td><td class="withdraw">−$30,000</td><td class="divi">$20.5万</td></tr>
+      <tr class="hl"><td class="age">19岁</td><td class="withdraw">−$30,000</td><td class="divi">$21.1万</td></tr>
+      <tr class="hl"><td class="age">20岁</td><td class="withdraw">−$30,000</td><td class="divi">$20.6万</td></tr>
+      <tr class="hl"><td class="age">21岁</td><td class="withdraw">−$30,000</td><td class="divi">$20.3万</td></tr>
+      <tr><td class="age">30岁</td><td>—</td><td class="divi">$40.0万</td></tr>
+      <tr><td class="age">50岁</td><td>—</td><td class="total">$127.8万</td></tr>
+      <tr><td class="age">100岁</td><td>—</td><td class="total">$1,230万</td></tr>
+    </table>
+  </div>
+  <div class="hbox">
+    <div class="hbox-title">✨ 神奇之处</div>
+    <div class="hbox-body">4年共取走$120,000读大学，但账户<strong>继续滚动投资</strong>。到孩子50岁时，账户价值反而已经涨到<strong style="color:var(--green)">近$130万</strong>——取了钱还越滚越多。</div>
+  </div>
+</section>
+
+<!-- SLIDE 6: 用途2 创业金 -->
+<section class="slide slide-6" id="s5">
+  <div class="scenario-pill">用途 ② 创业启动金</div>
+  <div class="slide-title">30岁创业，<span class="accent">一次取$30万</span></div>
+  <div class="divider-line"></div>
+  <div class="slide-subtitle">大学用RESP教育金没动这个账户，30岁想创业时一次性提取$300,000</div>
+  <div class="table-box">
+    <table class="data-table">
+      <tr><th>孩子年龄</th><th>提取创业金</th><th>账户余额<br>(现金价值)</th></tr>
+      <tr><td class="age">20岁</td><td>—</td><td class="divi">$29.9万</td></tr>
+      <tr class="hl"><td class="age">30岁</td><td class="withdraw">−$300,000</td><td class="divi">$27.1万</td></tr>
+      <tr><td class="age">40岁</td><td>—</td><td class="divi">$52.3万</td></tr>
+      <tr><td class="age">50岁</td><td>—</td><td class="total">$93.6万</td></tr>
+      <tr><td class="age">70岁</td><td>—</td><td class="total">$267万</td></tr>
+      <tr><td class="age">100岁</td><td>—</td><td class="total">$938万</td></tr>
+    </table>
+  </div>
+  <div class="hbox warm">
+    <div class="hbox-title">💼 灵活的资金池</div>
+    <div class="hbox-body">30岁一次性拿走$30万启动事业后，账户依然继续增值。到孩子50岁时，账户已经涨回<strong style="color:var(--green)">近$95万</strong>，创业与财富积累两不误。</div>
+  </div>
+</section>
+
+<!-- SLIDE 7: 用途3 退休金 -->
+<section class="slide slide-7" id="s6">
+  <div class="scenario-pill">用途 ③ 父母 / 孩子退休金</div>
+  <div class="slide-title">当作<span class="accent">退休现金流</span>使用</div>
+  <div class="divider-line"></div>
+  <div class="slide-subtitle">孩子读书工作都很省心，账户可以给父母（或孩子）当退休金</div>
+  <div class="cards">
+    <div class="card">
+      <span class="card-icon">🏖️</span>
+      <div class="card-title">给父母当退休金（若父母30岁生子）</div>
+      <div class="card-body">父母65-85岁，每年提取<strong>$40,000</strong>当退休金，20年共取<strong>$80万</strong>。而孩子70岁时账户仍涨到<strong style="color:var(--green)">近$184万</strong>。</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">🌅</span>
+      <div class="card-title">给孩子自己当退休金</div>
+      <div class="card-body">若一直没用，孩子65-100岁每年提取<strong>$150,000</strong>当退休金，35年共取<strong>$525万</strong>。孩子100岁时仍留下<strong style="color:var(--green)">近$440万</strong>免税现金给下一代。</div>
+    </div>
+  </div>
+  <div class="hbox">
+    <div class="hbox-title">🔄 一个账户，几十年现金流</div>
+    <div class="hbox-body">这个计划的特点是：<strong>怎么取都取不完</strong>。因为账户增值速度往往超过提取速度，源源不断地产生现金流。</div>
+  </div>
+</section>
+
+<!-- SLIDE 8: 用途4 三代传承 -->
+<section class="slide slide-8" id="s7">
+  <div class="scenario-pill">用途 ④ 一份保单，三代享用</div>
+  <div class="slide-title"><span class="accent">祖孙三代</span>都受益</div>
+  <div class="divider-line"></div>
+  <div class="slide-subtitle">同一份百万宝贝计划，可以让三代人先后取用</div>
+  <div class="table-box">
+    <table class="data-table">
+      <tr><th>阶段</th><th>每年提取</th><th>累计取用</th></tr>
+      <tr class="hl"><td class="age">第1代<br>父母 65-85岁</td><td class="withdraw">$40,000</td><td class="total">共 $80万</td></tr>
+      <tr class="hl"><td class="age">第2代<br>孩子 65-100岁</td><td class="withdraw">$50,000-<br>$60,000</td><td class="total">共 $175万</td></tr>
+      <tr><td class="age">第3代<br>孙辈 (100岁后)</td><td>免税继承</td><td class="total">约 $190万</td></tr>
+    </table>
+    <div class="table-note">*父母先取退休金，孩子再取退休金，最后仍留下大笔免税现金传给孙辈。</div>
+  </div>
+  <div class="hbox warm">
+    <div class="hbox-title">🏆 父母能给孩子的礼物</div>
+    <div class="hbox-body">✅ 免费保障陪伴孩子一生<br>✅ 教育、创业、买房、退休都有资金<br>✅ 父母始终掌握保单与现金价值的控制权<br>✅ 财富免税、跨代传承</div>
+  </div>
+</section>
+
+<!-- SLIDE 9: 加速技巧 ADO + 教育成本 -->
+<section class="slide slide-9" id="s8">
+  <div class="slide-label">实用建议</div>
+  <div class="slide-title">越早开始，<span class="accent">越划算</span></div>
+  <div class="divider-line"></div>
+  <div class="cards">
+    <div class="card">
+      <span class="card-icon">🚀</span>
+      <div class="card-title">加速技巧：额外存款（ADO）</div>
+      <div class="card-body">在基本保费之外增加<strong>额外存款（ADO）</strong>，可以大幅加快现金价值增长，让账户更快"超载增值"。</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">🎓</span>
+      <div class="card-title">教育费用只会越来越贵</div>
+      <div class="card-body">2021年出生的孩子，4年大学（含住宿）预计要花<strong>$122,651</strong>。越早为孩子准备，越能从容应对。</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">⏰</span>
+      <div class="card-title">时间是最大的朋友</div>
+      <div class="card-body">0岁投保比晚几年投保保费更低、增长时间更长。<strong>今天的一个决定，是孩子一生的财富基础。</strong></div>
+    </div>
+  </div>
+  <div class="hbox">
+    <div class="hbox-title">📌 一句话总结</div>
+    <div class="hbox-body">父母投入$24万，换来孩子一生的保障 + 教育金 + 创业金 + 退休金，最后还能给孙辈留下<strong style="color:var(--green)">数百万免税现金</strong>。</div>
+  </div>
+</section>
+
+<!-- SLIDE 10: CTA -->
+<section class="slide slide-cta" id="s9">
+  <div class="cta-ring">👶</div>
+  <div class="slide-label" style="text-align:center;">立即开始</div>
+  <div class="slide-title" style="text-align:center;color:var(--royal);">从今天起，<span class="accent">为孩子规划一生</span></div>
+
+  <div class="hbox" style="margin:16px 0;">
+    <div class="hbox-title">🎯 百万宝贝计划总结</div>
+    <div class="hbox-body">
+      ✅ 孩子0岁投保，每年$12,000存20年<br>
+      ✅ 18岁读大学 → 每年取$30,000教育金<br>
+      ✅ 30岁创业 → 一次取$300,000启动金<br>
+      ✅ 退休 → 每年取$40,000-$150,000现金流<br>
+      ✅ 100岁 → 仍留下数百万免税现金传承
+    </div>
+  </div>
+
+  <div class="cta-contact">
+    <div class="cta-label">🌟 立即联系顾问</div>
+    <div class="cc-name-row">
+      <div class="cc-avatar">👩</div>
+      <div>
+        <div class="cc-name">Elina</div>
+        <div class="cc-title">持牌保险及理财顾问</div>
+      </div>
+    </div>
+    <div class="cc-links">
+      <a href="tel:4168267591" class="cc-link"><span class="cc-icon">📞</span><span class="cc-link-text">416-826-7591</span></a>
+      <a href="https://wa.me/14168267591" class="cc-link"><span class="cc-icon">💬</span><span class="cc-link-text">WhatsApp: 416-826-7591</span></a>
+      <a href="mailto:elina_insurance@hotmail.com" class="cc-link"><span class="cc-icon gold-bg">✉️</span><span class="cc-link-text gold">elina_insurance@hotmail.com</span></a>
+    </div>
+  </div>
+
+  <p class="disclaimer">本演示稿仅供一般教育目的，不构成个人投资、税务或法律建议。所有数字基于特定案例与稳定分红假设，实际结果可能有所不同。投资决策前请咨询持牌理财顾问及税务专业人士。保险产品由持牌保险公司承保。</p>
+</section>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+function goTo(i) { slides[i].scrollIntoView({behavior:'smooth'}); }
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const i = Array.from(slides).indexOf(e.target);
+      dots.forEach(d => d.classList.remove('active'));
+      if (dots[i]) dots[i].classList.add('active');
+    }
+  });
+}, {threshold: 0.5});
+slides.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>
