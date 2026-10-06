@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>重疾险方案对比 · iA · Sun Life · Manulife | Elina 保险顾问</title>
+<meta name="description" content="三家加拿大保险公司重大疾病保险方案对比：均衡保费、未出险保费全额退还。iA Transition、Sun Life Sun Critical Illness Insurance、Manulife Lifecheque。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0D1B33; --navy2:#16294D; --blue:#1E4D8C;
+    --accent:#E07A2F; --accent-light:#F2B56B;
+    --green:#2E9E6B; --red:#D64545; --amber:#B8860B;
+    --ia:#2B63B8; --sun:#E3A51F; --mnl:#00A758;
+    --ink:#1A2233; --muted:#6B7280; --line:#E3E7EE; --light:#F4F6FA; --soft:#FBF7F1;
+    --sans:"Noto Sans SC","Noto Sans CJK SC","PingFang SC","Microsoft YaHei",sans-serif;
+    --serif:"Noto Serif SC","Noto Serif CJK SC","Songti SC","SimSun",serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{font-family:var(--sans);color:var(--ink);background:#F7F8FB;line-height:1.65;font-size:16px}
+  a{color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  .slide{padding:64px 0 72px;position:relative}
+  .slide:nth-of-type(even){background:#fff}
+  .slide::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--navy),var(--blue) 55%,var(--accent))}
+  h1,h2,h3{font-family:var(--serif);color:var(--navy);line-height:1.25}
+  h1{font-size:clamp(30px,5vw,48px);font-weight:700}
+  h2{font-size:clamp(23px,3.2vw,32px);font-weight:700;margin-bottom:8px}
+  h3{font-size:clamp(17px,2vw,20px);font-weight:700;margin-bottom:10px}
+  .sub{color:var(--muted);font-size:clamp(14px,1.6vw,16.5px);margin-bottom:28px;max-width:70ch}
+  .eyebrow{display:inline-block;font-size:12.5px;letter-spacing:1px;color:var(--accent-light);font-weight:700;border:1px solid var(--accent-light);border-radius:20px;padding:3px 14px;margin-bottom:18px}
+  .tag{display:inline-block;font-size:12px;font-weight:700;color:#fff;border-radius:4px;padding:2px 9px;vertical-align:middle;line-height:1.5}
+  .tag.ia{background:var(--ia)} .tag.sun{background:var(--sun);color:#1A2233} .tag.mnl{background:var(--mnl)}
+  .grid{display:grid;gap:18px}
+  .g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)}
+  .two{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:start}
+  .two.w125{grid-template-columns:1.25fr .75fr} .two.w130{grid-template-columns:1.3fr .7fr}
+  .two>*,.grid>*{min-width:0}
+  .tbl-wrap{max-width:100%}
+  .card{background:var(--light);border-radius:14px;padding:20px 22px;border:1px solid var(--line)}
+  .card .num{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--blue);line-height:1}
+  .card .t{font-weight:700;color:var(--navy);margin:8px 0 6px;font-size:17px}
+  .card .b{font-size:14.5px;color:#394150}
+  .hbox{background:var(--soft);border-left:5px solid var(--accent);border-radius:10px;padding:16px 20px;font-size:15px}
+  .hbox .ht{font-weight:700;color:var(--navy);margin-bottom:6px;font-size:16px}
+  .hbox.green{border-left-color:var(--green)} .hbox.mnl{border-left-color:var(--mnl)}
+  .ok{color:var(--green);font-weight:700} .no{color:var(--red);font-weight:700} .mid{color:var(--amber);font-weight:700}
+  .small{font-size:13px;color:var(--muted);line-height:1.6}
+  ul{padding-left:20px} li{margin-bottom:6px;font-size:15px}
+  .kv{display:grid;grid-template-columns:minmax(110px,auto) 1fr;gap:8px 16px;font-size:15px}
+  .kv div:nth-child(odd){color:var(--muted)}
+  .pill{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:6px;padding:4px 11px;font-size:13.5px;margin:3px 6px 3px 0}
+  .step{display:flex;gap:14px;align-items:flex-start;margin-bottom:16px}
+  .dot-n{width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px}
+  .step .st{font-weight:700;color:var(--navy);font-size:16px} .step .sb{font-size:14.5px;color:#394150}
+  /* tables */
+  .tbl{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff;border-radius:12px;overflow:hidden}
+  .tbl th,.tbl td{padding:11px 13px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+  .tbl thead th{background:var(--navy);color:#fff;font-weight:700}
+  .tbl thead th.ia{background:var(--ia)} .tbl thead th.sun{background:var(--sun);color:#1A2233} .tbl thead th.mnl{background:var(--mnl)}
+  .tbl thead small{display:block;font-weight:400;font-size:12.5px;opacity:.9;margin-top:2px}
+  .tbl tbody td:first-child{font-weight:700;color:var(--navy);background:var(--light);width:17%}
+  .tbl tbody tr:last-child td{border-bottom:none}
+  .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:12px}
+  .sched{min-width:720px;font-size:14px}
+  .sched th,.sched td{text-align:center;white-space:nowrap;padding:9px 8px}
+  .sched td:first-child{text-align:left}
+  /* contact */
+  .contact{display:flex;align-items:center;gap:18px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#fff;border-radius:16px;padding:18px 22px;flex-wrap:wrap}
+  .contact .av{width:58px;height:58px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:24px;font-family:var(--serif);flex-shrink:0}
+  .contact .nm{font-weight:700;font-size:20px;font-family:var(--serif)}
+  .contact .ti{font-size:13.5px;opacity:.85}
+  .contact .ct{margin-left:auto;display:flex;gap:10px;flex-wrap:wrap}
+  .contact .ct a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:8px 14px;font-size:14px;transition:background .2s}
+  .contact .ct a:hover{background:rgba(255,255,255,.22)}
+  /* hero & dark sections */
+  .dark{background:linear-gradient(155deg,#0B1628 0%,#0F2040 55%,#091520 100%)!important;color:#fff}
+  .dark h1,.dark h2,.dark h3{color:#fff}
+  .dark .sub{color:#CBD5E6}
+  .dark .card{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.15)}
+  .dark .card .num{color:var(--accent-light)} .dark .card .t{color:#fff} .dark .card .b{color:#CBD5E6}
+  .dark .hbox{background:rgba(255,255,255,.07);border-left-color:var(--accent-light);color:#E6ECF5}
+  .dark .hbox .ht{color:#fff}
+  .hero{padding:90px 0 70px;min-height:100vh;display:flex;align-items:center}
+  .hero .lead{font-size:clamp(16px,2vw,20px);color:#CBD5E6;margin-top:16px;max-width:60ch}
+  .hero .lead span{display:block;font-size:.85em;margin-top:4px}
+  /* nav dots */
+  .nav{position:fixed;right:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:9px;z-index:50}
+  .nav a{width:9px;height:9px;border-radius:50%;background:rgba(13,27,51,.22);display:block;transition:all .25s;position:relative}
+  .nav a.active{background:var(--accent);transform:scale(1.35)}
+  .nav a:hover::after{content:attr(data-t);position:absolute;right:18px;top:50%;transform:translateY(-50%);background:var(--navy);color:#fff;font-size:12px;padding:3px 9px;border-radius:6px;white-space:nowrap}
+  .dark-active .nav a{background:rgba(255,255,255,.35)} .dark-active .nav a.active{background:var(--accent-light)}
+  /* chart */
+  .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px;margin-bottom:12px}
+  .legend span i{display:inline-block;width:12px;height:12px;border-radius:2px;vertical-align:-1px;margin-right:6px}
+  .chart{background:var(--light);border-radius:14px;padding:34px 16px 8px 52px;position:relative;border:1px solid var(--line)}
+  .chart .ygrid{position:absolute;left:0;right:16px;top:34px;height:240px;pointer-events:none}
+  .chart .ygrid div{position:absolute;left:52px;right:0;border-top:1px dashed #D9DFE8;font-size:11.5px;color:var(--muted)}
+  .chart .ygrid div b{position:absolute;left:-46px;top:-9px;font-weight:400;width:38px;text-align:right}
+  .groups{display:flex;justify-content:space-between;align-items:flex-end;height:240px;position:relative}
+  .grp{display:flex;flex-direction:column;align-items:center;flex:1}
+  .bars{display:flex;align-items:flex-end;gap:3px;height:240px}
+  .bar{width:22px;height:var(--h);border-radius:3px 3px 0 0;position:relative;transition:height .6s ease}
+  .bar.ia{background:var(--ia)} .bar.sun{background:var(--sun)} .bar.mnl{background:var(--mnl)}
+  .bar.na{background:transparent;border-bottom:2px dotted #B8C0CC;height:2px}
+  .bar span{position:absolute;top:-19px;left:50%;transform:translateX(-50%);font-size:11px;color:#394150;white-space:nowrap}
+  .xl{font-size:12px;color:var(--muted);margin-top:8px;white-space:nowrap}
+  .xcap{text-align:center;font-size:13px;color:#394150;margin-top:10px}
+  /* calculator */
+  .calc{background:var(--soft);border-left:5px solid var(--accent);border-radius:10px;padding:18px 20px}
+  .calc label{font-size:14px;color:var(--muted);display:block;margin-bottom:6px}
+  .calc .inp{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+  .calc .inp span{font-size:22px;font-weight:700;color:var(--navy)}
+  .calc input{font:inherit;font-size:22px;font-weight:700;color:var(--navy);width:120px;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:#fff}
+  .calc input:focus{outline:2px solid var(--accent);border-color:transparent}
+  .calc .rows{display:grid;grid-template-columns:1fr auto;gap:8px 14px;font-size:15px}
+  .calc .rows b{font-size:17px;color:var(--navy)}
+  .cta{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:12px 24px;border-radius:999px;font-size:16px}
+  .disc{font-size:12.5px;color:#9AA7BD;line-height:1.6;margin-top:30px;border-top:1px solid rgba(255,255,255,.12);padding-top:18px}
+  .foot{font-size:12.5px;color:var(--muted);margin-top:28px;border-top:1px solid var(--line);padding-top:10px}
+  /* responsive */
+  @media (max-width:900px){
+    .two,.two.w125,.two.w130{grid-template-columns:1fr}
+    .g3{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:720px){
+    body{font-size:15px}
+    .slide{padding:48px 0 56px}
+    .g2,.g3{grid-template-columns:1fr}
+    .hero{padding:72px 0 56px;min-height:auto}
+    .nav{right:8px;gap:7px} .nav a{width:7px;height:7px} .nav a:hover::after{display:none}
+    .contact .ct{margin-left:0;width:100%}
+    /* comparison table -> stacked cards per feature */
+    .cmp thead{display:none}
+    .cmp,.cmp tbody,.cmp tr,.cmp td{display:block;width:100%}
+    .cmp tr{margin-bottom:14px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+    .cmp td{border-bottom:1px solid var(--line);padding:10px 14px;width:auto!important}
+    .cmp tbody td:first-child{background:var(--navy);color:#fff;font-size:15px}
+    .cmp td[data-c]::before{content:attr(data-c);display:inline-block;font-weight:700;font-size:11.5px;color:#fff;border-radius:4px;padding:1px 8px;margin-right:8px;vertical-align:1px}
+    .cmp td[data-c="iA"]::before{background:var(--ia)}
+    .cmp td[data-c="Sun Life"]::before{background:var(--sun);color:#1A2233}
+    .cmp td[data-c="Manulife"]::before{background:var(--mnl)}
+    .cmp td[data-h]::before{content:attr(data-h);display:block;font-weight:700;font-size:12px;color:var(--muted);margin-bottom:2px}
+    .hide-m{display:none!important}
+    .bar{width:13px}
+    .chart{padding-left:44px}
+    .chart .ygrid div{left:44px} .chart .ygrid div b{left:-40px;width:34px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="页面导航">
+  <a href="#s1" data-t="封面"></a><a href="#s2" data-t="筛选逻辑"></a><a href="#s3" data-t="总览对比"></a><a href="#s4" data-t="退还累计"></a><a href="#s5" data-t="iA"></a><a href="#s6" data-t="Sun Life"></a><a href="#s7" data-t="Manulife"></a><a href="#s8" data-t="Manulife 权益"></a><a href="#s9" data-t="疾病对比"></a><a href="#s10" data-t="备选与注意"></a><a href="#s11" data-t="下一步"></a>
+</nav>
+
+<!-- 1 HERO -->
+<section class="slide dark hero" id="s1">
+  <div class="wrap">
+    <div class="eyebrow">重大疾病保险 · 方案对比 · 2026 版</div>
+    <h1>三家保险公司<br>重疾险方案对比</h1>
+    <p class="lead">iA 加鼎 · Sun Life 永明 · Manulife 宏利<span>均衡保费 · 未出险保费全额退还 · 同一标准筛选</span></p>
+    <div class="grid g3" style="margin:40px 0 36px">
+      <div class="card"><div class="num">100%</div><div class="t">未出险，保费全额退还</div><div class="b">三个方案均附加退还保费条款，退还金额免税</div></div>
+      <div class="card"><div class="num">0 次</div><div class="t">保费上涨</div><div class="b">保费从投保第一天锁定，到保障期结束都不变</div></div>
+      <div class="card"><div class="num">24–26 种</div><div class="t">全额赔付重疾</div><div class="b">另含 6–8 种早期疾病部分赔付，不减主险保额</div></div>
+    </div>
+    <div class="contact">
+      <div class="av">E</div>
+      <div><div class="nm">Elina</div><div class="ti">持牌保险及理财顾问 · Licensed Insurance &amp; Financial Advisor</div></div>
+      <div class="ct">
+        <a href="tel:4168267591">📞 416-826-7591</a>
+        <a href="https://wa.me/14168267591" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a href="mailto:elina_insurance@hotmail.com">✉️ Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 REQUIREMENTS -->
+<section class="slide" id="s2">
+  <div class="wrap">
+    <h2>您的三个要求，以及我们是怎么筛选的</h2>
+    <p class="sub">筛选范围：iA Transition、Sun Life Sun Critical Illness Insurance、Manulife Lifecheque 全部在售方案</p>
+    <div class="grid g3" style="margin-bottom:28px">
+      <div class="card"><div class="num">①</div><div class="t">未出险，本金退还</div><div class="b">保障期内没有重疾理赔，所缴保费 100% 退回</div></div>
+      <div class="card"><div class="num">②</div><div class="t">保障 20–30 年左右</div><div class="b">不为终身保障付费，覆盖收入最重要的工作年期</div></div>
+      <div class="card"><div class="num">③</div><div class="t">保费不上涨</div><div class="b">保单期内每月保费固定，不随年龄增长</div></div>
+    </div>
+    <div class="two">
+      <div>
+        <div class="hbox" style="margin-bottom:16px">
+          <div class="ht">关键发现：直觉上的 T20 / T25 其实不符合要求</div>
+          三家公司的 10 年 / 20 年 / 25 年定期续保型（T10、T20、T25）都<span class="no">不能附加</span>"到期或退保返还保费"条款——只能加"身故返还"（RPD / ROPD）。而且每到续保期保费会按新年龄<span class="no">跳涨</span>，与要求 ① 和 ③ 都冲突。
+        </div>
+        <div class="hbox green" style="margin-bottom:16px">
+          <div class="ht">路径 A：T75 均衡保费 + 15 年退还条款（iA、Sun Life）</div>
+          保费锁定到 75 岁；从第 15 个保单周年起，任何时间退出都可拿回 100% 合资格保费。您自己决定在第 20、25 还是 30 年退出，保障期就是 20–30 年。
+        </div>
+        <div class="hbox mnl">
+          <div class="ht">路径 B：T65 均衡保费 + 到期返还条款（Manulife）</div>
+          保费锁定到 65 岁，65 岁到期未理赔时<strong>自动</strong>退还 100%。保障期固定到 65 岁，中途退保不返还；换来的是三家中最低的保费、同等预算下最高的保额。
+        </div>
+      </div>
+      <div>
+        <table class="tbl cmp">
+          <thead><tr><th style="width:42%">方案类型</th><th>保费是否上涨</th><th>可否到期/退保返还</th></tr></thead>
+          <tbody>
+            <tr><td>T10 / T20 / T25 续保型</td><td data-h="保费"><span class="no">续保时上涨</span></td><td data-h="返还"><span class="no">不可</span>（仅身故返还）</td></tr>
+            <tr><td>T65 均衡型（Manulife Primary）</td><td data-h="保费"><span class="ok">不变</span></td><td data-h="返还"><span class="ok">可</span>，到期返还 ROPX</td></tr>
+            <tr><td>T75 均衡型</td><td data-h="保费"><span class="ok">不变</span></td><td data-h="返还"><span class="ok">可</span>，退保 / 到期返还</td></tr>
+            <tr><td>T100 终身型</td><td data-h="保费"><span class="ok">不变</span></td><td data-h="返还"><span class="ok">可</span></td></tr>
+            <tr><td>限期缴费型（10/15/20 年缴清）</td><td data-h="保费"><span class="ok">不变</span></td><td data-h="返还"><span class="ok">可</span></td></tr>
+          </tbody>
+        </table>
+        <p class="small" style="margin-top:10px">T100 与限期缴费型同样满足要求，但同等预算下可买保额明显较低，详见<a href="#s10">备选方案</a>。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 OVERVIEW -->
+<section class="slide" id="s3">
+  <div class="wrap">
+    <h2>三家推荐方案一页总览</h2>
+    <p class="sub">每家公司各选出一款最符合要求的方案；iA 与 Sun Life 为"随时退出"结构，Manulife 为"到期返还"结构</p>
+    <table class="tbl cmp">
+      <thead>
+        <tr>
+          <th style="width:15%"></th>
+          <th class="ia">iA 加鼎<small>Transition 25 Illnesses · T75 + FRP15</small></th>
+          <th class="sun">Sun Life 永明<small>Sun Critical Illness Insurance · T75 + ROPC/E-15</small></th>
+          <th class="mnl">Manulife 宏利<small>Lifecheque Primary (Term 65) + ROPX</small></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>保障期</td><td data-c="iA">至 75 岁</td><td data-c="Sun Life">至 75 岁</td><td data-c="Manulife">至 65 岁</td></tr>
+        <tr><td>保费</td><td data-c="iA">均衡保费，投保时锁定至 75 岁</td><td data-c="Sun Life">保证均衡保费至 75 岁</td><td data-c="Manulife">合同期内保费不变，锁定至 65 岁</td></tr>
+        <tr><td>退还保费条款</td><td data-c="iA">Flexible Return of Premiums (FRP15) 弹性退还</td><td data-c="Sun Life">Return of Premium on Cancellation or Expiry 取消或到期返还</td><td data-c="Manulife">Return of Premium at Expiry (ROPX) 到期返还</td></tr>
+        <tr><td>100% 退还时点</td><td data-c="iA">第 15 个保单周年起，任意时间</td><td data-c="Sun Life">第 15 个保单周年起，任意时间；或 75 岁到期</td><td data-c="Manulife">65 岁到期时一次性返还</td></tr>
+        <tr><td>15 年前提前退出</td><td data-c="iA">第 5 年 15% → 第 10 年 50% → 第 14 年 90%</td><td data-c="Sun Life">第 3 年 10%，之后每年 +7.5%（第 10 年 62.5%）</td><td data-c="Manulife">不适用：中途退保无返还</td></tr>
+        <tr><td>退还触发方式</td><td data-c="iA">书面申请退保</td><td data-c="Sun Life">申请退保，或 75 岁到期自动</td><td data-c="Manulife">65 岁到期自动，无需申请</td></tr>
+        <tr><td>符合"20–30 年"</td><td data-c="iA"><span class="ok">✓</span> 第 15 年后任选退出时点</td><td data-c="Sun Life"><span class="ok">✓</span> 第 15 年后任选退出时点</td><td data-c="Manulife"><span class="mid">△</span> 保障期固定到 65 岁，需持有到期</td></tr>
+        <tr><td>全额赔付疾病</td><td data-c="iA">25 种</td><td data-c="Sun Life">26 种</td><td data-c="Manulife">24 种</td></tr>
+        <tr><td>早期 / 部分赔付</td><td data-c="iA">Prevention+：7 种，赔 15% 保额，每次 ≤ $50,000，最多 4 次，不减主险保额</td><td data-c="Sun Life">8 种，赔 15% 保额，每次 ≤ $50,000，最多 4 次，不减主险保额</td><td data-c="Manulife">Early Intervention Benefit：6 种，赔 25% 保额，上限 $50,000</td></tr>
+        <tr><td>保额范围</td><td data-c="iA">$10,000 – $3,000,000</td><td data-c="Sun Life">$25,000 – $4,000,000</td><td data-c="Manulife">$25,000 – $2,000,000</td></tr>
+        <tr><td>投保年龄</td><td data-c="iA">T75：0–65；FRP15：0–60</td><td data-c="Sun Life">18–65；ROPC/E-15：18–60</td><td data-c="Manulife">Term 65 附加 ROPX：18–45</td></tr>
+        <tr><td>第二医疗意见</td><td data-c="iA">Novus Health，本人、配偶、子女</td><td data-c="Sun Life">Medical Second Opinion by Dialogue，含父母及岳父母</td><td data-c="Manulife">WorldCare，含父母及岳父母</td></tr>
+        <tr><td>独有特色</td><td data-c="iA">部分赔付不影响退还金额；可以退还金额的 95% 办理保单贷款</td><td data-c="Sun Life">覆盖疾病数最多；最高保额 $400 万；退还从第 3 年起累计</td><td data-c="Manulife">Recovery Benefit 心脏类不等待先赔；LivingCare 月度护理金；无战争除外</td></tr>
+        <tr><td>参考报价（基础保费，未含退还条款）</td><td data-c="iA">$185,000 保额 ≈ $198 / 月</td><td data-c="Sun Life">待正式报价</td><td data-c="Manulife"><strong>$300,000 保额 ≈ $130 / 月</strong></td></tr>
+      </tbody>
+    </table>
+    <p class="small" style="margin-top:12px">参考报价为各公司按被保人当前年龄、非吸烟、标准体的基础保费，不含任何附加条款；加上退还保费条款后保费会相应上升，最终以正式报价单为准。资料来源：iA F13-1198 / F13-1199A（2026）、Sun Life 810-3581（2025-09）、Manulife Lifecheque Guide（2025-10）。</p>
+  </div>
+</section>
+
+<!-- 4 ROP TIMELINE -->
+<section class="slide" id="s4">
+  <div class="wrap">
+    <h2>退还保费是怎么累计的</h2>
+    <p class="sub">iA 与 Sun Life 在第 15 年达到 100% 并可随时退出；Manulife 在 65 岁到期时一次性返还 100%</p>
+    <div class="legend"><span><i style="background:var(--ia)"></i>iA FRP15</span><span><i style="background:var(--sun)"></i>Sun Life ROPC/E-15</span><span><i style="background:var(--mnl)"></i>Manulife ROPX（仅 65 岁到期返还）</span></div>
+    <div class="chart">
+      <div class="ygrid">
+        <div style="top:0"><b>100%</b></div><div style="top:25%"><b>75%</b></div><div style="top:50%"><b>50%</b></div><div style="top:75%"><b>25%</b></div><div style="top:100%"><b>0%</b></div>
+      </div>
+      <div class="groups">
+        <div class="grp"><div class="bars"><div class="bar ia na"></div><div class="bar sun" style="--h:10%"><span>10%</span></div><div class="bar mnl na"></div></div><div class="xl">第3年</div></div>
+        <div class="grp"><div class="bars"><div class="bar ia" style="--h:15%"><span>15%</span></div><div class="bar sun" style="--h:25%"><span>25%</span></div><div class="bar mnl na"></div></div><div class="xl">第5年</div></div>
+        <div class="grp"><div class="bars"><div class="bar ia" style="--h:50%"><span>50%</span></div><div class="bar sun" style="--h:62.5%"><span>62.5%</span></div><div class="bar mnl na"></div></div><div class="xl">第10年</div></div>
+        <div class="grp"><div class="bars"><div class="bar ia" style="--h:100%"></div><div class="bar sun" style="--h:100%"><span>100%</span></div><div class="bar mnl na"></div></div><div class="xl">第15年</div></div>
+        <div class="grp hide-m"><div class="bars"><div class="bar ia" style="--h:100%"></div><div class="bar sun" style="--h:100%"></div><div class="bar mnl na"></div></div><div class="xl">第20年</div></div>
+        <div class="grp hide-m"><div class="bars"><div class="bar ia" style="--h:100%"></div><div class="bar sun" style="--h:100%"></div><div class="bar mnl na"></div></div><div class="xl">第25年</div></div>
+        <div class="grp"><div class="bars"><div class="bar ia" style="--h:100%"></div><div class="bar sun" style="--h:100%"></div><div class="bar mnl na"></div></div><div class="xl">第30年</div></div>
+        <div class="grp"><div class="bars"><div class="bar ia" style="--h:100%"></div><div class="bar sun" style="--h:100%"><span>100%</span></div><div class="bar mnl" style="--h:100%"></div></div><div class="xl">第35年</div></div>
+      </div>
+      <div class="xcap">保单年度（以 30 岁投保为例：第 20 年 = 50 岁，第 35 年 = 65 岁到期）</div>
+    </div>
+    <div class="tbl-wrap" style="margin:18px 0 6px">
+      <table class="tbl sched">
+        <thead><tr><th>保单年度</th><th>3年</th><th>4年</th><th>5年</th><th>6年</th><th>7年</th><th>8年</th><th>9年</th><th>10年</th><th>11年</th><th>12年</th><th>13年</th><th>14年</th><th>15年起</th></tr></thead>
+        <tbody>
+          <tr><td><b style="color:var(--ia)">iA</b> FRP15</td><td>—</td><td>—</td><td>15%</td><td>22%</td><td>29%</td><td>36%</td><td>43%</td><td>50%</td><td>60%</td><td>70%</td><td>80%</td><td>90%</td><td><strong>100%</strong></td></tr>
+          <tr><td><b style="color:#B8860B">Sun Life</b> ROPC/E-15</td><td>10%</td><td>17.5%</td><td>25%</td><td>32.5%</td><td>40%</td><td>47.5%</td><td>55%</td><td>62.5%</td><td>70%</td><td>77.5%</td><td>85%</td><td>92.5%</td><td><strong>100%</strong></td></tr>
+          <tr><td><b style="color:var(--mnl)">Manulife</b> ROPX</td><td colspan="12" style="color:#9AA3B2">中途退保无返还</td><td><strong>65岁到期 100%</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small" style="margin-bottom:24px">手机上可左右滑动查看完整表格。</p>
+    <div class="grid g3">
+      <div class="calc">
+        <label for="prem">输入每月保费（含退还条款的总保费）</label>
+        <div class="inp"><span>$</span><input id="prem" type="number" inputmode="decimal" min="0" step="10" value="100"><span style="font-size:15px;color:var(--muted);font-weight:400">/ 月</span></div>
+        <div class="rows" id="calcRows">
+          <div>持有 20 年退出</div><b data-y="20">$24,000</b>
+          <div>持有 25 年退出</div><b data-y="25">$30,000</b>
+          <div>持有 30 年退出</div><b data-y="30">$36,000</b>
+          <div>持有 35 年到期（65 岁）</div><b data-y="35">$42,000</b>
+        </div>
+        <p class="small" style="margin-top:10px">累计缴费 ≈ 可退还金额。退还金额属本金返还，个人持有免税。</p>
+      </div>
+      <div class="card" style="border-color:var(--mnl)">
+        <div class="t" style="margin-top:0">Manulife 示例：$300,000 保额</div>
+        <div class="b">基础保费约 $130 / 月，30 岁投保至 65 岁共 35 年，累计约 <strong>$54,600</strong>，到期未理赔全额退还。加 ROPX 后保费上升，但 ROPX 条款本身的保费也计入退还范围（保单费、豁免条款保费除外）。</div>
+      </div>
+      <div class="card">
+        <div class="t" style="margin-top:0">保障期内如果确诊</div>
+        <div class="b">确诊合同列明的重疾并满足等待期 → 一次性领取<strong>全额保额</strong>（免税），保单结束。早期疾病 → 先领部分赔付，主险保额不减；iA、Sun Life 明确不影响退还金额，Manulife 以合同为准。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 iA -->
+<section class="slide" id="s5">
+  <div class="wrap">
+    <span class="tag ia">iA 加鼎金融</span>
+    <h2 style="margin-top:10px">Transition 25 Illnesses · T75 + FRP15</h2>
+    <p class="sub">独立重疾保单（非人寿附加 rider），附加 Flexible Return of Premiums 15 年弹性退还条款</p>
+    <div class="two">
+      <div class="kv">
+        <div>保障期 / 保费</div><div>保障至 75 岁；保费按投保时年龄、性别、吸烟状况、保额定价，锁定至 75 岁不变；不提供优惠体费率</div>
+        <div>投保年龄</div><div>T75：0–65 岁；FRP15：0–60 岁；Guaranteed Insurability：0–45 岁</div>
+        <div>保额 / 费率档</div><div>$10,000 – $3,000,000。费率分四档：&lt;$50,000、$50,000–$99,999、$100,000–$199,999、$200,000 以上，档位越高单位费率越低</div>
+        <div>核保上限</div><div>18–55 岁：年收入 10 倍；全家保单合计不超过 $300 万</div>
+        <div>全额赔付</div><div>25 种重疾，含丧失独立生活能力（Loss of Independent Existence）</div>
+        <div>Prevention+</div><div>7 种早期疾病赔 15% 保额、每次 ≤ $50,000，最多 4 次、每种 1 次，累计 ≤ $200,000；赔付后主险保额<strong>不减少</strong>，退还金额<strong>不受影响</strong></div>
+        <div>FRP15 规则</div><div>第 5 年 15%、第 10 年 50%、第 15 年起 100%；由保单持有人书面申请，行使后保单及所有附加条款终止</div>
+        <div>可退还保费</div><div>重疾主险保费、FRP 保费、RPD 保费、额外加费、$60/年保单费、月缴附加费。<strong>不含</strong> Guaranteed Insurability 与保费豁免条款保费</div>
+        <div>特别保障</div><div>若可退还金额已高于保额，确诊时按<strong>较高者</strong>赔付</div>
+        <div>灵活性</div><div>第 5 年起可申请保单贷款（最高为退还金额的 95%，利息按公司公布利率）或 Reduced Paid-up（停缴降额，FRP 作废）</div>
+        <div>可选附加</div><div>RPD 身故返还；Guaranteed Insurability（第 5、10 周年或结婚/生子/毕业后 31 天内免核保加保，单次最多 50% 保额且 ≤ $250,000）；三种保费豁免</div>
+        <div>增值服务</div><div>Novus Health 第二医疗意见及 Health Navigation，本人、配偶、子女无限次使用</div>
+        <div>缴费</div><div>年缴或月缴（PAC）；月缴 = 年缴 × 0.09，全年比年缴多约 8%</div>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:16px">
+          <div class="t" style="margin-top:0">参考报价</div>
+          <div class="b">T75 基础保费 <strong>≈ $198 / 月 → $185,000 保额</strong><br><span class="small">未含 FRP15。加上 FRP15 后同一保额保费会上升；若保额提高到 $200,000 可进入第四费率档。</span></div>
+        </div>
+        <div class="hbox" style="margin-bottom:16px">
+          <div class="ht">这个方案的优势</div>
+          三家中第 5–14 年的退还比例递增最清晰，提前退出也有明确拿回比例；Prevention+ 赔付不扣减退还金额；可用退还金额做保单贷款，退出前多一层现金灵活性。
+        </div>
+        <div class="card">
+          <div class="t" style="margin-top:0">需要知道</div>
+          <div class="b">FRP 不能后加，须投保时一起选；75 岁到期的返还需在到期前主动申请；行使 FRP 后保障立即终止。</div>
+        </div>
+      </div>
+    </div>
+    <p class="foot">资料来源：iA Critical Illness Insurance Guide F13-1198(26-09)、Critical Illness Descriptions Guide F13-1199A(25-11)</p>
+  </div>
+</section>
+
+<!-- 6 SUN LIFE -->
+<section class="slide" id="s6">
+  <div class="wrap">
+    <span class="tag sun">Sun Life 永明金融</span>
+    <h2 style="margin-top:10px">Sun Critical Illness Insurance · T75 + ROPC/E-15</h2>
+    <p class="sub">附加 Return of Premium on Cancellation or Expiry（取消或到期返还保费）15 年版本</p>
+    <div class="two">
+      <div class="kv">
+        <div>保障期 / 保费</div><div>保障至最接近 75 岁的保单周年日；<strong>保证均衡保费</strong>至 75 岁</div>
+        <div>投保年龄</div><div>成人 18–65 岁；ROPC/E-15：18–60 岁；ROPD：30 天–65 岁</div>
+        <div>保额</div><div>$25,000 – $4,000,000（三家中最高）</div>
+        <div>全额赔付</div><div>26 种重疾（三家中最多），含丧失独立生活能力、外伤导致的后天性脑损伤</div>
+        <div>部分赔付</div><div>8 种早期疾病赔 15% 保额、每次 ≤ $50,000，最多 4 次、每种 1 次；赔付后主险保额<strong>不减少</strong>，退还条款继续有效（条件是未申请过全额赔付疾病）</div>
+        <div>ROPC/E-15 规则</div><div>第 3 个保单周年起可退 10%，之后每年递增 7.5%，第 15 年起 100%；<strong>取消保单</strong>或 <strong>75 岁到期</strong>时返还，到期返还无需另行申请</div>
+        <div>可退还保费</div><div>已缴全部保费，不含长期护理转换选项等特定附加保费（以合同为准）</div>
+        <div>其他 ROPC/E 版本</div><div>ROPC/E-65（投保 18–50）：53 岁起 10%，每年 +7.5%，65 岁 100%；ROPC/E-75（投保 18–60）：63 岁起 10%，75 岁 100%。年限越长，保费越低</div>
+        <div>可选附加</div><div>ROPD 身故返还；全残豁免 TDW（18–55）；保单持有人豁免；长期护理转换选项 LTCCO（18–50，60 岁后五年内可将 ≤ $250,000 保额按 ÷200 转为每周长期护理金，最高 $1,250/周）</div>
+        <div>增值服务</div><div>Sun Life Medical Second Opinion by Dialogue，本人、配偶、子女、父母及岳父母无限次使用，保单终止后仍可用 4 个月</div>
+        <div>吸烟认定</div><div>偶尔抽大雪茄可按非吸烟费率</div>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:16px">
+          <div class="t" style="margin-top:0">参考报价</div>
+          <div class="b">待以含 ROPC/E-15 的正式报价为准。<br><span class="small">Sun Life 覆盖疾病最多、最高保额最高，同等保费下可买保额需与 iA、Manulife 报价并列比较。</span></div>
+        </div>
+        <div class="hbox" style="margin-bottom:16px">
+          <div class="ht">这个方案的优势</div>
+          退还比例从第 3 年就开始累计，三家中最早；"取消<strong>或到期</strong>"双触发——即使后来决定一直保到 75 岁，到期也会自动拿回 100%，不用担心忘记申请。26 种疾病也是最全的。
+        </div>
+        <div class="card">
+          <div class="t" style="margin-top:0">备选：T75 15-Pay + ROPC/E-15</div>
+          <div class="b">只缴 15 年，保障到 75 岁；第 15 年起取消或 75 岁到期均退 100%。缴费期短，同等保费下保额较低。</div>
+        </div>
+      </div>
+    </div>
+    <p class="foot">资料来源：Sun Life Sun Critical Illness Insurance Product at a Glance 810-3581（2025-09）、Client Guide 810-3434</p>
+  </div>
+</section>
+
+<!-- 7 MANULIFE -->
+<section class="slide" id="s7">
+  <div class="wrap">
+    <span class="tag mnl">Manulife 宏利金融</span>
+    <h2 style="margin-top:10px">Lifecheque Primary (Term 65) + ROPX</h2>
+    <p class="sub">附加 Return of Premium at Expiry（到期返还保费）——保费最低、保额最高的"到期返还"结构</p>
+    <div class="two">
+      <div class="kv">
+        <div>保障期 / 保费</div><div>保障至 65 岁，覆盖主要收入年期；<strong>合同期内保费不变</strong>。Manulife 将其定位为"最经济的方案"</div>
+        <div>投保年龄</div><div>Term 65 附加 ROPX 或 ROPD：18–45 岁</div>
+        <div>保额</div><div>$25,000 – $2,000,000</div>
+        <div>全额赔付</div><div>24 种重疾（不含丧失独立生活能力，由 LivingCare Benefit 另行提供护理保障）</div>
+        <div>ROPX 规则</div><div>65 岁到期时保单仍有效、且被保人不符合任何重疾理赔条件 → <strong>自动</strong>退还 100% 合资格保费，无需申请</div>
+        <div>中途退保</div><div><span class="no">无返还</span>。Manulife 的提前退保返还（ROPS）只适用于 Term 75 和终身型，不适用于 Term 65</div>
+        <div>可退还保费</div><div>不含保单费及残疾保费豁免条款保费；退还上限为保额减去已付 Recovery / Care Benefit；保额降低会相应减少退还金额；退还累计额达到保额上限后，ROP 条款免缴</div>
+        <div>Early Intervention</div><div>6 种早期疾病赔 <strong>25%</strong> 保额（三家中比例最高），上限 $50,000</div>
+        <div>Recovery Benefit</div><div>心脏类疾病无需等满等待期即可先领部分赔付；非心脏类疾病确诊后可立即申请理赔</div>
+        <div>LivingCare Benefit</div><div>若丧失自理能力并满足 90 天等待期，按月领取护理金，<strong>不要求</strong>永久不可逆</div>
+        <div>可选附加</div><div>ROPD 身故返还；残疾保费豁免（60 岁前完全残疾则全部保费豁免）；子女重疾附加（见下一节）</div>
+        <div>增值服务</div><div>WorldCare 医疗第二意见，本人、配偶、子女、父母及岳父母；四分之一的二次意见改变诊断，四分之三改变治疗方案</div>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:16px;border-color:var(--mnl)">
+          <div class="t" style="margin-top:0">参考报价</div>
+          <div class="b"><strong>$300,000 保额 ≈ $130 / 月</strong>（基础保费，不含任何附加条款）<br><span class="small">加上 ROPX 后月保费会上升，以正式报价为准。按基础保费计算，35 年累计约 $54,600。</span></div>
+        </div>
+        <div class="hbox mnl" style="margin-bottom:16px">
+          <div class="ht">这个方案的优势与取舍</div>
+          <strong>优势：</strong>同等保费下保额最高（$300,000 vs iA $185,000）；到期自动返还，不用操作；理赔体验最友好——非心脏类无等待期、心脏类可先拿钱；早期疾病赔 25%；无战争除外。<br><strong>取舍：</strong>保障期固定到 65 岁（30 岁投保即 35 年），比"20–30 年"略长；65 岁前退保拿不回保费，需要确定能持有到期；65 岁后保障结束。
+        </div>
+        <div class="card">
+          <div class="t" style="margin-top:0">若想保留"中途退出"选项</div>
+          <div class="b">可改选 Level (Term 75) + ROPS：满 15 年后随时取消保单退 100%（投保 18–60），保费会高于 Term 65。</div>
+        </div>
+      </div>
+    </div>
+    <p class="foot">资料来源：Manulife "Your guide to Lifecheque" 25_1959872（2025-10）</p>
+  </div>
+</section>
+
+<!-- 8 MANULIFE BENEFITS -->
+<section class="slide" id="s8">
+  <div class="wrap">
+    <span class="tag mnl">Manulife 宏利金融</span>
+    <h2 style="margin-top:10px">Lifecheque 内含权益与可选附加详解</h2>
+    <p class="sub">以下权益包含在所有 Lifecheque 方案中，无需额外付费</p>
+    <div class="grid g3" style="margin-bottom:28px">
+      <div class="card"><div class="t" style="margin-top:0">Early Intervention Benefit 早期干预赔付</div><div class="b">确诊以下 6 种"不危及生命但改变生活"的疾病，赔付 25% 保额（上限 $50,000）：乳腺导管原位癌、甲状腺乳头状/滤泡状癌 T1、A 期前列腺癌、1 期恶性黑色素瘤、慢性淋巴细胞白血病 Rai 0 期、冠状动脉血管成形术。</div></div>
+      <div class="card"><div class="t" style="margin-top:0">Recovery Benefit 快速赔付</div><div class="b">重疾理赔通常要等检查、等结果、等治疗。心脏病、搭桥等心脏类疾病有 30 天生存期，Recovery Benefit 让您在等待期结束前先拿到一部分钱，尽早开始康复。非心脏类疾病则确诊即可申请，无等待期。</div></div>
+      <div class="card"><div class="t" style="margin-top:0">LivingCare Benefit 长期护理金</div><div class="b">若因健康原因无法自理、需要居家或机构长期护理，满足 90 天等待期后按月领取护理金。与传统"丧失独立生活能力"定义不同，<strong>不要求</strong>状况永久且不可逆。理赔专线 1-866-575-0684。</div></div>
+    </div>
+    <div class="grid g2">
+      <div>
+        <h3>可选附加：Children's Lifecheque 子女重疾</h3>
+        <div class="kv">
+          <div>投保条件</div><div>子女 15 天–17 岁；父母 18–55 岁且持有 Lifecheque</div>
+          <div>保额</div><div>$5,000 起，以 $5,000 递增，最高 $100,000，且不超过父母保额的 50%</div>
+          <div>费用</div><div>每 $5,000 保额 $50/年，一份保费覆盖<strong>所有</strong>子女，包括附加条款生效后出生的孩子（无需再核保）</div>
+          <div>保障期</div><div>至子女 21 岁或父母 65 岁（以先到者为准）；父母身故或理赔后保费停止，子女保障继续至 21 岁</div>
+          <div>延续</div><div>子女 21 岁前可凭 insurability benefit 免全面核保转为独立重疾保单</div>
+          <div>覆盖疾病</div><div>15 种：再生障碍性贫血、细菌性脑膜炎、失明、癌症、脑瘫、先天性心脏病、囊性纤维化、失聪、唐氏综合征、肾衰竭、丧失语言能力、器官衰竭等候移植、器官移植、肌肉萎缩症、瘫痪</div>
+        </div>
+      </div>
+      <div>
+        <h3>可选附加：Waiver of Premium 残疾保费豁免</h3>
+        <p style="font-size:15px;margin-bottom:20px">若在最接近 60 岁的保单周年前完全残疾，Manulife 代缴全部 Lifecheque 保费；多人保单上所有被保人的保费一并豁免，也可为缴费人单独投保。注意：豁免条款本身的保费不计入 ROPX 退还范围。</p>
+        <h3>理赔流程</h3>
+        <div class="step"><div class="dot-n" style="background:var(--mnl)">1</div><div class="sb">确诊后尽快通知顾问，核对所患疾病是否在合同覆盖范围内</div></div>
+        <div class="step"><div class="dot-n" style="background:var(--mnl)">2</div><div class="sb">联系 Living Benefits Claims Team 索取表格；LivingCare 理赔会安排护理顾问上门评估</div></div>
+        <div class="step"><div class="dot-n" style="background:var(--mnl)">3</div><div class="sb">本人与医生填写表格并附检查结果（基因检测结果不在要求之列）；Manulife 直接与您沟通，并抄送顾问</div></div>
+        <div class="hbox mnl" style="margin-top:6px"><div class="ht">境外确诊</div>需提供全部病历，且 Manulife 确认在加拿大/美国会得出相同诊断和治疗建议；公司可要求指定专科医生独立检查。</div>
+      </div>
+    </div>
+    <p class="foot">资料来源：Manulife "Your guide to Lifecheque" 25_1959872（2025-10）</p>
+  </div>
+</section>
+
+<!-- 9 CONDITIONS -->
+<section class="slide" id="s9">
+  <div class="wrap">
+    <h2>覆盖疾病对比</h2>
+    <p class="sub">三家公司均采用加拿大人寿及健康保险协会（CLHIA）标准定义，核心 24 种疾病完全一致</p>
+    <div class="two w130">
+      <div>
+        <div class="card" style="margin-bottom:16px">
+          <div class="t" style="margin-top:0">三家共同覆盖的 24 种全额赔付疾病</div>
+          <div style="margin-top:8px">
+            <span class="pill">癌症 Cancer</span><span class="pill">心脏病发作 Heart attack</span><span class="pill">中风 Stroke</span><span class="pill">冠状动脉搭桥 CABG</span><span class="pill">主动脉手术 Aortic surgery</span><span class="pill">心脏瓣膜置换/修复</span><span class="pill">肾衰竭 Kidney failure</span><span class="pill">主要器官移植</span><span class="pill">主要器官衰竭等候移植</span><span class="pill">良性脑肿瘤</span><span class="pill">失智症 / 阿尔茨海默</span><span class="pill">帕金森及非典型帕金森</span><span class="pill">多发性硬化 MS</span><span class="pill">运动神经元疾病 ALS</span><span class="pill">昏迷 Coma</span><span class="pill">瘫痪 Paralysis</span><span class="pill">失明 Blindness</span><span class="pill">失聪 Deafness</span><span class="pill">丧失语言能力</span><span class="pill">失去肢体</span><span class="pill">严重烧伤</span><span class="pill">再生障碍性贫血</span><span class="pill">细菌性脑膜炎</span><span class="pill">职业性 HIV 感染</span>
+          </div>
+        </div>
+        <table class="tbl cmp">
+          <thead><tr><th>差异项</th><th class="ia">iA（25 种）</th><th class="sun">Sun Life（26 种）</th><th class="mnl">Manulife（24 种）</th></tr></thead>
+          <tbody>
+            <tr><td>丧失独立生活能力 LOIE</td><td data-c="iA"><span class="ok">✓</span> 全额赔付</td><td data-c="Sun Life"><span class="ok">✓</span> 全额赔付</td><td data-c="Manulife">不在 24 种内，由 LivingCare 月度护理金覆盖</td></tr>
+            <tr><td>外伤后天性脑损伤</td><td data-c="iA">—</td><td data-c="Sun Life"><span class="ok">✓</span> 全额赔付</td><td data-c="Manulife">—</td></tr>
+            <tr><td>早期疾病赔付比例</td><td data-c="iA">15%（7 种）</td><td data-c="Sun Life">15%（8 种）</td><td data-c="Manulife"><strong>25%</strong>（6 种）</td></tr>
+            <tr><td>胃肠道间质瘤 / 神经内分泌肿瘤（早期）</td><td data-c="iA"><span class="ok">✓</span></td><td data-c="Sun Life"><span class="ok">✓</span></td><td data-c="Manulife">—</td></tr>
+            <tr><td>儿童专属疾病</td><td data-c="iA">5 种（6 种于子女 rider），至 25 岁</td><td data-c="Sun Life">5 种，至 24 岁（儿童保单）</td><td data-c="Manulife">15 种（子女 rider），至 21 岁</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:16px">
+          <div class="t" style="margin-top:0">三家共同的 6 种早期 / 部分赔付疾病</div>
+          <ul style="margin-top:8px">
+            <li>乳腺导管原位癌 DCIS</li><li>甲状腺乳头状 / 滤泡状癌 T1 期</li><li>A 期（T1a / T1b）前列腺癌</li><li>1 期恶性黑色素瘤</li><li>慢性淋巴细胞白血病 Rai 0 期</li><li>冠状动脉血管成形术 Angioplasty</li>
+          </ul>
+        </div>
+        <div class="hbox" style="margin-bottom:16px">
+          <div class="ht">等待期（三家一致）</div>
+          癌症、良性脑肿瘤：投保后 90 天观察期内出现症状或确诊不赔；帕金森：12 个月。心脏病、中风、搭桥、主动脉及瓣膜手术：30 天生存期。失智症需症状持续 6 个月，丧失语言能力 180 天，瘫痪 90 天，昏迷 96 小时。
+        </div>
+        <div class="card">
+          <div class="t" style="margin-top:0">通用除外（三家相近）</div>
+          <div class="b">自伤、犯罪、酒驾（血液酒精 &gt; 80mg/100ml）、非遵医嘱用药或非法药物。iA 另有战争/武装冲突除外；Manulife 明确无战争除外。</div>
+        </div>
+      </div>
+    </div>
+    <p class="foot">完整疾病定义、除外责任以各公司保单合同及疾病定义指南为准</p>
+  </div>
+</section>
+
+<!-- 10 ALTERNATIVES & CAVEATS -->
+<section class="slide" id="s10">
+  <div class="wrap">
+    <h2>备选结构与需要提前了解的事项</h2>
+    <p class="sub">如果您更在意"缴费年期短"或"保留中途退出权"，以下结构也值得考虑</p>
+    <table class="tbl cmp" style="margin-bottom:28px">
+      <thead><tr><th style="width:19%">备选方案</th><th>缴费年期</th><th>保障期</th><th>退还保费</th><th>取舍</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tag ia">iA</span> T100 20-Pay + FRP20</td><td data-h="缴费年期">20 年</td><td data-h="保障期">终身</td><td data-h="退还保费">第 5 年 15% → 第 20 年 100%；也可不退、免费保终身</td><td data-h="取舍">基础报价约 $80,000 保额 ≈ $199/月，保额较低</td></tr>
+        <tr><td><span class="tag sun">Sun Life</span> T75 15-Pay + ROPC/E-15</td><td data-h="缴费年期">15 年</td><td data-h="保障期">至 75 岁</td><td data-h="退还保费">第 3 年 10% 起递增，第 15 年起取消或到期退 100%</td><td data-h="取舍">缴费期最短之一，保额需报价</td></tr>
+        <tr><td><span class="tag mnl">Manulife</span> Level (Term 75) + ROPS</td><td data-h="缴费年期">至 75 岁</td><td data-h="保障期">至 75 岁</td><td data-h="退还保费">满 15 年后取消保单退 100%；可再加 ROPX 实现 75 岁到期自动返还</td><td data-h="取舍">比 Term 65 贵，但保留中途退出权</td></tr>
+        <tr><td><span class="tag mnl">Manulife</span> Permanent 15-Pay + ROPS</td><td data-h="缴费年期">15 年</td><td data-h="保障期">终身</td><td data-h="退还保费">满 15 年后取消保单退 100%</td><td data-h="取舍">投保 18–55，同等保费下保额最低</td></tr>
+      </tbody>
+    </table>
+    <div class="grid g2">
+      <div>
+        <div class="step"><div class="dot-n">1</div><div><div class="st">退还保费与重疾理赔是"二选一"</div><div class="sb">一旦全额理赔，退还条款不再支付；行使退还后保障终止。50–65 岁正是重疾高发期，退出前建议重新评估保障需求。</div></div></div>
+        <div class="step"><div class="dot-n">2</div><div><div class="st">退还条款必须投保时一起选</div><div class="sb">三家公司均不允许后期加到现有保单上。</div></div></div>
+        <div class="step"><div class="dot-n">3</div><div><div class="st">到期返还型要能持有到期</div><div class="sb">Manulife Term 65 + ROPX 中途退保没有返还，适合确定能缴到 65 岁的人；若不确定，选 T75 + 15 年退还结构更稳妥。</div></div></div>
+      </div>
+      <div>
+        <div class="step"><div class="dot-n">4</div><div><div class="st">年缴比月缴划算</div><div class="sb">iA 月缴 = 年缴 × 0.09，全年多付约 8%；Sun Life、Manulife 月缴也有类似附加。现金流允许的话建议年缴。</div></div></div>
+        <div class="step"><div class="dot-n">5</div><div><div class="st">报价需含退还条款后再比</div><div class="sb">退还条款通常使保费增加 30–50%。三家需在同样附加退还条款的前提下报价，比较"每 $1 保费换多少保额"。</div></div></div>
+        <div class="step"><div class="dot-n">6</div><div><div class="st">税务</div><div class="sb">个人持有：重疾赔付与退还保费均免税，保费不可抵税。公司持有另有税务规则，需单独咨询。</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 NEXT STEPS -->
+<section class="slide dark" id="s11">
+  <div class="wrap">
+    <h2>下一步</h2>
+    <p class="sub">三家方案已按同一标准筛选，剩下的就是用含退还条款的正式报价对比保额，再根据您的偏好选择</p>
+    <div class="grid g3" style="margin-bottom:28px">
+      <div class="card"><div class="num">1</div><div class="t">正式报价</div><div class="b">三家均附加退还保费条款后报价，对比同等保费下的保额</div></div>
+      <div class="card"><div class="num">2</div><div class="t">确定偏好</div><div class="b">更看重保额与保费（Manulife）、随时退出的灵活性（iA / Sun Life）还是疾病覆盖数（Sun Life）</div></div>
+      <div class="card"><div class="num">3</div><div class="t">核保与投保</div><div class="b">填写健康问卷，必要时体检；保费按投保当天年龄锁定，越早越便宜</div></div>
+    </div>
+    <div class="hbox" style="margin-bottom:28px">
+      <div class="ht">一句话总结</div>
+      三家公司都能做到"保费锁定不涨、未出险 100% 退还"。Manulife Term 65 保费最低、保额最高、到期自动返还，但要持有到 65 岁；Sun Life 覆盖最全、退还起步最早、取消或到期都返还；iA 提前退出比例最清晰、还能做保单贷款。
+    </div>
+    <div class="contact">
+      <div class="av">E</div>
+      <div><div class="nm">Elina</div><div class="ti">持牌保险及理财顾问 · Licensed Insurance &amp; Financial Advisor</div></div>
+      <div class="ct">
+        <a href="tel:4168267591">📞 416-826-7591</a>
+        <a href="https://wa.me/14168267591" target="_blank" rel="noopener">💬 WhatsApp 咨询</a>
+        <a href="mailto:elina_insurance@hotmail.com">✉️ elina_insurance@hotmail.com</a>
+      </div>
+    </div>
+    <p class="disc">免责声明：本资料仅供一般教育及参考用途，根据 iA、Sun Life、Manulife 公开发布的产品资料整理（iA F13-1198 / F13-1199A；Sun Life 810-3581、810-3434；Manulife 25_1959872），不构成个人保险、税务或法律建议。文中参考报价为基础保费估算，不含退还保费条款；所有保障内容、疾病定义、除外责任、退还保费条款、保费及保额均以保险公司正式报价及保单合同为准，如有不一致，以合同为准。投保前请与持牌顾问详细确认。<br>© 2026 Elina Insurance Advisory</p>
+  </div>
+</section>
+
+<script>
+  // 导航圆点
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.nav a');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const i = Array.from(slides).indexOf(e.target);
+        dots.forEach(d => d.classList.remove('active'));
+        if (dots[i]) dots[i].classList.add('active');
+        document.body.classList.toggle('dark-active', e.target.classList.contains('dark'));
+      }
+    });
+  }, {threshold: 0.4});
+  slides.forEach(s => obs.observe(s));
+
+  // 保费累计计算器
+  const prem = document.getElementById('prem');
+  const fmt = n => '$' + Math.round(n).toLocaleString('en-CA');
+  function calc(){
+    const m = parseFloat(prem.value) || 0;
+    document.querySelectorAll('#calcRows b[data-y]').forEach(b => {
+      b.textContent = fmt(m * 12 * parseInt(b.dataset.y, 10));
+    });
+  }
+  prem.addEventListener('input', calc);
+  calc();
+</script>
+</body>
+</html>
